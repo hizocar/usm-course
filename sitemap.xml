@@ -26,6 +26,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://github.com/fralfaro/DS-Python-Course/programa/</loc>
+         <lastmod>2025-08-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://github.com/fralfaro/DS-Python-Course/seaborn/</loc>
          <lastmod>2025-08-04</lastmod>
          <changefreq>daily</changefreq>
