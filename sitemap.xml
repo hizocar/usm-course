@@ -35,4 +35,19 @@
          <lastmod>2025-08-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
+    <url>
+         <loc>https://github.com/fralfaro/DS-Python-Course/clases/Clase%201-%20Intro/</loc>
+         <lastmod>2025-08-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://github.com/fralfaro/DS-Python-Course/clases/Clase%202-%20NumPy/</loc>
+         <lastmod>2025-08-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://github.com/fralfaro/DS-Python-Course/clases/Clase%203-%20Pandas/</loc>
+         <lastmod>2025-08-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
 </urlset>
