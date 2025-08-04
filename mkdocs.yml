@@ -1,13 +1,7 @@
 # Project information
 site_name: Home
-site_url: https://github.com/fralfaro/DS-Python-Course
 site_author: Sebastian Azocar
 site_description: usm machine learning course
-
-# Repository
-repo_name: fralfaro/DS-Python-Course
-repo_url: https://github.com/fralfaro/DS-Python-Course
-edit_uri: ''
 
 # Markdown extensions
 markdown_extensions:
@@ -65,11 +59,7 @@ theme:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/fralfaro
-    - icon: fontawesome/brands/linkedin
-      link: https://www.linkedin.com/in/faam/
-    - icon: fontawesome/solid/globe
-      link: https://fralfaro.github.io/portfolio/
+      link: https://github.com/hizocar
 
 # Plugins
 plugins:
