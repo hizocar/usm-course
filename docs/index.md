@@ -1,15 +1,15 @@
-# Introducción básica a Python
+# 👋 Hi, We are Sebastián Azócar
 
-## Material
+## **Data Scientist and Teacher**
 
-El material está disponible en el siguiente [repositorio](https://github.com/fralfaro/DS-Python-Course), para obtener el código de fuente basta con que ejecutes el siguiente comando:
+![Sebastián Azócar](/images/perfil_seba.png)
 
-> `https://github.com/fralfaro/DS-Python-Course`
+---
 
+### Perfil
 
-## Contenidos temáticos
-
-* Introducción a Python
-* Nomenclatura
-* Introducción Pandas
-* Introducción Seaborn
+- 👋 Hi there, I’m a Mathematical Engineer and hold a Master’s degree in Data Science  
+- 🏡 I’m currently living in Santiago, Chile.  
+- 🌐 I love traveling and visiting different countries.  
+- 📚 I’m always learning and have a special interest in data analysis.  
+- 📫 How to reach me: **hizocar@gmail.com**
