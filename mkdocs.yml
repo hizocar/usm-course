@@ -83,7 +83,5 @@ nav:
     - Programa y calendario:
         - programa.md
     - Clases:
-        - clases/Clase 1- Intro.ipynb
-        - clases/Clase 2- NumPy.ipynb
-        - clases/Clase 3- Pandas.ipynb
+        - clases/clases.md
 
