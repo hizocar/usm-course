@@ -41,7 +41,7 @@
     <img src="images/perfil_fernando.png" alt="Fernando Díaz">
     <h3>Fernando Díaz H., PhD</h3>
     <em>Professor & MBA Program Director</em><br><br>
-    🎓 PhD in Management (Purdue), MSc (LSE)<br>
+    🎓 Ph.D. in Finance (Purdue), MSc. in Finance and Economics (LSE), MA in Economics (PUC)<br>
     👨‍🏫 Professor at UTFSM<br>
     📈 Focus on Finance, Econometrics, ML<br>
     🔗 <a href="https://www.linkedin.com/in/frdiazh/">LinkedIn</a>
