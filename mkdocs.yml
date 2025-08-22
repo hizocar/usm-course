@@ -70,8 +70,10 @@ plugins:
 # TOC
 nav:
     - Home: index.md
-    - Programa y calendario:
+    - Program:
         - programa.md
-    - Clases:
+    - Classes:
         - clases/clases.md
+    - Exercises: 
+        - exercises/exercises.md
 
