@@ -821,24 +821,24 @@ To <em>claim no meaningful difference</em>, use <strong>non-inferiority</strong>
 <ul>
 <li>
 <p><strong>Open rate (OR):</strong><br />
-  [
+  $$
   \text{open_rate} = \frac{\text{unique opens}}{\text{delivered}}
-  ]
+  $$
   <em>Primary</em> for <strong>subject line</strong> tests.</p>
 </li>
 <li>
 <p><strong>Click-to-open rate (CTOR):</strong><br />
-  [
+  $$
   \text{CTOR} = \frac{\text{unique clicks}}{\text{unique opens}}
-  ]
+  $$
   <em>Primary</em> for <strong>content/personalization</strong> tests.<br />
   👉 Test CTOR <strong>conditional on opens</strong> (denominator = opens per arm), not on recipients.</p>
 </li>
 <li>
 <p><strong>Conversion (purchase):</strong><br />
-  [
+  $$
   \text{conversion} = \frac{\text{ticket purchases}}{\text{delivered}}
-  ]
+  $$
   <em>Primary</em> for tests whose goal is <strong>sales</strong>.</p>
 </li>
 <li>
@@ -862,13 +862,13 @@ To <em>claim no meaningful difference</em>, use <strong>non-inferiority</strong>
 - <span class="arithmatex">\(c_T - c_C\)</span> = <strong>incremental cost per email</strong> (e.g., template B with extra enrichments),
 - <span class="arithmatex">\(\Delta p\)</span> = absolute lift in <strong>purchase conversion</strong>.</p>
 <p><strong>Break-even:</strong><br />
-[
+$$
 \Delta p \cdot v \ \ge\ (c_T - c_C)
-]</p>
+$$</p>
 <p>If <span class="arithmatex">\(c_T - c_C = \$0.002\)</span> (0.2¢) and <span class="arithmatex">\(v = \$25\)</span>, then:
-[
+$$
 \Delta p \ge \frac{0.002}{25} = 0.00008 = 0.008\% \text{ (0.008 pp)}
-]
+$$
 ➡️ Even tiny <strong>conversion</strong> lifts can be profitable; ensure <strong>guardrails</strong> (complaints, unsubscribes) are steady.</p>
 <blockquote>
 <p>🧩 For <strong>subject lines</strong> (primary: open rate), require a <strong>minimum downstream</strong> effect path:<br />
@@ -883,9 +883,9 @@ OR ↑ should translate to <strong>clicks</strong> and ideally <strong>conversio
 <li><strong>MDE:</strong> smallest effect you commit to detect (e.g., +1.2 pp OR; +0.10 pp conversion).</li>
 </ul>
 <p><strong>Rule of thumb for two proportions (per arm):</strong>
-[
+$$
 n \approx \frac{2\,p(1-p)\,(z_{1-\alpha/2}+z_{1-\beta})^2}{\delta^2}
-]
+$$
 Where:
 - <span class="arithmatex">\(p\)</span> = baseline rate (OR, CTOR, conversion),<br />
 - <span class="arithmatex">\(\delta\)</span> = <strong>absolute</strong> lift (MDE, in proportion points).</p>

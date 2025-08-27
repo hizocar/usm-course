@@ -936,9 +936,9 @@ We estimate <strong>individualized effects</strong> (a.k.a. CATE) and turn them 
 - <span class="arithmatex">\(c\)</span> = incremental <strong>per-recipient</strong> cost of the treatment,
 - <span class="arithmatex">\(\hat{\tau}(x)\)</span> = predicted <strong>absolute lift</strong> in conversion for user <span class="arithmatex">\(x\)</span>.</p>
 <p><strong>Target if:</strong><br />
-[
+$$
 \hat{\tau}(x)\cdot v \ \ge\ c \quad\Rightarrow\quad \hat{\tau}(x) \ge \frac{c}{v}
-]</p>
+$$</p>
 <p><strong>Email example:</strong> <span class="arithmatex">\(c= \$0.002\)</span>, <span class="arithmatex">\(v=\$25\)</span> ⇒ threshold <span class="arithmatex">\(=0.008\%\)</span> (0.008 pp).<br />
 Score all recipients; <strong>email only</strong> those above the threshold (and respect caps/guardrails).</p>
 <blockquote>

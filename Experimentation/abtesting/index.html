@@ -974,18 +974,18 @@
 <ul>
 <li><strong>Difference:</strong> <span class="arithmatex">\( \Delta = p_B - p_A \)</span></li>
 <li><strong>Pooled SE (for H₀: <span class="arithmatex">\( p_A = p_B \)</span>):</strong>
-  [
+  $$
   \hat{p} = \frac{x_A + x_B}{n_A + n_B}, \quad
   SE_{\text{pooled}} = \sqrt{\hat{p}(1-\hat{p})\left(\frac{1}{n_A}+\frac{1}{n_B}\right)}
-  ]</li>
+  $$</li>
 <li><strong>z-statistic:</strong> <span class="arithmatex">\( z = \frac{\Delta}{SE_{\text{pooled}}} \)</span></li>
 <li><strong>Two-sided p-value:</strong> compare |z| to standard normal.</li>
 </ul>
 <blockquote>
 <p><strong>95% CI (unpooled)</strong><br />
-[
+$$
 CI = \Delta \pm 1.96 \cdot \sqrt{\frac{p_A(1-p_A)}{n_A} + \frac{p_B(1-p_B)}{n_B}}
-]</p>
+$$</p>
 </blockquote>
 <h3 id="continuous-metrics-revenue-per-user-order-value">💵 Continuous metrics (Revenue per User, Order Value)</h3>
 <ul>
@@ -1005,9 +1005,9 @@ CI = \Delta \pm 1.96 \cdot \sqrt{\frac{p_A(1-p_A)}{n_A} + \frac{p_B(1-p_B)}{n_B}
 <li><strong>Type II error (β):</strong> false negative rate; <strong>Power = 1 − β</strong> (commonly 0.8).</li>
 </ul>
 <p><strong>Back-of-the-envelope N for two proportions</strong> <em>(per arm)</em>:
-[
+$$
 n \approx \frac{2\,p(1-p)\,(z_{1-\alpha/2}+z_{1-\beta})^2}{\delta^2}
-]
+$$
 Where <span class="arithmatex">\( p \)</span> is baseline rate; <span class="arithmatex">\( \delta \)</span> is <strong>absolute</strong> lift (MDE, in pp).</p>
 <blockquote>
 <p>🧮 <strong>Interpretation:</strong> Smaller MDE ⇒ larger sample or longer duration.</p>

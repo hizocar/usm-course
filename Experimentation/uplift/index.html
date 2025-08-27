@@ -891,9 +891,9 @@
 </li>
 <li>
 <p><strong>Uplift model:</strong> estimates <strong>incremental effect</strong><br />
-  [
+  $$
   u(x) \equiv \Pr(Y=1\mid T=1,X=x) - \Pr(Y=1\mid T=0,X=x)
-  ]
+  $$
   → “<strong>Who changes</strong> because of the email?”</p>
 </li>
 </ul>
@@ -973,9 +973,9 @@ Apply frequency caps and eligibility rules.</p>
 <hr />
 <h2 id="offline-evaluation-qini-auuc-deciles">📊 Offline evaluation (Qini, AUUC, deciles)</h2>
 <p>With constant treatment rate <span class="arithmatex">\(e\)</span> in randomized data, the <strong>incremental outcome</strong> for a scored set <span class="arithmatex">\(S\)</span> is
-[
+$$
 \widehat{U}(S) \;=\; \sum_{i\in S}\Big[\frac{T_i Y_i}{e} \;-\; \frac{(1-T_i) Y_i}{1-e}\Big]
-]</p>
+$$</p>
 <ul>
 <li><strong>Uplift curve / Qini curve:</strong> sort by <span class="arithmatex">\(\hat u(x)\)</span>, plot <span class="arithmatex">\(\widehat{U}\)</span> vs share of targeted users.  </li>
 <li><strong>AUUC / Qini coefficient:</strong> area under uplift curve (higher is better).  </li>
