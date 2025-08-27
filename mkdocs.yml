@@ -9,7 +9,7 @@ markdown_extensions:
   - admonition
   - md_in_html
   - pymdownx.arithmatex:
-      generic: true
+      generic: true          # <- necesario para MathJax/KaTeX con Material
   - pymdownx.highlight:
       anchor_linenums: true
   - pymdownx.inlinehilite
@@ -20,7 +20,7 @@ markdown_extensions:
 
 # Extra javascript
 extra_javascript:
-  - javascripts/mathjax.js
+  - javascripts/mathjax.js   # <- nuestro config (ruta relativa a docs/)
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
@@ -69,19 +69,19 @@ plugins:
 
 # TOC
 nav:
-    - Home: index.md
-    - Program:
-        - programa.md
-    - Classes:
-        - clases/clases.md
-    - Exercises: 
-        - exercises/exercises.md 
-    - Datasets: 
-        - datasets/datasets.md
-    - Experimentation:
-        - Experimentation/abtesting.md
-        - Experimentation/deciding.md
-        - Experimentation/hte.md
-        - Experimentation/uplift.md
+  - Home: index.md
+  - Program:
+      - programa.md
+  - Classes:
+      - clases/clases.md
+  - Exercises:
+      - exercises/exercises.md
+  - Datasets:
+      - datasets/datasets.md
+  - Experimentation:
+      - Experimentation/abtesting.md
+      - Experimentation/deciding.md
+      - Experimentation/hte.md
+      - Experimentation/uplift.md
 
 
