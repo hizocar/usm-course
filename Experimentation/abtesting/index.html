@@ -1,0 +1,1216 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="usm machine learning course">
+      
+      
+        <meta name="author" content="Sebastian Azocar">
+      
+      
+      <link rel="icon" href="../../images/logo_python.svg">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.15">
+    
+    
+      
+        <title>2 - A/B Testing - Machine Learning and Business Applications</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.c382b1dc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.cc9b2e1e.min.css">
+        
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="light-blue">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ab-testing" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="Machine Learning and Business Applications" class="md-header__button md-logo" aria-label="Machine Learning and Business Applications" data-md-component="logo">
+      
+  <img src="../../images/logo.bmp" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Machine Learning and Business Applications
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              2 - A/B Testing
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="light-blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="light-blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Limpiar" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Machine Learning and Business Applications" class="md-nav__button md-logo" aria-label="Machine Learning and Business Applications" data-md-component="logo">
+      
+  <img src="../../images/logo.bmp" alt="logo">
+
+    </a>
+    Machine Learning and Business Applications
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Program
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Program" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Program
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programa/" class="md-nav__link">
+        Programa del Curso
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Classes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Classes" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Classes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../clases/clases/" class="md-nav__link">
+        Classes
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Exercises
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Exercises" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Exercises
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exercises/exercises/" class="md-nav__link">
+        Exercises
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Datasets
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Datasets" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Datasets
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datasets/datasets/" class="md-nav__link">
+        Datasets
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Experimentation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Experimentation" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Experimentation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../intro/" class="md-nav__link">
+        Intro
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          2 - A/B Testing
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        2 - A/B Testing
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#definition" class="md-nav__link">
+    🔎 Definition
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#statistical-framework" class="md-nav__link">
+    🧠 Statistical framework
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#minimal-workflow" class="md-nav__link">
+    🧭 Minimal workflow
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#design-choices-that-matter" class="md-nav__link">
+    🧩 Design choices that matter
+  </a>
+  
+    <nav class="md-nav" aria-label="🧩 Design choices that matter">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unit-of-randomization" class="md-nav__link">
+    🆔 Unit of randomization
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#split-allocation" class="md-nav__link">
+    ⚖️ Split &amp; allocation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stratification-blocking" class="md-nav__link">
+    🧱 Stratification (blocking)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exposure-policy" class="md-nav__link">
+    🔒 Exposure policy
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metrics-statistical-tests" class="md-nav__link">
+    📐 Metrics &amp; statistical tests
+  </a>
+  
+    <nav class="md-nav" aria-label="📐 Metrics &amp; statistical tests">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#binary-metrics-conversion-rate-click-through-rate" class="md-nav__link">
+    ✅ Binary metrics (conversion rate, click-through rate)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#continuous-metrics-revenue-per-user-order-value" class="md-nav__link">
+    💵 Continuous metrics (Revenue per User, Order Value)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ratio-time-based-metrics" class="md-nav__link">
+    ⏱️ Ratio &amp; time-based metrics
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sample-size-power-and-mde" class="md-nav__link">
+    📏 Sample size, Power, and MDE
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variance-reduction-optional-but-powerful" class="md-nav__link">
+    🎯 Variance reduction (optional but powerful)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#randomization-health-srm" class="md-nav__link">
+    🩺 Randomization health &amp; SRM
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stopping-rules-sequential-looks" class="md-nav__link">
+    ⏳ Stopping rules &amp; sequential looks
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multiple-comparisons" class="md-nav__link">
+    ➗ Multiple comparisons
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#worked-examples" class="md-nav__link">
+    🛠️ Worked examples
+  </a>
+  
+    <nav class="md-nav" aria-label="🛠️ Worked examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-1-conversion-rate-lift" class="md-nav__link">
+    📈 Example 1 — Conversion rate lift
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-2-revenue-per-user-skewed" class="md-nav__link">
+    💰 Example 2 — Revenue per user (skewed)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-pitfalls-remedies" class="md-nav__link">
+    🧯 Common pitfalls &amp; remedies
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#decision-checklist" class="md-nav__link">
+    ✅ Decision checklist
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deciding/" class="md-nav__link">
+        Deciding Whether to Reject H₀
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hte/" class="md-nav__link">
+        Causal Forests & Heterogeneous Treatment Effects
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../uplift.md" class="md-nav__link">
+        None
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#definition" class="md-nav__link">
+    🔎 Definition
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#statistical-framework" class="md-nav__link">
+    🧠 Statistical framework
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#minimal-workflow" class="md-nav__link">
+    🧭 Minimal workflow
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#design-choices-that-matter" class="md-nav__link">
+    🧩 Design choices that matter
+  </a>
+  
+    <nav class="md-nav" aria-label="🧩 Design choices that matter">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unit-of-randomization" class="md-nav__link">
+    🆔 Unit of randomization
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#split-allocation" class="md-nav__link">
+    ⚖️ Split &amp; allocation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stratification-blocking" class="md-nav__link">
+    🧱 Stratification (blocking)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exposure-policy" class="md-nav__link">
+    🔒 Exposure policy
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metrics-statistical-tests" class="md-nav__link">
+    📐 Metrics &amp; statistical tests
+  </a>
+  
+    <nav class="md-nav" aria-label="📐 Metrics &amp; statistical tests">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#binary-metrics-conversion-rate-click-through-rate" class="md-nav__link">
+    ✅ Binary metrics (conversion rate, click-through rate)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#continuous-metrics-revenue-per-user-order-value" class="md-nav__link">
+    💵 Continuous metrics (Revenue per User, Order Value)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ratio-time-based-metrics" class="md-nav__link">
+    ⏱️ Ratio &amp; time-based metrics
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sample-size-power-and-mde" class="md-nav__link">
+    📏 Sample size, Power, and MDE
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variance-reduction-optional-but-powerful" class="md-nav__link">
+    🎯 Variance reduction (optional but powerful)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#randomization-health-srm" class="md-nav__link">
+    🩺 Randomization health &amp; SRM
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stopping-rules-sequential-looks" class="md-nav__link">
+    ⏳ Stopping rules &amp; sequential looks
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multiple-comparisons" class="md-nav__link">
+    ➗ Multiple comparisons
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#worked-examples" class="md-nav__link">
+    🛠️ Worked examples
+  </a>
+  
+    <nav class="md-nav" aria-label="🛠️ Worked examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-1-conversion-rate-lift" class="md-nav__link">
+    📈 Example 1 — Conversion rate lift
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-2-revenue-per-user-skewed" class="md-nav__link">
+    💰 Example 2 — Revenue per user (skewed)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-pitfalls-remedies" class="md-nav__link">
+    🧯 Common pitfalls &amp; remedies
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#decision-checklist" class="md-nav__link">
+    ✅ Decision checklist
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="ab-testing">🧪 A/B Testing</h1>
+<h2 id="definition">🔎 Definition</h2>
+<p>A randomized experiment comparing two versions:</p>
+<ul>
+<li><strong>A (Control):</strong> current baseline.</li>
+<li><strong>B (Treatment):</strong> new variant.</li>
+</ul>
+<blockquote>
+<p>🎨 <em>Optional hero image (place in <code>/assets/ab-testing/</code>):</em></p>
+<p><figure>
+  <img src="/assets/ab-testing/ab-hero.png" alt="Illustration of traffic split into A (control) and B (treatment) with metric comparison panels" />
+  <figcaption>High-level view of a randomized split and metric comparison.</figcaption>
+</figure></p>
+<p><details>
+<summary>🧑‍💻 Suggested AI prompt</summary>
+Minimal flat illustration of an A/B test: traffic enters a split node and flows into two panels labeled <strong>A (Control)</strong> and <strong>B (Treatment)</strong>, each showing a conversion gauge. Clean, modern, vector style, white background, subtle shadows, brand-neutral colors.
+</details></p>
+</blockquote>
+<hr />
+<h2 id="statistical-framework">🧠 Statistical framework</h2>
+<ul>
+<li><strong>Null hypothesis (H₀):</strong> no difference between A and B.</li>
+<li><strong>Alternative (H₁):</strong> a difference exists (two-sided by default; use one-sided only with strong prior and pre-registration) ⚠️.</li>
+<li><strong>Why A/B tests?</strong>  </li>
+<li>✅ Simple, robust design  </li>
+<li>🎲 Randomization minimizes selection bias  </li>
+<li>📏 Quantifies uncertainty for clear decisions</li>
+</ul>
+<hr />
+<h2 id="minimal-workflow">🧭 Minimal workflow</h2>
+<ol>
+<li>🎯 Define the <strong>primary metric</strong> (e.g., conversion rate, revenue per user).</li>
+<li>👤 Choose <strong>unit of randomization</strong> (user, session, PNR, household).</li>
+<li>🚦 Set <strong>exposure rules</strong> (who can/cannot be re-exposed).</li>
+<li>📝 Pre-register <strong>α, power, MDE, duration, guardrails</strong>.</li>
+<li>📊 Run, monitor for <strong>sample ratio mismatch (SRM)</strong>.</li>
+<li>🧾 Analyze and <strong>decide</strong> (see decision rules below).</li>
+</ol>
+<hr />
+<h2 id="design-choices-that-matter">🧩 Design choices that matter</h2>
+<h3 id="unit-of-randomization">🆔 Unit of randomization</h3>
+<ul>
+<li>Prefer <strong>stable identifiers</strong> (user ID, PNR) over sessions/cookies when possible.</li>
+<li>If cross-device is common, consider <strong>household</strong> or <strong>account</strong> level to reduce spillovers.</li>
+</ul>
+<h3 id="split-allocation">⚖️ Split &amp; allocation</h3>
+<ul>
+<li><strong>50/50</strong> maximizes power; skewed splits (e.g., 90/10) need <strong>larger total N</strong> for the same MDE.</li>
+<li>For risky changes, start with a <strong>10–20% ramp</strong>, then escalate if guardrails are healthy.</li>
+</ul>
+<h3 id="stratification-blocking">🧱 Stratification (blocking)</h3>
+<ul>
+<li>Randomize <strong>within strata</strong> (e.g., country, device, recency tiers) to keep groups balanced on key covariates.</li>
+<li>Report results overall and by strata; pre-specify subgroup analyses.</li>
+</ul>
+<h3 id="exposure-policy">🔒 Exposure policy</h3>
+<ul>
+<li>One user → one arm for the full test window.</li>
+<li>Avoid cross-arm exposure (e.g., receiving both Email and WhatsApp).</li>
+<li>Define <strong>frequency caps</strong> and <strong>eligibility</strong> rules up front.</li>
+</ul>
+<hr />
+<h2 id="metrics-statistical-tests">📐 Metrics &amp; statistical tests</h2>
+<h3 id="binary-metrics-conversion-rate-click-through-rate">✅ Binary metrics (conversion rate, click-through rate)</h3>
+<p>Let <span class="arithmatex">\( p_A \)</span>, <span class="arithmatex">\( p_B \)</span> be conversion rates; <span class="arithmatex">\( n_A, n_B \)</span> sample sizes.</p>
+<ul>
+<li><strong>Difference:</strong> <span class="arithmatex">\( \Delta = p_B - p_A \)</span></li>
+<li><strong>Pooled SE (for H₀: <span class="arithmatex">\( p_A = p_B \)</span>):</strong>
+  [
+  \hat{p} = \frac{x_A + x_B}{n_A + n_B}, \quad
+  SE_{\text{pooled}} = \sqrt{\hat{p}(1-\hat{p})\left(\frac{1}{n_A}+\frac{1}{n_B}\right)}
+  ]</li>
+<li><strong>z-statistic:</strong> <span class="arithmatex">\( z = \frac{\Delta}{SE_{\text{pooled}}} \)</span></li>
+<li><strong>Two-sided p-value:</strong> compare |z| to standard normal.</li>
+</ul>
+<blockquote>
+<p><strong>95% CI (unpooled)</strong><br />
+[
+CI = \Delta \pm 1.96 \cdot \sqrt{\frac{p_A(1-p_A)}{n_A} + \frac{p_B(1-p_B)}{n_B}}
+]</p>
+</blockquote>
+<h3 id="continuous-metrics-revenue-per-user-order-value">💵 Continuous metrics (Revenue per User, Order Value)</h3>
+<ul>
+<li>Use <strong>Welch’s t-test</strong> (unequal variances).</li>
+<li>For skewed revenue: <strong>trimmed means</strong>, <strong>winsorization</strong>, or <strong>bootstrap CIs</strong>.</li>
+<li>Report both <strong>mean</strong> and <strong>median</strong>; consider <strong>RPU</strong> and <strong>RPT</strong>.</li>
+</ul>
+<h3 id="ratio-time-based-metrics">⏱️ Ratio &amp; time-based metrics</h3>
+<ul>
+<li>If numerator/denominator vary per user, consider <strong>delta method</strong> or <strong>bootstrap</strong>.</li>
+<li>Guardrails (refund rate, complaint rate) are tested but <strong>not optimized</strong>.</li>
+</ul>
+<hr />
+<h2 id="sample-size-power-and-mde">📏 Sample size, Power, and MDE</h2>
+<ul>
+<li><strong>Type I error (α):</strong> false positive rate (commonly 0.05).</li>
+<li><strong>Type II error (β):</strong> false negative rate; <strong>Power = 1 − β</strong> (commonly 0.8).</li>
+</ul>
+<p><strong>Back-of-the-envelope N for two proportions</strong> <em>(per arm)</em>:
+[
+n \approx \frac{2\,p(1-p)\,(z_{1-\alpha/2}+z_{1-\beta})^2}{\delta^2}
+]
+Where <span class="arithmatex">\( p \)</span> is baseline rate; <span class="arithmatex">\( \delta \)</span> is <strong>absolute</strong> lift (MDE, in pp).</p>
+<blockquote>
+<p>🧮 <strong>Interpretation:</strong> Smaller MDE ⇒ larger sample or longer duration.</p>
+</blockquote>
+<hr />
+<h2 id="variance-reduction-optional-but-powerful">🎯 Variance reduction (optional but powerful)</h2>
+<ul>
+<li><strong>Stratified randomization:</strong> balances covariates ⇒ lower variance.</li>
+<li><strong>Covariate adjustment (ANCOVA):</strong> regress outcome on treatment + pre-exposure covariates.</li>
+<li><strong>CUPED (pre-exposure correction):</strong><br />
+<span class="arithmatex">\( y' = y - \theta (x - \bar{x}) \)</span>, with <span class="arithmatex">\( \theta = \frac{\text{Cov}(y,x)}{\text{Var}(x)} \)</span>.</li>
+</ul>
+<p>⚠️ Pre-specify the method; ensure treatment does <strong>not</strong> affect the covariate <span class="arithmatex">\( x \)</span>.</p>
+<hr />
+<h2 id="randomization-health-srm">🩺 Randomization health &amp; SRM</h2>
+<p><strong>Sample Ratio Mismatch (SRM):</strong> observed allocation deviates from expected (e.g., expect 50/50, observe 49/51 out of 200k).</p>
+<ul>
+<li>Diagnose with a <strong>chi-square test</strong> on assignment counts.</li>
+<li>Common causes: bot traffic, bucketing bugs, eligibility filters applied <strong>after</strong> randomization, cross-device leakage, late-day traffic spikes.</li>
+</ul>
+<details>
+ <summary>🧑‍💻 Suggested AI prompt</summary>
+ Clean bar chart comparing expected 50/50 vs observed 49/51 assignment with a red highlight on the mismatch. Minimalist dashboard style.
+ </details>
+
+<p><strong>Action:</strong> If SRM is significant, <strong>invalidate</strong> the test and fix instrumentation before re-running.</p>
+<hr />
+<h2 id="stopping-rules-sequential-looks">⏳ Stopping rules &amp; sequential looks</h2>
+<ul>
+<li><strong>Fixed-horizon testing:</strong> set duration and N in advance; <strong>no peeking</strong>.</li>
+<li><strong>Sequential testing:</strong> allowed with proper <strong>alpha-spending</strong> (e.g., Pocock, O’Brien–Fleming) or <strong>always-valid</strong> methods.</li>
+<li>If monitoring periodically, use <strong>group-sequential</strong> plans and document spending rules.</li>
+</ul>
+<hr />
+<h2 id="multiple-comparisons">➗ Multiple comparisons</h2>
+<p>If you test many variants/metrics/subgroups, control false discoveries:</p>
+<ul>
+<li><strong>Bonferroni</strong> (conservative), <strong>Holm–Bonferroni</strong>, or <strong>Benjamini–Hochberg (FDR)</strong>.</li>
+<li>Prefer a <strong>single primary metric</strong>; treat others as <strong>guardrails</strong> or <strong>exploratory</strong>.</li>
+</ul>
+<hr />
+<h2 id="worked-examples">🛠️ Worked examples</h2>
+<h3 id="example-1-conversion-rate-lift">📈 Example 1 — Conversion rate lift</h3>
+<ul>
+<li><span class="arithmatex">\( n_A = n_B = 50{,}000 \)</span></li>
+<li><span class="arithmatex">\( p_A = 3.0\% = 0.030 \)</span></li>
+<li><span class="arithmatex">\( p_B = 3.6\% = 0.036 \)</span></li>
+<li><span class="arithmatex">\( \Delta = 0.006 \)</span> (<strong>+0.6 pp</strong>)</li>
+</ul>
+<p>Pooled <span class="arithmatex">\( \hat{p} = 0.03299 \)</span><br />
+<span class="arithmatex">\( SE_{\text{pooled}} \approx 0.00113 \)</span><br />
+<span class="arithmatex">\( z \approx 5.31 \)</span> → <strong>p-value ≈ 1.1e−7</strong> ✅<br />
+95% CI (unpooled) for <span class="arithmatex">\( \Delta \)</span>: <strong>[+0.38 pp, +0.82 pp]</strong><br />
+<strong>Decision:</strong> reject H₀. Also check <strong>business impact</strong> (incremental revenue, margin).</p>
+<h3 id="example-2-revenue-per-user-skewed">💰 Example 2 — Revenue per user (skewed)</h3>
+<ul>
+<li>Use <strong>Welch’s t-test</strong> or <strong>bootstrap CI</strong> on mean RPU.  </li>
+<li>If heavy tails: <strong>winsorize</strong> top 0.1–1% or report <strong>trimmed mean (e.g., 5%)</strong>.  </li>
+<li>Complement with <strong>conversion rate</strong> and <strong>AOV</strong> to explain drivers.</li>
+</ul>
+<hr />
+<h2 id="common-pitfalls-remedies">🧯 Common pitfalls &amp; remedies</h2>
+<ul>
+<li>👀 <strong>Peeking without correction:</strong> inflates Type I error → use fixed horizon or sequential designs.  </li>
+<li>🔁 <strong>Inconsistent exposure:</strong> users switch arms → lock assignment, deduplicate IDs.  </li>
+<li>🌐 <strong>Interference/spillovers:</strong> cross-channel effects → consider <strong>geo experiments</strong> or <strong>cluster randomization</strong>.  </li>
+<li>📅 <strong>Seasonality &amp; novelty:</strong> ensure runtime covers weekly cycles; consider ramps and post-holdouts.  </li>
+<li>🧮 <strong>Metric drift:</strong> freeze definitions during the test.  </li>
+<li>🧪 <strong>Underpowered tests:</strong> align MDE with business value; extend duration or traffic.  </li>
+</ul>
+<hr />
+<h2 id="decision-checklist">✅ Decision checklist</h2>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled/> Primary metric defined; guardrails listed.  </li>
+<li class="task-list-item"><input type="checkbox" disabled/> α, power, MDE pre-registered; sample size computed.  </li>
+<li class="task-list-item"><input type="checkbox" disabled/> Unit of randomization &amp; exposure rules documented.  </li>
+<li class="task-list-item"><input type="checkbox" disabled/> Stratification keys (if any) fixed pre-launch.  </li>
+<li class="task-list-item"><input type="checkbox" disabled/> SRM monitored; assignment counts logged.  </li>
+<li class="task-list-item"><input type="checkbox" disabled/> Fixed horizon <strong>or</strong> sequential plan documented.  </li>
+<li class="task-list-item"><input type="checkbox" disabled/> Analysis plan: test type, CI, variance reduction (if any).  </li>
+<li class="task-list-item"><input type="checkbox" disabled/> Result meets <strong>statistical</strong> and <strong>business</strong> significance.  </li>
+<li class="task-list-item"><input type="checkbox" disabled/> Rollout plan &amp; post-launch monitoring defined.  </li>
+</ul>
+<hr />
+
+              
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Volver al principio
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Pie">
+      
+        
+        <a href="../intro/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Intro" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              Intro
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../deciding/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: Deciding Whether to Reject H₀" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Siguiente
+              </span>
+              Deciding Whether to Reject H₀
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+      
+      
+    
+    <a href="https://github.com/hizocar" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.top", "content.code.annotate", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.config.lang": "es", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "B\u00fasqueda", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version.title": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.a6c66575.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

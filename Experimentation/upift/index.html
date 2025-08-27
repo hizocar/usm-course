@@ -1,0 +1,944 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="usm machine learning course">
+      
+      
+        <meta name="author" content="Sebastian Azocar">
+      
+      
+      <link rel="icon" href="../../images/logo_python.svg">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.15">
+    
+    
+      
+        <title>Uplift Models - Machine Learning and Business Applications</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.c382b1dc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.cc9b2e1e.min.css">
+        
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="light-blue">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#uplift-models-incrementality-first-targeting" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="Machine Learning and Business Applications" class="md-header__button md-logo" aria-label="Machine Learning and Business Applications" data-md-component="logo">
+      
+  <img src="../../images/logo.bmp" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Machine Learning and Business Applications
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Uplift Models
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="light-blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="light-blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Limpiar" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Machine Learning and Business Applications" class="md-nav__button md-logo" aria-label="Machine Learning and Business Applications" data-md-component="logo">
+      
+  <img src="../../images/logo.bmp" alt="logo">
+
+    </a>
+    Machine Learning and Business Applications
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Program
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Program" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Program
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programa/" class="md-nav__link">
+        Programa del Curso
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Classes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Classes" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Classes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../clases/clases/" class="md-nav__link">
+        Classes
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Exercises
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Exercises" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Exercises
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exercises/exercises/" class="md-nav__link">
+        Exercises
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Datasets
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Datasets" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Datasets
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datasets/datasets/" class="md-nav__link">
+        Datasets
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Experimentation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Experimentation" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Experimentation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../intro/" class="md-nav__link">
+        Intro
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../abtesting/" class="md-nav__link">
+        2 - A/B Testing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deciding/" class="md-nav__link">
+        Deciding Whether to Reject H₀
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hte/" class="md-nav__link">
+        Causal Forests & Heterogeneous Treatment Effects
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../uplift.md" class="md-nav__link">
+        None
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#uplift-vs-propensity-quick-recap" class="md-nav__link">
+    🧠 Uplift vs Propensity (quick recap)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#outcomes-we-commonly-model-at-latam-email" class="md-nav__link">
+    🗂️ Outcomes we commonly model at LATAM Email
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-modeling-approaches" class="md-nav__link">
+    🧩 Core modeling approaches
+  </a>
+  
+    <nav class="md-nav" aria-label="🧩 Core modeling approaches">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-two-model-t-learner" class="md-nav__link">
+    1) Two-Model (T-learner)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-class-transformation-single-classifier" class="md-nav__link">
+    2) Class Transformation (single classifier)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-direct-uplift-models-treesforests" class="md-nav__link">
+    3) Direct Uplift Models (trees/forests)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-meta-learners-drorthogonal-learners" class="md-nav__link">
+    4) Meta-learners &amp; DR/Orthogonal learners
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-features-email-context" class="md-nav__link">
+    🧱 Data &amp; features (email context)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#training-validation-recipe" class="md-nav__link">
+    🧪 Training &amp; validation recipe
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#from-scores-to-policy-value-threshold" class="md-nav__link">
+    💸 From scores to policy (value threshold)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#offline-evaluation-qini-auuc-deciles" class="md-nav__link">
+    📊 Offline evaluation (Qini, AUUC, deciles)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pitfalls-and-fixes" class="md-nav__link">
+    ⚠️ Pitfalls (and fixes)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#worked-latam-examples" class="md-nav__link">
+    ✈️ Worked LATAM examples
+  </a>
+  
+    <nav class="md-nav" aria-label="✈️ Worked LATAM examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-subject-line-uplift-on-open-rate" class="md-nav__link">
+    A) Subject line — Uplift on Open Rate
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-personalization-uplift-on-ctor" class="md-nav__link">
+    B) Personalization — Uplift on CTOR
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-commercial-push-uplift-on-conversion-rpr" class="md-nav__link">
+    C) Commercial push — Uplift on Conversion / RPR
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#online-validation-must-do" class="md-nav__link">
+    🔁 Online validation (must-do)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deployment-checklist" class="md-nav__link">
+    🧾 Deployment checklist
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tooling-quick-start" class="md-nav__link">
+    🛠️ Tooling quick-start
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#glossary" class="md-nav__link">
+    📚 Glossary
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="uplift-models-incrementality-first-targeting">📈 Uplift Models (Incrementality-First Targeting)</h1>
+<blockquote>
+<p><strong>What:</strong> Predict the <strong>causal lift</strong> of treating a user (email variant, personalization) instead of just the probability of an outcome.<br />
+<strong>Why:</strong> Spend contact budget on people whose behavior <strong>changes</strong> because of the email — not on “sure things” or “lost causes”.</p>
+</blockquote>
+<hr />
+<h2 id="uplift-vs-propensity-quick-recap">🧠 Uplift vs Propensity (quick recap)</h2>
+<ul>
+<li>
+<p><strong>Propensity model:</strong> estimates <span class="arithmatex">\(p(Y=1\mid X)\)</span> → “Who is likely to buy?”<br />
+  ⚠️ Sends to <strong>sure things</strong> (buy anyway) and <strong>lost causes</strong> (never buy).</p>
+</li>
+<li>
+<p><strong>Uplift model:</strong> estimates <strong>incremental effect</strong><br />
+  [
+  u(x) \equiv \Pr(Y=1\mid T=1,X=x) - \Pr(Y=1\mid T=0,X=x)
+  ]
+  → “<strong>Who changes</strong> because of the email?”</p>
+</li>
+</ul>
+<blockquote>
+<p>✈️ <strong>LATAM examples:</strong><br />
+- Subject line variants → uplift on <strong>open_rate</strong> (with caution: should drive downstream metrics).<br />
+- Content/personalization → uplift on <strong>CTOR</strong> or <strong>conversion</strong>.<br />
+- Commercial push → uplift on <strong>conversion</strong> and <strong>revenue per recipient (RPR)</strong>.</p>
+</blockquote>
+<hr />
+<h2 id="outcomes-we-commonly-model-at-latam-email">🗂️ Outcomes we commonly model at LATAM Email</h2>
+<ul>
+<li><strong>Open Rate (OR)</strong> — for <strong>subject lines</strong>.  </li>
+<li><strong>Click-to-Open Rate (CTOR)</strong> — for <strong>content/personalization</strong>.  </li>
+<li><strong>Conversion</strong> (ticket purchase) — for <strong>sales</strong> impact.  </li>
+<li><strong>RPR (Revenue per Recipient)</strong> — continuous &amp; skewed; summarize with robust stats.</li>
+</ul>
+<blockquote>
+<p>🔗 For OR/CTOR uplift, check that gains propagate to <strong>conversion/RPR</strong>; otherwise it’s vanity.</p>
+</blockquote>
+<hr />
+<h2 id="core-modeling-approaches">🧩 Core modeling approaches</h2>
+<h3 id="1-two-model-t-learner">1) Two-Model (T-learner)</h3>
+<p>Train two models, one per arm:
+- <span class="arithmatex">\(\hat p_1(x) = \Pr(Y=1\mid T=1, X=x)\)</span><br />
+- <span class="arithmatex">\(\hat p_0(x) = \Pr(Y=1\mid T=0, X=x)\)</span><br />
+Then <strong>uplift</strong>: <span class="arithmatex">\(\hat u(x) = \hat p_1(x) - \hat p_0(x)\)</span></p>
+<p><strong>Pros:</strong> simple, flexible. <strong>Cons:</strong> can be data-hungry, unstable with imbalance.</p>
+<hr />
+<h3 id="2-class-transformation-single-classifier">2) Class Transformation (single classifier)</h3>
+<p>Transform labels to encode “incrementality signal” and fit one model.<br />
+A common transformation (for randomized data) marks examples as <strong>1</strong> when the observed outcome is <strong>consistent with a positive treatment effect</strong> (e.g., treated-success or control-failure) and <strong>0</strong> otherwise.<br />
+<strong>Pros:</strong> easy with standard classifiers. <strong>Cons:</strong> choice of transform matters; may need weighting for arm sizes.</p>
+<hr />
+<h3 id="3-direct-uplift-models-treesforests">3) Direct Uplift Models (trees/forests)</h3>
+<p><strong>Uplift trees/forests</strong> choose splits that <strong>maximize treatment–control outcome differences</strong> in leaves.<br />
+<strong>Pros:</strong> directly optimizes uplift; interpretable leaves (“who gains”). <strong>Cons:</strong> careful regularization &amp; min leaf size to avoid noise.</p>
+<hr />
+<h3 id="4-meta-learners-drorthogonal-learners">4) Meta-learners &amp; DR/Orthogonal learners</h3>
+<ul>
+<li><strong>S-, T-, X-learners</strong> (good defaults; <strong>X</strong> helps with arm imbalance).  </li>
+<li><strong>Doubly-Robust / Orthogonal learners</strong> (e.g., CausalForestDML/DRLearner): model <strong>propensity</strong> <span class="arithmatex">\(e(x)\)</span> and <strong>outcomes</strong> <span class="arithmatex">\(m_t(x)\)</span> with cross-fitting to reduce bias.</li>
+</ul>
+<p><strong>Pros:</strong> strong statistical properties. <strong>Cons:</strong> slightly more complex pipeline.</p>
+<hr />
+<h2 id="data-features-email-context">🧱 Data &amp; features (email context)</h2>
+<ul>
+<li><strong>Treatment <span class="arithmatex">\(T\)</span>:</strong> variant indicator (e.g., subject B vs A; personalized tiles vs generic).  </li>
+<li><strong>Outcome <span class="arithmatex">\(Y\)</span>:</strong> OR / CTOR / conversion / RPR.  </li>
+<li><strong>Features <span class="arithmatex">\(X\)</span> (pre-send only):</strong> country/market, device, language, loyalty tier, last open/click, search history (routes/dates), price sensitivity proxies, RFM (recency/frequency/monetary), seasonality (dow/holiday).</li>
+</ul>
+<blockquote>
+<p>🔒 <strong>No leakage:</strong> include only signals known <strong>before</strong> sending the email.</p>
+</blockquote>
+<hr />
+<h2 id="training-validation-recipe">🧪 Training &amp; validation recipe</h2>
+<ol>
+<li><strong>Start from randomized test data</strong> (or robustly adjust if observational).  </li>
+<li><strong>Split</strong> data (or use <strong>cross-fitting</strong>): train/validation/test.  </li>
+<li><strong>Fit</strong> the uplift approach (T/S/X-learner, uplift trees, DR-learner).  </li>
+<li><strong>Calibrate</strong>: <span class="arithmatex">\(\text{mean}(\hat u(X))\)</span> on holdout ≈ <strong>ATE</strong> from A/B.  </li>
+<li><strong>Rank</strong> users by <span class="arithmatex">\(\hat u(x)\)</span>; build <strong>decile</strong> tables.  </li>
+<li><strong>Policy simulation</strong> on holdout: treat top-k% and estimate <strong>incremental conversions/RPR</strong> (see below).  </li>
+<li><strong>Ship</strong> with a <strong>value threshold</strong> and guardrails.</li>
+</ol>
+<hr />
+<h2 id="from-scores-to-policy-value-threshold">💸 From scores to policy (value threshold)</h2>
+<p>Let
+- <span class="arithmatex">\(v\)</span> = net margin per conversion (expected, after costs)<br />
+- <span class="arithmatex">\(c\)</span> = incremental cost per treated recipient<br />
+- <strong>Treat if</strong> <span class="arithmatex">\(\hat u(x)\cdot v \ge c\)</span>  ⇒  <span class="arithmatex">\(\hat u(x) \ge c/v\)</span></p>
+<p><strong>Email example:</strong> <span class="arithmatex">\(c = \$0.002\)</span>, <span class="arithmatex">\(v = \$25\)</span> → threshold = <strong>0.008% (0.008 pp)</strong>.<br />
+Apply frequency caps and eligibility rules.</p>
+<blockquote>
+<p>For <strong>OR/CTOR uplift</strong>, convert expected lift to <strong>conversion/RPR</strong> via a simple funnel (OR→click→conversion) to compare against cost.</p>
+</blockquote>
+<hr />
+<h2 id="offline-evaluation-qini-auuc-deciles">📊 Offline evaluation (Qini, AUUC, deciles)</h2>
+<p>With constant treatment rate <span class="arithmatex">\(e\)</span> in randomized data, the <strong>incremental outcome</strong> for a scored set <span class="arithmatex">\(S\)</span> is
+[
+\widehat{U}(S) \;=\; \sum_{i\in S}\Big[\frac{T_i Y_i}{e} \;-\; \frac{(1-T_i) Y_i}{1-e}\Big]
+]</p>
+<ul>
+<li><strong>Uplift curve / Qini curve:</strong> sort by <span class="arithmatex">\(\hat u(x)\)</span>, plot <span class="arithmatex">\(\widehat{U}\)</span> vs share of targeted users.  </li>
+<li><strong>AUUC / Qini coefficient:</strong> area under uplift curve (higher is better).  </li>
+<li><strong>Deciles:</strong> table of incremental conversions/RPR by top-10%, 20%, …  </li>
+<li><strong>Calibration:</strong> bin by predicted <span class="arithmatex">\(\hat u\)</span>, compare <strong>predicted vs realized</strong> uplift.</li>
+</ul>
+<blockquote>
+<p>✅ <strong>Success:</strong> top deciles show steep incremental gains and positive <strong>net value</strong> after cost.</p>
+</blockquote>
+<hr />
+<h2 id="pitfalls-and-fixes">⚠️ Pitfalls (and fixes)</h2>
+<ul>
+<li><strong>Leakage:</strong> future info in features → restrict to <strong>pre-send</strong> signals.  </li>
+<li><strong>Treatment imbalance:</strong> use <strong>X-learner</strong> / weighting.  </li>
+<li><strong>Sparse outcomes (conversion):</strong> extend window, aggregate, or model <strong>RPR</strong> with robust stats.  </li>
+<li><strong>Tiny leaves / overfit:</strong> uplift trees need <strong>min leaf size</strong> and regularization.  </li>
+<li><strong>Non-stationarity:</strong> seasonality/holidays; retrain and monitor drift.  </li>
+<li><strong>“OR-only” wins:</strong> ensure OR/CTOR uplift <strong>propagates</strong> to conversion/RPR.</li>
+</ul>
+<hr />
+<h2 id="worked-latam-examples">✈️ Worked LATAM examples</h2>
+<h3 id="a-subject-line-uplift-on-open-rate">A) Subject line — Uplift on <strong>Open Rate</strong></h3>
+<ul>
+<li><strong>T:</strong> subject <strong>with route + urgency</strong> vs baseline.  </li>
+<li><strong>X:</strong> device, country, last-7d opens, route search recency, loyalty tier.  </li>
+<li><strong>Finding:</strong> top 20% by <span class="arithmatex">\(\hat u\)</span> (mobile + recent LIM search) → <strong>+2.1 pp OR</strong> incremental vs random target.  </li>
+<li><strong>Action:</strong> send the urgent route subject to <strong>top-20% uplift decile</strong> only; keep baseline for others.  </li>
+<li><strong>Check:</strong> CTOR and conversion stable (no dilution).</li>
+</ul>
+<h3 id="b-personalization-uplift-on-ctor">B) Personalization — Uplift on <strong>CTOR</strong></h3>
+<ul>
+<li><strong>T:</strong> <strong>Top-3 personalized tiles</strong> vs <strong>generic grid</strong>.  </li>
+<li><strong>X:</strong> recent search intensity, short-haul vs long-haul interest, loyalty, language.  </li>
+<li><strong>Finding:</strong> top 30% uplift users show <strong>+1.6 pp CTOR</strong> incremental; bottom deciles ≈ 0.  </li>
+<li><strong>Action:</strong> serve personalized tiles only to top uplift deciles; generic to the rest.  </li>
+<li><strong>Result:</strong> downstream <strong>conversion</strong> lift in treated deciles.</li>
+</ul>
+<h3 id="c-commercial-push-uplift-on-conversion-rpr">C) Commercial push — Uplift on <strong>Conversion / RPR</strong></h3>
+<ul>
+<li><strong>T:</strong> fare callouts + date suggestions vs generic promo.  </li>
+<li><strong>X:</strong> price sensitivity proxy, weekend searcher flag, recency, route family.  </li>
+<li><strong>Finding:</strong> top 10% uplift users deliver <strong>65 extra purchases / 100k recipients</strong> and <strong>positive RPR</strong> after cost.  </li>
+<li><strong>Action:</strong> target top-10% uplift; skip low-uplift segments to save budget &amp; fatigue.</li>
+</ul>
+<hr />
+<h2 id="online-validation-must-do">🔁 Online validation (must-do)</h2>
+<ul>
+<li><strong>Policy A/B:</strong> Compare <strong>“Treat-Top-k% by uplift”</strong> vs <strong>Random</strong> (or vs Propensity targeting).  </li>
+<li><strong>KPIs:</strong> incremental <strong>conversion</strong> and <strong>RPR</strong>, plus guardrails (unsubs/complaints).  </li>
+<li><strong>Stability:</strong> check markets/devices; confirm patterns hold.</li>
+</ul>
+<hr />
+<h2 id="deployment-checklist">🧾 Deployment checklist</h2>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled/> Objective &amp; <strong>primary outcome</strong> (OR/CTOR/Conversion/RPR) fixed  </li>
+<li class="task-list-item"><input type="checkbox" disabled/> Clean <strong>pre-send</strong> feature set; no leakage  </li>
+<li class="task-list-item"><input type="checkbox" disabled/> Chosen learner (T/S/X, DR, uplift forest) &amp; hyperparameters  </li>
+<li class="task-list-item"><input type="checkbox" disabled/> <strong>Calibration</strong>: mean <span class="arithmatex">\(\hat u\)</span> ≈ ATE on holdout  </li>
+<li class="task-list-item"><input type="checkbox" disabled/> <strong>Uplift/Qini</strong> and <strong>deciles</strong> pass value threshold <span class="arithmatex">\(c/v\)</span>  </li>
+<li class="task-list-item"><input type="checkbox" disabled/> Policy A/B designed; frequency caps &amp; eligibility set  </li>
+<li class="task-list-item"><input type="checkbox" disabled/> Monitoring: drift, seasonality, guardrails</li>
+</ul>
+<hr />
+<h2 id="tooling-quick-start">🛠️ Tooling quick-start</h2>
+<ul>
+<li><strong>Python:</strong> <code>causalml</code> (uplift trees/forests, Qini/AUUC), <code>econml</code> (DRLearner, CausalForestDML), <code>scikit-uplift</code> / <code>sklift</code>.  </li>
+<li><strong>R:</strong> <code>uplift</code>, <code>grf</code> (Causal Forest).  </li>
+<li><strong>Key plots:</strong> uplift/Qini curve, decile bars, calibration by bins.</li>
+</ul>
+<hr />
+<h2 id="glossary">📚 Glossary</h2>
+<ul>
+<li><strong>Uplift <span class="arithmatex">\(u(x)\)</span>:</strong> <span class="arithmatex">\( \Pr(Y=1\mid T=1,X) - \Pr(Y=1\mid T=0,X) \)</span>.  </li>
+<li><strong>ATE / CATE:</strong> average / conditional average treatment effect.  </li>
+<li><strong>AUUC / Qini:</strong> area/measure of uplift ranking quality.  </li>
+<li><strong>Policy:</strong> treat users with <span class="arithmatex">\(\hat u(x)\)</span> above a <strong>value-based</strong> threshold <span class="arithmatex">\(c/v\)</span>.  </li>
+<li><strong>Guardrails:</strong> unsubscribes, complaints, latency, frequency caps.</li>
+</ul>
+
+              
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Volver al principio
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+      
+      
+    
+    <a href="https://github.com/hizocar" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.top", "content.code.annotate", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.config.lang": "es", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "B\u00fasqueda", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version.title": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.a6c66575.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
