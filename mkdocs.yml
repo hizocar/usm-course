@@ -79,7 +79,6 @@ nav:
     - Datasets: 
         - datasets/datasets.md
     - Experimentation:
-        - Experimentation/intro.md
         - Experimentation/abtesting.md
         - Experimentation/deciding.md
         - Experimentation/hte.md

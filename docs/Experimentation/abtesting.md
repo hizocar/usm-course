@@ -11,18 +11,6 @@ A randomized experiment comparing two versions:
 - **A (Control):** current baseline.
 - **B (Treatment):** new variant.
 
-> 🎨 *Optional hero image (place in `/assets/ab-testing/`):*
->
-> <figure>
->   <img src="/assets/ab-testing/ab-hero.png" alt="Illustration of traffic split into A (control) and B (treatment) with metric comparison panels" />
->   <figcaption>High-level view of a randomized split and metric comparison.</figcaption>
-> </figure>
->
-> <details>
-> <summary>🧑‍💻 Suggested AI prompt</summary>
-> Minimal flat illustration of an A/B test: traffic enters a split node and flows into two panels labeled **A (Control)** and **B (Treatment)**, each showing a conversion gauge. Clean, modern, vector style, white background, subtle shadows, brand-neutral colors.
-> </details>
-
 ---
 
 ## 🧠 Statistical framework
