@@ -14,9 +14,9 @@ layout: page
 
 - **ATE (average treatment effect):** single number: “on average, B beats A by +0.4 pp.”
 - **CATE / HTE:** effect **by user profile** \(x\):  
-  \[
+  $$
   \tau(x) = \mathbb{E}[Y(1) - Y(0) \mid X=x]
-  \]
+  $$
   Think: *“How much lift do we expect if we email **this** customer with **this** subject/personalization?”*
 
 - **Why it matters for an airline:**
