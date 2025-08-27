@@ -28,22 +28,22 @@ layout: page
 ## 🧪 Metrics used in LATAM email tests
 
 - **Open rate (OR):**  
-  \[
+  $$
   \text{open\_rate} = \frac{\text{unique opens}}{\text{delivered}}
-  \]
+  $$
   *Primary* for **subject line** tests.
 
 - **Click-to-open rate (CTOR):**  
-  \[
+  $$
   \text{CTOR} = \frac{\text{unique clicks}}{\text{unique opens}}
-  \]
+  $$
   *Primary* for **content/personalization** tests.  
   👉 Test CTOR **conditional on opens** (denominator = opens per arm), not on recipients.
 
 - **Conversion (purchase):**  
-  \[
+  $$
   \text{conversion} = \frac{\text{ticket purchases}}{\text{delivered}}
-  \]
+  $$
   *Primary* for tests whose goal is **sales**.
 
 - **Revenue (ticket value):**  
@@ -68,14 +68,14 @@ Let:
 - \(\Delta p\) = absolute lift in **purchase conversion**.
 
 **Break-even:**  
-\[
+$$
 \Delta p \cdot v \ \ge\ (c_T - c_C)
-\]
+$$
 
 If \(c_T - c_C = \$0.002\) (0.2¢) and \(v = \$25\), then:
-\[
+$$
 \Delta p \ge \frac{0.002}{25} = 0.00008 = 0.008\% \text{ (0.008 pp)}
-\]
+$$
 ➡️ Even tiny **conversion** lifts can be profitable; ensure **guardrails** (complaints, unsubscribes) are steady.
 
 > 🧩 For **subject lines** (primary: open rate), require a **minimum downstream** effect path:  
@@ -91,9 +91,9 @@ If \(c_T - c_C = \$0.002\) (0.2¢) and \(v = \$25\), then:
 - **MDE:** smallest effect you commit to detect (e.g., +1.2 pp OR; +0.10 pp conversion).
 
 **Rule of thumb for two proportions (per arm):**
-\[
+$$
 n \approx \frac{2\,p(1-p)\,(z_{1-\alpha/2}+z_{1-\beta})^2}{\delta^2}
-\]
+$$
 Where:
 - \(p\) = baseline rate (OR, CTOR, conversion),  
 - \(\delta\) = **absolute** lift (MDE, in proportion points).

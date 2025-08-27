@@ -98,9 +98,9 @@ Let:
 - \(\hat{\tau}(x)\) = predicted **absolute lift** in conversion for user \(x\).
 
 **Target if:**  
-\[
+$$
 \hat{\tau}(x)\cdot v \ \ge\ c \quad\Rightarrow\quad \hat{\tau}(x) \ge \frac{c}{v}
-\]
+$$
 
 **Email example:** \(c= \$0.002\), \(v=\$25\) ⇒ threshold \(=0.008\%\) (0.008 pp).  
 Score all recipients; **email only** those above the threshold (and respect caps/guardrails).

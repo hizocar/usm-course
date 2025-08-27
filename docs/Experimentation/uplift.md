@@ -16,9 +16,9 @@ layout: page
   ⚠️ Sends to **sure things** (buy anyway) and **lost causes** (never buy).
 
 - **Uplift model:** estimates **incremental effect**  
-  \[
+  $$
   u(x) \equiv \Pr(Y=1\mid T=1,X=x) - \Pr(Y=1\mid T=0,X=x)
-  \]
+  $$
   → “**Who changes** because of the email?”
 
 > ✈️ **LATAM examples:**  
@@ -111,9 +111,9 @@ Apply frequency caps and eligibility rules.
 ## 📊 Offline evaluation (Qini, AUUC, deciles)
 
 With constant treatment rate \(e\) in randomized data, the **incremental outcome** for a scored set \(S\) is
-\[
+$$
 \widehat{U}(S) \;=\; \sum_{i\in S}\Big[\frac{T_i Y_i}{e} \;-\; \frac{(1-T_i) Y_i}{1-e}\Big]
-\]
+$$
 
 - **Uplift curve / Qini curve:** sort by \(\hat u(x)\), plot \(\widehat{U}\) vs share of targeted users.  
 - **AUUC / Qini coefficient:** area under uplift curve (higher is better).  

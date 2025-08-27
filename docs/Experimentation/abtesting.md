@@ -61,17 +61,17 @@ Let \( p_A \), \( p_B \) be conversion rates; \( n_A, n_B \) sample sizes.
 
 - **Difference:** \( \Delta = p_B - p_A \)
 - **Pooled SE (for H₀: \( p_A = p_B \)):**
-  \[
+  $$
   \hat{p} = \frac{x_A + x_B}{n_A + n_B}, \quad
   SE_{\text{pooled}} = \sqrt{\hat{p}(1-\hat{p})\left(\frac{1}{n_A}+\frac{1}{n_B}\right)}
-  \]
+  $$
 - **z-statistic:** \( z = \frac{\Delta}{SE_{\text{pooled}}} \)
 - **Two-sided p-value:** compare |z| to standard normal.
 
 > **95% CI (unpooled)**  
-> \[
+> $$
 > CI = \Delta \pm 1.96 \cdot \sqrt{\frac{p_A(1-p_A)}{n_A} + \frac{p_B(1-p_B)}{n_B}}
-> \]
+> $$
 
 ### 💵 Continuous metrics (Revenue per User, Order Value)
 - Use **Welch’s t-test** (unequal variances).
@@ -90,9 +90,9 @@ Let \( p_A \), \( p_B \) be conversion rates; \( n_A, n_B \) sample sizes.
 - **Type II error (β):** false negative rate; **Power = 1 − β** (commonly 0.8).
 
 **Back-of-the-envelope N for two proportions** *(per arm)*:
-\[
+$$
 n \approx \frac{2\,p(1-p)\,(z_{1-\alpha/2}+z_{1-\beta})^2}{\delta^2}
-\]
+$$
 Where \( p \) is baseline rate; \( \delta \) is **absolute** lift (MDE, in pp).
 
 > 🧮 **Interpretation:** Smaller MDE ⇒ larger sample or longer duration.
