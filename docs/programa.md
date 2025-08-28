@@ -4,6 +4,38 @@ A continuación se presenta la planificación semanal del curso, organizada clas
 
 ---
 
+# 📚 Evaluaciones del curso
+
+## 🧮 Ponderaciones
+- 🧪 **Evaluación 1, 2 y 3** *(proyecto + presentación)*: **30% cada una** → **90%** del curso.  
+- 📝 **Tareas/controles**: **10%** del curso.
+
+> Cada evaluación incluye **entrega de proyecto** y **presentación oral**.
+
+---
+
+## 🗓️ Cronograma — Evaluación 1
+| Hito | Fecha | Hora | Lugar |
+|---|---|---:|---|
+| 📢 Publicación de la evaluación | **viernes 5 de septiembre de 2025** | — | — |
+| 📥 **Plazo de entrega** (⏳ 5 días) | **miércoles 10 de septiembre de 2025** | **23:59** *(hora local)* | Entrega en el canal indicado por el/la docente |
+| 🎤 Presentaciones | **viernes 12 de septiembre de 2025** | **18:00** | Universidad |
+
+> Las fechas de **Evaluación 2** y **Evaluación 3** se comunicarán oportunamente. 🔔
+
+---
+
+## ✅ Indicaciones de la entrega
+- 📄 **Formato y pauta**: se detallarán en el enunciado de cada evaluación.  
+- 💻 **Reproducibilidad**: incluye código/datos (si aplica) y el **informe del proyecto**.  
+- ⏱️ **Presentación**: ajustarse al tiempo que indique la pauta.
+
+> 💡 **Tip:** planifica tu trabajo considerando el plazo de **5 días** entre publicación y entrega.
+
+
+El curso consiste en 3 evaluaciones (entrega proyecto + presentación) donde cada una vale el 30% y tareas/controles que pesan el 10%. 
+La primera evaluación de subirá el viernes 5 de septiembre, se tienen 5 dias para entregar la evaluación y las presentaciones se haran el viernes siguiente a las 6 pm en la universidad
+
 ## 🗓️ Semana 1
 
 - **Clase 1**: Intro  
