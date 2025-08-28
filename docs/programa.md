@@ -1,10 +1,6 @@
-# Programa del Curso
-
-A continuación se presenta la planificación semanal del curso, organizada clase por clase:
+# 📚 Evaluaciones del curso
 
 ---
-
-# 📚 Evaluaciones del curso
 
 ## 🧮 Ponderaciones
 - 🧪 **Evaluación 1, 2 y 3** *(proyecto + presentación)*: **30% cada una** → **90%** del curso.  
@@ -32,9 +28,11 @@ A continuación se presenta la planificación semanal del curso, organizada clas
 
 > 💡 **Tip:** planifica tu trabajo considerando el plazo de **5 días** entre publicación y entrega.
 
+# Programa del Curso
 
-El curso consiste en 3 evaluaciones (entrega proyecto + presentación) donde cada una vale el 30% y tareas/controles que pesan el 10%. 
-La primera evaluación de subirá el viernes 5 de septiembre, se tienen 5 dias para entregar la evaluación y las presentaciones se haran el viernes siguiente a las 6 pm en la universidad
+A continuación se presenta la planificación semanal del curso, organizada clase por clase:
+
+---
 
 ## 🗓️ Semana 1
 
