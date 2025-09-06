@@ -78,10 +78,13 @@ nav:
       - exercises/exercises.md
   - Datasets:
       - datasets/datasets.md
+  - Assessments:
+      - project1.md
   - Experimentation:
       - Experimentation/abtesting.md
       - Experimentation/deciding.md
       - Experimentation/hte.md
       - Experimentation/uplift.md
+  
 
 
