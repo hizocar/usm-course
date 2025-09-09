@@ -13,9 +13,10 @@
 ## 🗓️ Cronograma — Evaluación 1
 | Hito | Fecha | Hora | Lugar |
 |---|---|---:|---|
-| 📢 Publicación de la evaluación | **viernes 5 de septiembre de 2025** | — | — |
-| 📥 **Plazo de entrega** (⏳ 5 días) | **miércoles 10 de septiembre de 2025** | **23:59** *(hora local)* | Entrega en el canal indicado por el/la docente |
-| 🎤 Presentaciones | **viernes 12 de septiembre de 2025** | **18:00** | Universidad |
+| 📢 Publicación de la evaluación | **sábado 6 de septiembre de 2025** | — | — |
+| 📥 **Plazo de entrega** (⏳ 4 días) | **miércoles 10 de septiembre de 2025** | **23:59** *(hora local)* | Entrega en el canal indicado por el/la docente |
+| 🎤 Presentaciones | **martes 23 de septiembre de 2025** | **18:00** | Sede Vitacura (Sección Santiago) |
+|  | **miércoles 24 de septiembre de 2025** | **18:00** | Casa Central (Sección Valparaíso) |
 
 > Las fechas de **Evaluación 2** y **Evaluación 3** se comunicarán oportunamente. 🔔
 
