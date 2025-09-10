@@ -16,4 +16,4 @@ title: "Classes"
 
 [Clase 6a: Regresión Lineal complement](Clase_6a_Polynomial_Under_Overfitting.ipynb) | <a href="https://colab.research.google.com/github/hizocar/usm-course/blob/main/docs/clases/Clase_6a_Polynomial_Under_Overfitting.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
 
-[Clase 6a: Regresión Polinomial](Clase_6a_Polynomial_Under_Overfitting.ipynb) | <a href="https://colab.research.google.com/github/hizocar/usm-course/blob/main/docs/clases/Clase_6a_Polynomial_Under_Overfitting.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
+
