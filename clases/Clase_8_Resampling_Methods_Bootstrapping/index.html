@@ -495,6 +495,109 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#importing-libraries" class="md-nav__link">
+    Importing Libraries
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-bootstrapping" class="md-nav__link">
+    🥾 What is Bootstrapping?
+  </a>
+  
+    <nav class="md-nav" aria-label="🥾 What is Bootstrapping?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-populations" class="md-nav__link">
+    The Populations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-generation" class="md-nav__link">
+    Data Generation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visualizing-the-distributions" class="md-nav__link">
+    Visualizing the Distributions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sampling-from-the-populations" class="md-nav__link">
+    Sampling from the Populations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#t-test-for-the-difference-in-means" class="md-nav__link">
+    $t-test$ for the Difference in Means
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bootstap-implementation" class="md-nav__link">
+    Bootstap Implementation
+  </a>
+  
+    <nav class="md-nav" aria-label="Bootstap Implementation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bootstrapped-t-test" class="md-nav__link">
+    🥾 Bootstrapped $t-test$
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#calculate-the-bootstrapped-standard-error-and-t-statistic" class="md-nav__link">
+    🥾 Calculate the Bootstrapped Standard Error and t-statistic
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#p-value" class="md-nav__link">
+    p-value
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-empirical-distribution" class="md-nav__link">
+    The Empirical Distribution
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wrapup" class="md-nav__link">
+    ✅ Wrap‑Up
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1580,7 +1683,6 @@ hr.section-split { border: 0; border-top: 2px dashed #e0e0e0; margin: 1.2em 0; }
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><a id="top"></a></p>
 <h1 id="class-8-resampling-methods-bootstrapping">&#128216; Class 8 &#8212; Resampling Methods &amp; Bootstrapping<a class="anchor-link" href="#class-8-resampling-methods-bootstrapping">&#182;</a></h1><p><strong>Data Science / Python Data Analysis</strong><br>
 <strong>Objective:</strong> Understand and apply resampling (train/test split, k-fold cross-validation, bootstrap) to estimate model error and stability.</p>
 <hr>
@@ -1590,11 +1692,7 @@ hr.section-split { border: 0; border-top: 2px dashed #e0e0e0; margin: 1.2em 0; }
 <li><a href="#exercises">🧠 Exercises</a></li>
 <li><a href="#wrapup">✅ Wrap‑Up</a></li>
 </ul>
-<div class="callout info">
-<b>Icon guide</b> &nbsp; 🎯 Objective &nbsp; 🧠 Exercise &nbsp; 🧪 Example &nbsp; 🔁 Cross-Validation &nbsp; 🥾 Bootstrap &nbsp; ✅ Wrap‑Up
-</div><div class="callout tip">
-<b>Tip:</b> Use <i>Run All</i> to execute the notebook. Keep the random seed fixed for reproducibility.
-</div>
+
 </div>
 </div>
 </div>
@@ -1605,166 +1703,15 @@ hr.section-split { border: 0; border-top: 2px dashed #e0e0e0; margin: 1.2em 0; }
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><a id="toc"></a></p>
-<h2 id="table-of-contents">&#128209; Table of Contents<a class="anchor-link" href="#table-of-contents">&#182;</a></h2><div class="toc">
-
-- [1. 📚 Introduction to Resampling](#intro)
-- [2. 🔁 K-Fold Cross-Validation](#kfold)
-- [3. 🥾 Bootstrapping](#bootstrap)
-- [4. 🧪 Hands‑on Practice](#practice)
-- [5. 🧠 Exercises](#exercises)
-- [6. ✅ Wrap‑Up](#wrapup)
-- [⬆️ Back to Top](#top)
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<style>
-/* Gentle typography & spacing */
-h1 { font-size: 2.0em; margin-top: 0.6em; margin-bottom: 0.4em; }
-h2 { font-size: 1.6em; margin-top: 0.8em; margin-bottom: 0.3em; }
-h3 { font-size: 1.25em; margin-top: 0.8em; margin-bottom: 0.3em; }
-p, li { line-height: 1.55; }
-
-/* Callouts */
-.callout {
-  border-left: 6px solid #bbb;
-  background: #f7f7f7;
-  padding: 0.8em 1em;
-  border-radius: 6px;
-  margin: 0.8em 0;
-}
-.callout.tip { border-color: #8bc34a; }
-.callout.warn { border-color: #ff9800; }
-.callout.info { border-color: #03a9f4; }
-
-/* TOC box */
-.toc {
-  background: #fafafa;
-  border: 1px solid #e5e5e5;
-  border-radius: 8px;
-  padding: 0.8em 1em;
-}
-hr.section-split { border: 0; border-top: 2px dashed #e0e0e0; margin: 1.2em 0; }
-</style>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><a id="top"></a></p>
-<p><a id="intro"></a></p>
-<h1 id="clase-8-metodos-de-resampling-bootstrapping">&#128218; &#128216; Clase 8 &#8212; M&#233;todos de <em>Resampling</em> &amp; Bootstrapping<a class="anchor-link" href="#clase-8-metodos-de-resampling-bootstrapping">&#182;</a></h1><p><strong>Data Science / Análisis de Datos con Python</strong><br>
-<strong>Objetivo:</strong> Comprender y aplicar <em>resampling</em> (train/test split, k-fold CV, bootstrap) para estimar error y estabilidad de modelos.</p>
-<hr>
-<h3 id="navegacion-rapida">&#129517; Navegaci&#243;n r&#225;pida<a class="anchor-link" href="#navegacion-rapida">&#182;</a></h3><ul>
-<li><a href="#toc">📑 Table of Contents</a></li>
-<li><a href="#practicas">🧪 Practice guiadas</a></li>
-<li><a href="#ejercicios">🧠 Exercises</a></li>
-<li><a href="#cierre">✅ Wrap-Up</a></li>
+<h2 id="table-of-contents">&#128209; Table of Contents<a class="anchor-link" href="#table-of-contents">&#182;</a></h2><ul>
+<li><a href="#intro">1. 📚 Introduction to Resampling</a></li>
+<li><a href="#kfold">2. 🔁 K-Fold Cross-Validation</a></li>
+<li><a href="#bootstrap">3. 🥾 Bootstrapping</a></li>
+<li><a href="#practice">4. 🧪 Hands‑on Practice</a></li>
+<li><a href="#exercises">5. 🧠 Exercises</a></li>
+<li><a href="#wrapup">6. ✅ Wrap‑Up</a></li>
+<li><a href="#top">⬆️ Back to Top</a></li>
 </ul>
-<div class="callout info">
-<b>Icon guide</b> &nbsp; 🎯 Objetivo &nbsp; 🧠 Ejercicio &nbsp; 🧪 Ejemplo &nbsp; 🔁 Cross-Validation &nbsp; 🥾 Bootstrap &nbsp; ✅ Wrap-Up
-</div><div class="callout tip">
-<b>Tip:</b> Usa <i>Run All</i> para ejecutar todo. Mantén la semilla aleatoria para reproducibilidad.
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><hr class="section-split"/>
-<a href="#toc">⬆️ Back to TOC</a> &nbsp; | &nbsp; <a href="#top">🔝 Top</a></p>
-
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><a id="toc"></a></p>
-<h2 id="tabla-de-contenidos">&#128209; Tabla de contenidos<a class="anchor-link" href="#tabla-de-contenidos">&#182;</a></h2><div class="toc">
-
-- [1. 📚 Introduction a Resampling](#intro)
-- [2. 🔁 K-Fold Cross-Validation](#kfold)
-- [3. 🥾 Bootstrapping](#bootstrap)
-- [4. 🧪 Ejemplos Prácticos](#practicas)
-- [5. 🧠 Exercises](#ejercicios)
-- [6. ✅ Conclusions](#cierre)
-- [⬆️ Back to Top](#top)
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><hr class="section-split"/>
-<a href="#toc">⬆️ Back to TOC</a> &nbsp; | &nbsp; <a href="#top">🔝 Top</a></p>
-
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><a id="bootstrap"></a>
-<a id="bootstrap"></a></p>
-<h1 id="the-bootstrap">&#129406; <strong>The Bootstrap</strong><a class="anchor-link" href="#the-bootstrap">&#182;</a></h1>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><hr class="section-split"/>
-<a href="#toc">⬆️ Back to TOC</a> &nbsp; | &nbsp; <a href="#top">🔝 Top</a></p>
-
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><hr class="section-split"/>
-<a href="#toc">⬆️ Back to TOC</a> &nbsp; | &nbsp; <a href="#top">🔝 Top</a></p>
 
 </div>
 </div>
@@ -1778,32 +1725,6 @@ hr.section-split { border: 0; border-top: 2px dashed #e0e0e0; margin: 1.2em 0; }
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <hr>
 <h2 id="importing-libraries"><strong>Importing Libraries</strong><a class="anchor-link" href="#importing-libraries">&#182;</a></h2>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><hr class="section-split"/>
-<a href="#toc">⬆️ Back to TOC</a> &nbsp; | &nbsp; <a href="#top">🔝 Top</a></p>
-
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><hr class="section-split"/>
-<a href="#toc">⬆️ Back to TOC</a> &nbsp; | &nbsp; <a href="#top">🔝 Top</a></p>
-
 </div>
 </div>
 </div>
@@ -1873,32 +1794,6 @@ from sklearn.utils import resample
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><hr class="section-split"/>
-<a href="#toc">⬆️ Back to TOC</a> &nbsp; | &nbsp; <a href="#top">🔝 Top</a></p>
-
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><hr class="section-split"/>
-<a href="#toc">⬆️ Back to TOC</a> &nbsp; | &nbsp; <a href="#top">🔝 Top</a></p>
-
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Bootstrapping is a powerful statistical technique used to estimate the distribution of a statistic (like the mean, median, variance, etc.) from a sample data set. It belongs to the broader class of resampling methods and is particularly useful when the theoretical distribution of the statistic is complex or unknown. The core idea behind bootstrapping is to generate many simulated samples from the original data, calculate the statistic of interest for each simulated sample, and then analyze the distribution of these statistics.</p>
 
 </div>
@@ -1922,32 +1817,6 @@ from sklearn.utils import resample
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><hr class="section-split"/>
-<a href="#toc">⬆️ Back to TOC</a> &nbsp; | &nbsp; <a href="#top">🔝 Top</a></p>
-
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><hr class="section-split"/>
-<a href="#toc">⬆️ Back to TOC</a> &nbsp; | &nbsp; <a href="#top">🔝 Top</a></p>
-
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Two independent populations will be generated with the same mean but different distributions: one strongly left-skewed and the other with heavy tails. Two small samples are then taken (without replacement) from these populations and the performance of a t-test for equality of means is checked.</p>
 
 </div>
@@ -1961,32 +1830,6 @@ from sklearn.utils import resample
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="data-generation"><strong>Data Generation</strong><a class="anchor-link" href="#data-generation">&#182;</a></h3><p>First, we'll generate the datasets for each group.</p>
-
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><hr class="section-split"/>
-<a href="#toc">⬆️ Back to TOC</a> &nbsp; | &nbsp; <a href="#top">🔝 Top</a></p>
-
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><hr class="section-split"/>
-<a href="#toc">⬆️ Back to TOC</a> &nbsp; | &nbsp; <a href="#top">🔝 Top</a></p>
 
 </div>
 </div>
@@ -2131,32 +1974,6 @@ Group 2 Mean: 0.5244079967121674
 </div>
 </div>
 </div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><hr class="section-split"/>
-<a href="#toc">⬆️ Back to TOC</a> &nbsp; | &nbsp; <a href="#top">🔝 Top</a></p>
-
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><hr class="section-split"/>
-<a href="#toc">⬆️ Back to TOC</a> &nbsp; | &nbsp; <a href="#top">🔝 Top</a></p>
-
-</div>
-</div>
-</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
@@ -2253,32 +2070,6 @@ class="
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="sampling-from-the-populations"><strong>Sampling from the Populations</strong><a class="anchor-link" href="#sampling-from-the-populations">&#182;</a></h3><p>We will work with sample sizes of 30 for the first group and 35 for the second group.</p>
 <p>The plot below shows the kernel density estimates for these smaller samples from each group. While these samples are drawn from distributions adjusted to have the same overall mean, the sample means might slightly differ due to sampling variability, especially with these smaller sample sizes.</p>
-
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><hr class="section-split"/>
-<a href="#toc">⬆️ Back to TOC</a> &nbsp; | &nbsp; <a href="#top">🔝 Top</a></p>
-
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><hr class="section-split"/>
-<a href="#toc">⬆️ Back to TOC</a> &nbsp; | &nbsp; <a href="#top">🔝 Top</a></p>
 
 </div>
 </div>
@@ -2422,32 +2213,6 @@ Group 2 Sample Mean: -0.05074711421813244
 </div>
 </div>
 </div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><hr class="section-split"/>
-<a href="#toc">⬆️ Back to TOC</a> &nbsp; | &nbsp; <a href="#top">🔝 Top</a></p>
-
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><hr class="section-split"/>
-<a href="#toc">⬆️ Back to TOC</a> &nbsp; | &nbsp; <a href="#top">🔝 Top</a></p>
-
-</div>
-</div>
-</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
@@ -2545,61 +2310,9 @@ print(f'The t-stat is equal to {t_stat:.2f}, with a p-value of {p_value:.4f} ')
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><hr class="section-split"/>
-<a href="#toc">⬆️ Back to TOC</a> &nbsp; | &nbsp; <a href="#top">🔝 Top</a></p>
-
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><hr class="section-split"/>
-<a href="#toc">⬆️ Back to TOC</a> &nbsp; | &nbsp; <a href="#top">🔝 Top</a></p>
-
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p><a id="bootstrap"></a>
 <a id="bootstrap"></a></p>
 <h3 id="bootstrapped-t-test">&#129406; <strong>Bootstrapped $t-test$</strong><a class="anchor-link" href="#bootstrapped-t-test">&#182;</a></h3>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><hr class="section-split"/>
-<a href="#toc">⬆️ Back to TOC</a> &nbsp; | &nbsp; <a href="#top">🔝 Top</a></p>
-
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><hr class="section-split"/>
-<a href="#toc">⬆️ Back to TOC</a> &nbsp; | &nbsp; <a href="#top">🔝 Top</a></p>
-
 </div>
 </div>
 </div>
@@ -2756,32 +2469,6 @@ print(bootstrapped_diffs_corrected)</div>
 </div>
 </div>
 </div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><hr class="section-split"/>
-<a href="#toc">⬆️ Back to TOC</a> &nbsp; | &nbsp; <a href="#top">🔝 Top</a></p>
-
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><hr class="section-split"/>
-<a href="#toc">⬆️ Back to TOC</a> &nbsp; | &nbsp; <a href="#top">🔝 Top</a></p>
-
-</div>
-</div>
-</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
@@ -2869,32 +2556,6 @@ print(f'Bootstrap t-statistic: {t_stat_bootstrap_corrected:.3f}')</div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="p-value"><strong>p-value</strong><a class="anchor-link" href="#p-value">&#182;</a></h3><p>The p-value is estimated by calculating the proportion of the absolute bootstrapped differences that are greater than or equal to the absolute observed difference. This gives an idea of how extreme the observed difference is, considering the distribution of bootstrapped differences.</p>
-
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><hr class="section-split"/>
-<a href="#toc">⬆️ Back to TOC</a> &nbsp; | &nbsp; <a href="#top">🔝 Top</a></p>
-
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><hr class="section-split"/>
-<a href="#toc">⬆️ Back to TOC</a> &nbsp; | &nbsp; <a href="#top">🔝 Top</a></p>
 
 </div>
 </div>
@@ -3002,32 +2663,6 @@ print(f'Bootstrap t-statistic: {t_stat_bootstrap_corrected:.3f}, p-value: {p_val
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <hr>
 <h2 id="the-empirical-distribution"><strong>The Empirical Distribution</strong><a class="anchor-link" href="#the-empirical-distribution">&#182;</a></h2>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><hr class="section-split"/>
-<a href="#toc">⬆️ Back to TOC</a> &nbsp; | &nbsp; <a href="#top">🔝 Top</a></p>
-
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><hr class="section-split"/>
-<a href="#toc">⬆️ Back to TOC</a> &nbsp; | &nbsp; <a href="#top">🔝 Top</a></p>
-
 </div>
 </div>
 </div>
@@ -3279,40 +2914,6 @@ Skewness: 0.3734823828541609
 
 </div>
 
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><a id="cierre"></a></p>
-<p><a id="wrapup"></a></p>
-<h2 id="conclusiones">&#9989; Conclusiones<a class="anchor-link" href="#conclusiones">&#182;</a></h2><ul>
-<li>El <em>resampling</em> permite <strong>estimar</strong> el error generalizable y la <strong>variabilidad</strong> del modelo.</li>
-<li><strong>K-Fold CV</strong> reduce la varianza del estimador y ayuda a comparar configuraciones.</li>
-<li><strong>Bootstrapping</strong> cuantifica incertidumbre (intervalos de confianza, sesgo/varianza).</li>
-</ul>
-<div class="callout tip">
-<b>Para seguir:</b> Prueba otros tamaños de muestra, diferentes semillas y compara métricas (MAE, RMSE, R²).
-</div><p><a href="#toc">⬆️ Back to TOC</a> &nbsp; | &nbsp; <a href="#top">🔝 Top</a></p>
-
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><hr class="section-split"/>
-<a href="#toc">⬆️ Back to TOC</a> &nbsp; | &nbsp; <a href="#top">🔝 Top</a></p>
-
-</div>
-</div>
 </div>
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
