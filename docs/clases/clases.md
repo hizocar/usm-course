@@ -19,3 +19,5 @@ title: "Classes"
 [Class 7: Resample Cross Validation](Clase_7_Resample_Methods_Cross_Validation.ipynb) | <a href="https://colab.research.google.com/github/hizocar/usm-course/blob/main/docs/clases/Clase_7_Resample_Methods_Cross_Validation.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
 
 [Class 8: Bootstrapping](Clase_8_Resampling_Methods_Bootstrapping.ipynb) | <a href="https://colab.research.google.com/github/hizocar/usm-course/blob/main/docs/clases/Clase_8_Resampling_Methods_Bootstrapping.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
+
+[Class 9: Regularization](Clase_9_Regularizacion_Ridge_Lasso.ipynb) | <a href="https://colab.research.google.com/github/hizocar/usm-course/blob/main/docs/clases/Clase_9_Regularizacion_Ridge_Lasso.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
