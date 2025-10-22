@@ -18,7 +18,19 @@
 | 🎤 Presentaciones | **martes 23 de septiembre de 2025** | **18:00** | Sede Vitacura (Sección Santiago) |
 |  | **miércoles 24 de septiembre de 2025** | **18:00** | Casa Central (Sección Valparaíso) |
 
-> Las fechas de **Evaluación 2** y **Evaluación 3** se comunicarán oportunamente. 🔔
+---
+
+---
+
+## 🗓️ Cronograma — Evaluación 2
+| Hito | Fecha | Hora | Lugar |
+|---|---|---:|---|
+| 📢 Publicación de la evaluación | **miércoles 22 de octubre de 2025** | — | — |
+| 📥 **Plazo de entrega** (⏳ 8 días) | **jueves 30 de octubre de 2025** | **23:59** *(hora local)* | Entrega en el canal indicado por el/la docente |
+| 🎤 Presentaciones | **por definir** | **18:00** | Sede Vitacura (Sección Santiago) |
+|  | **por definir** | **18:00** | Casa Central (Sección Valparaíso) |
+
+
 
 ---
 
