@@ -79,5 +79,5 @@ nav:
   - Datasets:
       - datasets/datasets.md
   - Assessments:
-      - assessments/project1.md
-      - assessments/project2.pdf
+      - "📊 Project 1": assessments/project1.md
+      - "📈 Project 2": assessments/project2.pdf
