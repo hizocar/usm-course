@@ -23,3 +23,8 @@ title: "Classes"
 [Class 9: Regularization](Clase_9_Regularizacion_Ridge_Lasso.ipynb) | <a href="https://colab.research.google.com/github/hizocar/usm-course/blob/main/docs/clases/Clase_9_Regularizacion_Ridge_Lasso.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
 
 [Class 10: Non linear regression models](Clase_10_Modelos_No_Lineales_de_Regresion.ipynb) | <a href="https://colab.research.google.com/github/hizocar/usm-course/blob/main/docs/clases/Clase_10_Modelos_No_Lineales_de_Regresion.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
+
+[Class 11: Logistic Regression and Error Metrics](Clase_11_Logistic_Regression_and_Error_Metrics.ipynb) | <a href="https://colab.research.google.com/github/hizocar/usm-course/blob/main/docs/clases/Clase_11_Logistic_Regression_and_Error_Metrics.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
+
+
+
