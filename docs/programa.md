@@ -27,12 +27,27 @@
 |---|---|---:|---|
 | 📢 Publicación de la evaluación | **miércoles 22 de octubre de 2025** | — | — |
 | 📥 **Plazo de entrega** (⏳ 8 días) | **jueves 30 de octubre de 2025** | **23:59** *(hora local)* | Entrega en el canal indicado por el/la docente |
-| 🎤 Presentaciones | **por definir** | **18:00** | Sede Vitacura (Sección Santiago) |
-|  | **por definir** | **18:00** | Casa Central (Sección Valparaíso) |
+| 🎤 Presentaciones | **martes 18 de noviembre** | **horario clases** | Sede Vitacura (Sección Santiago) |
+|  | **jueves 20 de noviembre** | **horario clases** | Casa Central (Sección Valparaíso) |
 
 
 
 ---
+
+---
+
+## 🗓️ Cronograma — Evaluación 3
+| Hito | Fecha | Hora | Lugar |
+|---|---|---:|---|
+| 📢 Publicación de la evaluación | **domingo 23 de noviembre de 2025** | — | — |
+| 📥 **Plazo de entrega** (⏳ 5 días) | **viernes 28 de noviembre de 2025** | **23:59** *(hora local)* | Entrega en el canal indicado por el/la docente |
+| 🎤 Presentaciones | **por definir** | **horario clases** | Sede Vitacura (Sección Santiago) |
+|  | **por definir** | **horario clases** | Casa Central (Sección Valparaíso) |
+
+
+
+---
+
 
 ## ✅ Indicaciones de la entrega
 - 📄 **Formato y pauta**: se detallarán en el enunciado de cada evaluación.  
