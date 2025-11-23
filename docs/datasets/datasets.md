@@ -13,3 +13,7 @@ title: "Datasets"
 ## Data for assesment 1: 
 
 [Sales Data (CSV)](sales.csv) | <a href="https://github.com/hizocar/USM-COURSE/raw/main/docs/datasets/sales.csv" target="_blank">⬇️ Descargar</a>
+
+## Data for assesment 3: 
+
+[Bank Data (CSV)](Bank.csv) | <a href="https://github.com/hizocar/USM-COURSE/raw/main/docs/datasets/Bank.csv" target="_blank">⬇️ Descargar</a>
