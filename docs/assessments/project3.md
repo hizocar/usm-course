@@ -32,7 +32,7 @@ Your task is to **predict the variable `churn`**, which indicates whether a cust
 
 ## 🧭 Project Roadmap (Challenge Structure)
 
-You will deliver a **full analytical report** written in English, covering both **technical** and **business** aspects.  
+You will deliver a **full analytical report**, covering both **technical** and **business** aspects.  
 Your notebook or report must include the following sections:
 
 ---
@@ -145,7 +145,7 @@ Each student or group must submit the following materials:
    - A concise written summary of your key findings.  
    - Include the selected best-performing model, a short explanation of why it was chosen, and clear recommendations for ABC Bank’s management team.
 
-3. 🎤 **Final Presentation (10–12 minutes)**  
+3. 🎤 **Final Presentation (12–15 minutes)**  
    - Each team must prepare a **presentation** summarizing the project.  
    - The presentation should include:  
      - The business problem and objective.  
@@ -169,7 +169,7 @@ Each student or group must submit the following materials:
 
 Each group will be evaluated on a scale from **10 to 100 points**.  
 The following rubric outlines the specific criteria and their respective weightings.  
-All presentations must be delivered in **English** and last between **10–12 minutes**.
+All presentations must be delivered in **English or Spanish** and last between **12–15 minutes**.
 
 ---
 
@@ -210,7 +210,7 @@ The **final presentation score** is the weighted sum of all categories, scaled t
 ---
 
 ### 🧾 Notes for Evaluators
-- Deduct up to **10 points** for presentations outside the allowed time range (under 8 min or over 13 min).  
+- Deduct up to **10 points** for presentations outside the allowed time range (under 8 min or over 15 min).  
 - Deduct up to **5 points** if not all team members participate.  
 - Give **bonus up to +5 points** for exceptional creativity, clarity, or real business insight.
 
