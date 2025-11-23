@@ -181,7 +181,7 @@ All presentations must be delivered in **English or Spanish** and last between *
 | 📊 **2. Data Exploration & Insights** | Presents key EDA findings clearly and concisely. Highlights meaningful patterns, trends, or anomalies. Explains how the analysis guided model development. | 10–20 | **20%** |
 | 🤖 **3. Model Explanation & Comparison** | Explains models, tuning strategy, and performance metrics (AUC, precision, recall, etc.) accurately. Shows a clear comparison between models and justifies the final choice. | 10–20 | **20%** |
 | 🎯 **4. Business Interpretation & Recommendations** | Translates technical results into actionable business insights. Explains what the bank should do with the results and how the model can support decisions. | 10–20 | **20%** |
-| 🗣️ **5. Communication & Delivery** | Clear and professional communication in English. Logical flow, engaging tone, correct pronunciation, and confidence. Effective teamwork and time management. | 10–15 | **15%** |
+| 🗣️ **5. Communication & Delivery** | Clear and professional communication in English or Spanish. Logical flow, engaging tone, correct pronunciation, and confidence. Effective teamwork and time management. | 10–15 | **15%** |
 | 🖼️ **6. Visual Aids & Presentation Design** | Uses slides or dashboards effectively. Visuals are clear, professional, and enhance understanding (charts, tables, key metrics). Avoids text-heavy or disorganized slides. | 10–15 | **15%** |
 
 ---
