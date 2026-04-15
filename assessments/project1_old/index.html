@@ -17,7 +17,7 @@
     
     
       
-        <title>📊 [PROPOSAL] Workforce Analytics: Salary Drivers & Compensation Modeling - Machine Learning and Business Applications</title>
+        <title>📊 Business Analytics with Python: Hypothesis Testing & Advanced Linear Regression - Machine Learning and Business Applications</title>
       
     
     
@@ -67,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#proposal-workforce-analytics-salary-drivers-compensation-modeling" class="md-skip">
+        <a href="#business-analytics-with-python-hypothesis-testing-advanced-linear-regression" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -99,7 +99,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              📊 [PROPOSAL] Workforce Analytics: Salary Drivers & Compensation Modeling
+              📊 Business Analytics with Python: Hypothesis Testing & Advanced Linear Regression
             
           </span>
         </div>
@@ -510,15 +510,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#context-objective" class="md-nav__link">
-    🎯 Context &amp; Objective
+  <a href="#objective" class="md-nav__link">
+    🎯 Objective
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#dataset-employee_compensationcsv" class="md-nav__link">
-    📂 Dataset: employee_compensation.csv
+  <a href="#dataset" class="md-nav__link">
+    📂 Dataset
   </a>
   
 </li>
@@ -546,29 +546,22 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#step-1-variable-justification-before-coding" class="md-nav__link">
-    Step 1: Variable Justification (before coding)
+  <a href="#step-1-data-preparation" class="md-nav__link">
+    Step 1: Data Preparation
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-2-data-preparation" class="md-nav__link">
-    Step 2: Data Preparation
+  <a href="#step-2-model-building-ols-and-ml" class="md-nav__link">
+    Step 2: Model Building (OLS and ML)
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-3-model-building" class="md-nav__link">
-    Step 3: Model Building
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-4-model-evaluation" class="md-nav__link">
-    Step 4: Model Evaluation
+  <a href="#step-3-model-evaluation" class="md-nav__link">
+    Step 3: Model Evaluation
   </a>
   
 </li>
@@ -579,30 +572,30 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#part-4-model-analysis-refinement" class="md-nav__link">
-    🔧 Part 4: Model Analysis &amp; Refinement
+  <a href="#part-4-model-improvement" class="md-nav__link">
+    🔧 Part 4: Model Improvement
   </a>
   
-    <nav class="md-nav" aria-label="🔧 Part 4: Model Analysis &amp; Refinement">
+    <nav class="md-nav" aria-label="🔧 Part 4: Model Improvement">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#step-1-interpreting-coefficient-p-values" class="md-nav__link">
-    Step 1: Interpreting Coefficient p-values
+  <a href="#step-1-variable-significance" class="md-nav__link">
+    Step 1: Variable Significance
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-2-multicollinearity-analysis-vif" class="md-nav__link">
-    Step 2: Multicollinearity Analysis (VIF)
+  <a href="#step-2-multicollinearity-check" class="md-nav__link">
+    Step 2: Multicollinearity Check
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-3-regression-assumptions" class="md-nav__link">
-    Step 3: Regression Assumptions
+  <a href="#step-3-assumptions-of-linear-regression" class="md-nav__link">
+    Step 3: Assumptions of Linear Regression
   </a>
   
 </li>
@@ -613,8 +606,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#part-5-business-report" class="md-nav__link">
-    📈 Part 5: Business Report
+  <a href="#part-5-business-application" class="md-nav__link">
+    📈 Part 5: Business Application
   </a>
   
 </li>
@@ -647,357 +640,117 @@
                 
 
 
-<h1 id="proposal-workforce-analytics-salary-drivers-compensation-modeling">📊 [PROPOSAL] Workforce Analytics: Salary Drivers &amp; Compensation Modeling</h1>
-<blockquote>
-<p><strong>Status:</strong> Draft proposal — pending review before official publication.
-<strong>Edition:</strong> 2026 | <strong>Assessment:</strong> Project 1 (30% of final grade)
-<strong>Dates:</strong> Release Apr 4 → Due Apr 8, 23:59 → Presentations Apr 21–22</p>
-</blockquote>
+<h1 id="business-analytics-with-python-hypothesis-testing-advanced-linear-regression">📊 Business Analytics with Python: Hypothesis Testing &amp; Advanced Linear Regression</h1>
+<h2 id="objective">🎯 Objective</h2>
+<p>The goal of this assignment is to apply <strong>Python programming</strong>, <strong>hypothesis testing</strong>, and <strong>machine learning (linear regression with OLS)</strong> to solve real-world <strong>business problems</strong>.<br />
+By the end, you will:
+- Handle both <strong>numerical and categorical variables</strong>.<br />
+- Apply <strong>encoding techniques</strong> (One Hot Encoding, Label Encoding).<br />
+- Build, evaluate, and improve regression models.<br />
+- Check <strong>multicollinearity and regression assumptions</strong>.<br />
+- Interpret the results in a <strong>business context</strong>.  </p>
 <hr />
-<h2 id="context-objective">🎯 Context &amp; Objective</h2>
-<p>A multinational consulting firm has been hired by <strong>TalentCo</strong>, a company operating across multiple regions and departments, to analyze its <strong>compensation structure</strong>. The HR team suspects that salaries are not being assigned consistently — some employees feel underpaid relative to peers with similar experience, while others in the same department earn significantly different amounts depending on their region or education level.</p>
-<p>Your role is to act as a <strong>Data Analyst</strong> at the consulting firm. You will use <strong>Python</strong>, <strong>statistical hypothesis testing</strong>, and <strong>linear regression</strong> to identify the key drivers of employee salary and deliver data-driven recommendations to TalentCo's leadership.</p>
-<p>By the end of this project, you will be able to:</p>
+<h2 id="dataset">📂 Dataset</h2>
+<p>For this assignment, we will use a <strong>sales dataset</strong> with the following variables:</p>
 <ul>
-<li>Perform <strong>exploratory data analysis (EDA)</strong> on HR data.</li>
-<li>Apply <strong>hypothesis testing</strong> to validate business assumptions.</li>
-<li>Handle <strong>categorical variables</strong> using encoding techniques.</li>
-<li>Build and evaluate <strong>OLS and scikit-learn regression models</strong>.</li>
-<li>Check <strong>regression assumptions</strong> (multicollinearity, normality, homoscedasticity).</li>
-<li>Communicate results in a <strong>business-oriented report</strong>.</li>
+<li><code>Marketing_Spend</code> (USD) → Amount spent on advertising.  </li>
+<li><code>Price</code> (USD) → Selling price of the product.  </li>
+<li><code>Sales</code> (units) → Number of products sold.  </li>
+<li><code>Month</code> → Time indicator.  </li>
+<li><code>Region</code> (categorical) → Region where the product was sold (<code>North</code>, <code>South</code>, <code>East</code>, <code>West</code>).  </li>
+<li><code>Product_Category</code> (categorical) → Category of the product (<code>Basic</code>, <code>Premium</code>).  </li>
+<li><code>Channel</code> (categorical) → Sales channel (<code>Online</code>, <code>Retail</code>).  </li>
 </ul>
-<hr />
-<h2 id="dataset-employee_compensationcsv">📂 Dataset: <code>employee_compensation.csv</code></h2>
-<blockquote>
-<p><em>(To be added to the datasets section before publication.)</em></p>
-</blockquote>
-<p>The dataset contains records for <strong>1,500 employees</strong> across departments, regions, and job levels.</p>
-<table>
-<thead>
-<tr>
-<th>Variable</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>Salary</code></td>
-<td>Numerical (USD/year)</td>
-<td>Annual gross salary — <strong>target variable</strong></td>
-</tr>
-<tr>
-<td><code>Years_Experience</code></td>
-<td>Numerical</td>
-<td>Total years of professional experience</td>
-</tr>
-<tr>
-<td><code>Age</code></td>
-<td>Numerical</td>
-<td>Employee age</td>
-</tr>
-<tr>
-<td><code>Performance_Score</code></td>
-<td>Numerical (1.0–5.0)</td>
-<td>Most recent annual performance rating</td>
-</tr>
-<tr>
-<td><code>Education_Level</code></td>
-<td>Categorical</td>
-<td><code>Bachelor</code>, <code>Master</code>, <code>PhD</code></td>
-</tr>
-<tr>
-<td><code>Department</code></td>
-<td>Categorical</td>
-<td><code>Engineering</code>, <code>Sales</code>, <code>Marketing</code>, <code>HR</code>, <code>Finance</code></td>
-</tr>
-<tr>
-<td><code>Region</code></td>
-<td>Categorical</td>
-<td><code>North</code>, <code>South</code>, <code>East</code>, <code>West</code></td>
-</tr>
-<tr>
-<td><code>Job_Level</code></td>
-<td>Categorical</td>
-<td><code>Junior</code>, <code>Mid</code>, <code>Senior</code></td>
-</tr>
-<tr>
-<td><code>Gender</code></td>
-<td>Categorical</td>
-<td><code>Male</code>, <code>Female</code></td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p><strong>Note on dataset generation:</strong> This dataset can be generated synthetically using <code>numpy</code> and <code>pandas</code> with realistic salary distributions per department and job level. A generation script (<code>generate_dataset.py</code>) will be included alongside the dataset.</p>
-</blockquote>
+<p><em>(You can find in the datasets section.)</em></p>
 <hr />
 <h2 id="part-1-exploratory-data-analysis-eda">📝 Part 1: Exploratory Data Analysis (EDA)</h2>
 <ol>
-<li>Load the dataset into a pandas DataFrame.</li>
-<li>Display the first 10 rows and inspect data types.</li>
-<li>Check for missing values and duplicates — report findings.</li>
-<li>Compute descriptive statistics (mean, median, std, min, max) for all numerical variables.</li>
-<li>Create <strong>at least three</strong> of the following visualizations:</li>
-<li>Histogram of <code>Salary</code>.</li>
-<li>Box plot of <code>Salary</code> by <code>Job_Level</code>.</li>
-<li>Scatter plot of <code>Years_Experience</code> vs. <code>Salary</code>.</li>
-<li>Bar plot of average <code>Salary</code> by <code>Department</code>.</li>
-<li>Heatmap of correlations between numerical variables.</li>
+<li>Load the dataset into a pandas DataFrame.  </li>
+<li>Display the first 10 rows.  </li>
+<li>Compute descriptive statistics (mean, median, variance, etc.).  </li>
+<li>Create at least two visualizations:</li>
+<li>Histogram of sales.  </li>
+<li>Scatter plot of <code>Marketing_Spend</code> vs. <code>Sales</code>.  </li>
+<li>Bar plot of sales by <code>Region</code>.  </li>
 </ol>
 <hr />
 <h2 id="part-2-hypothesis-testing">🧪 Part 2: Hypothesis Testing</h2>
-<p><strong>Business Question:</strong> Does years of experience significantly drive salary differences?</p>
+<p><strong>Business Question:</strong> Does marketing spend significantly increase sales?  </p>
 <ol>
-<li>Define the hypotheses:</li>
-<li><strong>H₀:</strong> Years of experience has no linear relationship with salary.</li>
+<li>Define the hypotheses:  </li>
+<li><strong>Null Hypothesis (H₀):</strong> Marketing spend has no effect on sales.  </li>
 <li>
-<p><strong>H₁:</strong> Years of experience is positively associated with salary.</p>
+<p><strong>Alternative Hypothesis (H₁):</strong> Marketing spend increases sales.  </p>
 </li>
 <li>
-<p>Use <strong>Pearson correlation</strong> and a <strong>t-test</strong> to evaluate the relationship.</p>
+<p>Use <strong>Pearson correlation</strong> and a <strong>t-test</strong> to evaluate the relationship.  </p>
 </li>
-<li>Report the <strong>p-value</strong> and interpret the result at a <strong>5% significance level</strong>.</li>
-<li><em>(Bonus)</em> Run a second hypothesis test: Is there a statistically significant salary difference between <code>Junior</code> and <code>Senior</code> employees? Use a <strong>two-sample t-test</strong>.</li>
+<li>Report the p-value and interpret the result at a 5% significance level.  </li>
 </ol>
 <hr />
 <h2 id="part-3-linear-regression-with-categorical-variables">🤖 Part 3: Linear Regression with Categorical Variables</h2>
-<h3 id="step-1-variable-justification-before-coding">Step 1: Variable Justification (before coding)</h3>
-<p>Before building any model, answer the following in your notebook:</p>
+<h3 id="step-1-data-preparation">Step 1: Data Preparation</h3>
 <ol>
-<li>Which variables do you expect to be <strong>strong predictors</strong> of salary, and why?</li>
-<li>Are there variables that, even if they turn out to be statistically insignificant, you would still include in the model? <strong>Justify based on business or theoretical reasoning.</strong></li>
-<li>Do you expect any two variables to be strongly correlated with each other? Which ones, and why? What problems could that cause?</li>
+<li>Apply <strong>Label Encoding</strong> (for <code>Product_Category</code>).  </li>
+<li>Apply <strong>One Hot Encoding</strong> (for <code>Region</code> and <code>Channel</code>).  </li>
 </ol>
-<blockquote>
-<p>This step should be answered in plain text — no code required yet. The goal is to articulate your prior beliefs before looking at the data, so you can later compare them against what the model tells you.</p>
-</blockquote>
-<h3 id="step-2-data-preparation">Step 2: Data Preparation</h3>
+<h3 id="step-2-model-building-ols-and-ml">Step 2: Model Building (OLS and ML)</h3>
 <ol>
-<li>Apply <strong>Label Encoding</strong> for <code>Job_Level</code> (ordinal variable: Junior &lt; Mid &lt; Senior).</li>
-<li>Apply <strong>One Hot Encoding</strong> for <code>Education_Level</code>, <code>Department</code>, <code>Region</code>, and <code>Gender</code>.</li>
-<li>Drop the first dummy variable in each group to avoid perfect multicollinearity (use <code>drop_first=True</code>).</li>
+<li>Split the dataset into <strong>training (80%)</strong> and <strong>testing (20%)</strong>.  </li>
+<li>Build two models:</li>
+<li><strong>OLS regression model</strong> using <code>statsmodels</code>.  </li>
+<li><strong>Linear Regression model</strong> using <code>scikit-learn</code>.  </li>
 </ol>
-<h3 id="step-3-model-building">Step 3: Model Building</h3>
+<h3 id="step-3-model-evaluation">Step 3: Model Evaluation</h3>
 <ol>
-<li>Split the dataset into <strong>training (80%)</strong> and <strong>test (20%)</strong> sets. Use <code>random_state=42</code>.</li>
-<li>Build two models using <strong>all available variables</strong>:</li>
-<li><strong>OLS regression</strong> using <code>statsmodels</code>.</li>
-<li><strong>Linear Regression</strong> using <code>scikit-learn</code>.</li>
+<li>Compute and compare metrics for <strong>training and test sets</strong>:  </li>
+<li><strong>MAE</strong> (Mean Absolute Error)  </li>
+<li><strong>MAPE</strong> (Mean Absolute Percentage Error)  </li>
+<li><strong>RMSE</strong> (Root Mean Squared Error)  </li>
+<li><strong>R²</strong>  </li>
+<li><strong>Adjusted R²</strong>  </li>
+<li>Compare OLS summary results (coefficients, p-values, R²) with scikit-learn results.  </li>
 </ol>
-<h3 id="step-4-model-evaluation">Step 4: Model Evaluation</h3>
-<p>Compute and report metrics for <strong>both training and test sets</strong>:</p>
-<table>
-<thead>
-<tr>
-<th>Metric</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>MAE</strong></td>
-<td>Mean Absolute Error</td>
-</tr>
-<tr>
-<td><strong>MAPE</strong></td>
-<td>Mean Absolute Percentage Error</td>
-</tr>
-<tr>
-<td><strong>RMSE</strong></td>
-<td>Root Mean Squared Error</td>
-</tr>
-<tr>
-<td><strong>R²</strong></td>
-<td>Coefficient of determination</td>
-</tr>
-<tr>
-<td><strong>Adjusted R²</strong></td>
-<td>R² penalized for number of predictors</td>
-</tr>
-</tbody>
-</table>
-<p>Compare the OLS summary (coefficients, p-values, R²) with the scikit-learn output.</p>
 <hr />
-<h2 id="part-4-model-analysis-refinement">🔧 Part 4: Model Analysis &amp; Refinement</h2>
-<blockquote>
-<p>⚠️ <strong>Important note:</strong> The goal of this section is <strong>not</strong> to apply mechanical rules. There is no universal threshold that tells you whether to include or exclude a variable. Every decision must be argued from the context of the problem.</p>
-</blockquote>
-<h3 id="step-1-interpreting-coefficient-p-values">Step 1: Interpreting Coefficient p-values</h3>
-<p>Examine the p-values from the OLS summary and answer the following questions for <strong>each variable with p-value &gt; 0.05</strong>:</p>
+<h2 id="part-4-model-improvement">🔧 Part 4: Model Improvement</h2>
+<h3 id="step-1-variable-significance">Step 1: Variable Significance</h3>
 <ul>
-<li>Is the variable <strong>statistically insignificant</strong> because it has no real effect, or could there be another explanation (e.g., it is correlated with another variable already in the model)?</li>
-<li>Is this variable <strong>conceptually important</strong> for the salary analysis, even if the model does not find a significant effect? Would dropping it change the interpretation of other coefficients?</li>
-<li>What is the <strong>business cost</strong> of removing this variable from the model?</li>
+<li>Remove variables with <strong>p-value &gt; 0.05</strong> (not statistically significant).  </li>
 </ul>
-<p>Based on this analysis, <strong>decide which variables to keep or remove — and justify each decision explicitly</strong>. Re-train the model with your selected variables and compare metrics against the full model.</p>
-<blockquote>
-<p>Example of the reasoning expected: <em>"Gender has p = 0.18 in our model. However, we choose to keep it because (1) salary equity by gender is one of TalentCo's core questions, and (2) its insignificance may be driven by collinearity with Job_Level rather than absence of effect. Removing it would obscure a key dimension of the analysis."</em></p>
-</blockquote>
-<h3 id="step-2-multicollinearity-analysis-vif">Step 2: Multicollinearity Analysis (VIF)</h3>
-<p>Compute the <strong>Variance Inflation Factor (VIF)</strong> for all independent variables and answer:</p>
+<h3 id="step-2-multicollinearity-check">Step 2: Multicollinearity Check</h3>
 <ul>
-<li>Which pairs of variables are likely causing high VIF, and <strong>why does that correlation exist</strong> in this context?</li>
-<li>Does the presence of multicollinearity <strong>invalidate the model's predictions</strong>, or does it mainly affect the reliability of individual coefficients?</li>
-<li>For each variable with high VIF: what would be <strong>lost</strong> if you removed it? Is that loss acceptable given your research question?</li>
+<li>Compute <strong>Variance Inflation Factor (VIF)</strong> for all independent variables.  </li>
+<li>If VIF &gt; 10, consider removing the variable.  </li>
 </ul>
-<p><strong>Decide whether to act on the multicollinearity and justify your decision.</strong> Valid answers include keeping collinear variables if the reasoning supports it.</p>
-<blockquote>
-<p>Example of the reasoning expected: <em>"<code>Age</code> and <code>Years_Experience</code> show VIF = 8.4 and 9.1 respectively, reflecting that older employees tend to have more experience. Both variables capture different dimensions — biological age vs. accumulated professional time — so we keep both and acknowledge the inflated standard errors as a limitation."</em></p>
-</blockquote>
-<h3 id="step-3-regression-assumptions">Step 3: Regression Assumptions</h3>
-<p>Verify the following assumptions of linear regression on your <strong>final model</strong>:</p>
+<h3 id="step-3-assumptions-of-linear-regression">Step 3: Assumptions of Linear Regression</h3>
 <ul>
-<li><strong>Normality of residuals:</strong> Histogram and Q-Q plot of residuals.</li>
-<li><strong>Homoscedasticity:</strong> Perform the <strong>Breusch-Pagan test</strong> (<code>het_breuschpagan</code>).</li>
+<li><strong>Normality of residuals</strong>: Use histogram and Q-Q plot.  </li>
+<li><strong>Homoscedasticity</strong>: Perform <strong>Breusch-Pagan test</strong>.  </li>
+<li><strong>Multicollinearity</strong>: Already checked with VIF.  </li>
 </ul>
-<p>For each assumption, state whether it holds, show the evidence, and briefly discuss what it means for the validity of your conclusions.</p>
 <hr />
-<h2 id="part-5-business-report">📈 Part 5: Business Report</h2>
-<p>Write a <strong>short business report (300–400 words)</strong> addressed to TalentCo's HR Director, answering:</p>
-<ol>
-<li>Which variables are the <strong>strongest drivers</strong> of employee salary?</li>
-<li>How does <strong>years of experience</strong> quantitatively impact annual compensation?</li>
-<li>Are there <strong>significant salary differences</strong> across departments or regions? What do they suggest?</li>
-<li>Based on your final model: if TalentCo promotes an employee from <code>Mid</code> to <code>Senior</code> level, what is the <strong>expected salary increase</strong> (in USD)?</li>
-<li>What <strong>recommendations</strong> would you make to TalentCo to improve compensation fairness and transparency?</li>
-</ol>
+<h2 id="part-5-business-application">📈 Part 5: Business Application</h2>
+<p>Write a <strong>short business report (300–400 words)</strong> answering:
+1. Which variables are the most important drivers of sales?<br />
+2. How does marketing spend impact sales?<br />
+3. What is the effect of sales channel and region on performance?<br />
+4. If the company increases marketing spend by $10,000, how many additional units should they expect to sell (according to your final model)?  </p>
 <hr />
 <h2 id="deliverables">✅ Deliverables</h2>
-<p>Each student or group must submit the following:</p>
-<ol>
-<li><strong>Jupyter Notebook (<code>.ipynb</code>)</strong> with all code, outputs, and inline comments.</li>
-<li>Code must be clean, well-commented, and reproducible.</li>
-<li>
-<p>All plots must include titles, axis labels, and legends where applicable.</p>
-</li>
-<li>
-<p><strong>Business Report</strong> in Markdown (<code>.md</code>) or Word (<code>.docx</code>) format — 300 to 400 words, addressed to a non-technical audience.</p>
-</li>
-<li>
-<p><strong>Oral Presentation</strong> — 10 to 12 minutes (see rubric below).</p>
-</li>
-</ol>
-<blockquote>
-<p>⚠️ <strong>Important:</strong> Both the written submission and the oral presentation are <strong>mandatory</strong>. Missing either component results in the <strong>minimum grade</strong> for the project.</p>
-</blockquote>
+<ul>
+<li>Python notebook (<code>.ipynb</code>) or script (<code>.py</code>) with all code and results.  </li>
+<li>Final business report in <strong>Markdown</strong> or <strong>Word</strong> format.  </li>
+</ul>
 <hr />
 <h2 id="tips">💡 Tips</h2>
 <ul>
-<li>Use <code>pandas</code>, <code>numpy</code>, <code>matplotlib</code>, <code>seaborn</code>, <code>scikit-learn</code>, and <code>statsmodels</code>.</li>
-<li>For VIF: <code>from statsmodels.stats.outliers_influence import variance_inflation_factor</code></li>
-<li>For Breusch-Pagan: <code>from statsmodels.stats.diagnostic import het_breuschpagan</code></li>
-<li>For Q-Q plot: <code>import scipy.stats as stats; stats.probplot(residuals, plot=plt)</code></li>
-<li>Focus on <strong>business interpretation</strong>, not just statistical output.</li>
-<li>In your report, write for an HR Director — no formulas, no code, no p-values. Just clear insights.</li>
+<li>Use <code>pandas</code>, <code>numpy</code>, <code>matplotlib</code>, <code>scikit-learn</code>, and <code>statsmodels</code>.  </li>
+<li>For VIF: <code>from statsmodels.stats.outliers_influence import variance_inflation_factor</code>.  </li>
+<li>For heteroscedasticity: <code>from statsmodels.stats.diagnostic import het_breuschpagan</code>.  </li>
+<li>Comment your code clearly.  </li>
+<li>Focus on <strong>business interpretation</strong>, not only statistical results.  </li>
 </ul>
 <hr />
-<hr />
-<h1 id="oral-presentation-rubric-workforce-analytics-project">🎤 Oral Presentation Rubric — Workforce Analytics Project</h1>
-<p>Each group will be evaluated on a scale from <strong>10 to 100 points</strong>.
-All presentations must be delivered in <strong>English or Spanish</strong> and last between <strong>10–12 minutes</strong>.</p>
-<hr />
-<h2 id="evaluation-criteria">Evaluation Criteria</h2>
-<table>
-<thead>
-<tr>
-<th><strong>Category</strong></th>
-<th><strong>Description</strong></th>
-<th><strong>Points Range</strong></th>
-<th><strong>Weight</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>🧭 <strong>1. Problem Understanding &amp; Context</strong></td>
-<td>Demonstrates a clear understanding of TalentCo's business problem and the value of data-driven compensation analysis. Connects statistical findings to real HR decisions.</td>
-<td>10–20</td>
-<td><strong>20%</strong></td>
-</tr>
-<tr>
-<td>📊 <strong>2. Data Exploration &amp; Insights</strong></td>
-<td>Presents key EDA findings clearly. Highlights meaningful patterns (e.g., salary by department, experience trends). Explains how the analysis guided modeling choices.</td>
-<td>10–20</td>
-<td><strong>20%</strong></td>
-</tr>
-<tr>
-<td>🤖 <strong>3. Model Explanation &amp; Results</strong></td>
-<td>Explains regression models, encoding decisions, and evaluation metrics (MAE, RMSE, R²) accurately. Compares OLS vs. sklearn outputs and justifies the final model.</td>
-<td>10–20</td>
-<td><strong>20%</strong></td>
-</tr>
-<tr>
-<td>🎯 <strong>4. Business Interpretation &amp; Recommendations</strong></td>
-<td>Translates model coefficients and test results into actionable HR recommendations. Explains what TalentCo should do and why, without using technical jargon.</td>
-<td>10–20</td>
-<td><strong>20%</strong></td>
-</tr>
-<tr>
-<td>🗣️ <strong>5. Communication &amp; Delivery</strong></td>
-<td>Clear and professional delivery in English or Spanish. Logical flow, confident tone, and effective teamwork. Stays within the time limit.</td>
-<td>10–15</td>
-<td><strong>15%</strong></td>
-</tr>
-<tr>
-<td>🖼️ <strong>6. Visual Aids &amp; Slide Design</strong></td>
-<td>Slides are clear, professional, and support the narrative. Charts and tables are legible and well-labeled. Avoids text-heavy or cluttered slides.</td>
-<td>10–15</td>
-<td><strong>15%</strong></td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h2 id="scoring-guide">Scoring Guide</h2>
-<table>
-<thead>
-<tr>
-<th><strong>Score Range</strong></th>
-<th><strong>Level</strong></th>
-<th><strong>Description</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>90–100</strong></td>
-<td>⭐ Excellent</td>
-<td>Outstanding understanding, strong business insight, and engaging delivery. Clear link between data analysis and HR strategy.</td>
-</tr>
-<tr>
-<td><strong>80–89</strong></td>
-<td>✅ Very Good</td>
-<td>Solid explanation and visuals, minor gaps in depth or flow. Good technical and business command.</td>
-</tr>
-<tr>
-<td><strong>70–79</strong></td>
-<td>⚙️ Good</td>
-<td>Covers main points adequately but lacks depth or clarity in some areas. Reasonable structure.</td>
-</tr>
-<tr>
-<td><strong>60–69</strong></td>
-<td>⚠️ Acceptable</td>
-<td>Basic coverage with limited business insight or weak connection to the HR problem. Somewhat unclear or rushed.</td>
-</tr>
-<tr>
-<td><strong>10–59</strong></td>
-<td>❌ Insufficient</td>
-<td>Poor structure, missing key content, or failure to communicate findings. May significantly exceed or fall short of time.</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h2 id="final-score-calculation">Final Score Calculation</h2>
-<div class="arithmatex">\[
-\text{Final Score} = 0.20(\text{Problem}) + 0.20(\text{EDA}) + 0.20(\text{Models}) + 0.20(\text{Business}) + 0.15(\text{Delivery}) + 0.15(\text{Visuals})
-\]</div>
-<hr />
-<h3 id="notes-for-evaluators">Notes for Evaluators</h3>
-<ul>
-<li>Deduct up to <strong>10 points</strong> for presentations outside the time range (under 7 min or over 13 min).</li>
-<li>Deduct up to <strong>5 points</strong> if not all team members participate actively.</li>
-<li>Award <strong>bonus up to +5 points</strong> for exceptional insight, creativity, or real-world connection.</li>
-</ul>
-<hr />
-<p><strong>Total:</strong> 100 points maximum | <strong>Minimum passing score:</strong> 60 points</p>
 
               
             </article>
