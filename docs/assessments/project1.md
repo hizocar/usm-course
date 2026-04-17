@@ -1,8 +1,8 @@
-# 📊 [PROPOSAL] Workforce Analytics: Salary Drivers & Compensation Modeling
+# 📊 Workforce Analytics: Salary Drivers & Compensation Modeling
 
 > **Status:** Draft proposal — pending review before official publication.
 > **Edition:** 2026 | **Assessment:** Project 1 (30% of final grade)
-> **Dates:** Release Apr 4 → Due Apr 8, 23:59 → Presentations Apr 21–22
+> **Dates:** Release Apr 4 → Due Apr 20, 23:59 → Presentations Apr 21–22
 
 ---
 
@@ -25,7 +25,7 @@ By the end of this project, you will be able to:
 
 ## 📂 Dataset: `employee_compensation.csv`
 
-> *(To be added to the datasets section before publication.)*
+> Available in the [datasets section](../datasets/datasets.md).
 
 The dataset contains records for **1,500 employees** across departments, regions, and job levels.
 

@@ -17,3 +17,7 @@ title: "Datasets"
 ## Data for assesment 3: 
 
 [Bank Data (CSV)](Bank.csv) | <a href="https://github.com/hizocar/USM-COURSE/raw/main/docs/datasets/Bank.csv" target="_blank">⬇️ Descargar</a>
+
+## Data for Project 1: 
+
+[Employee Compensation Data (CSV)](employee_compensation.csv) | <a href="https://github.com/hizocar/USM-COURSE/raw/main/docs/datasets/employee_compensation.csv" target="_blank">⬇️ Descargar</a>
