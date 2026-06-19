@@ -17,7 +17,7 @@
     
     
       
-        <title>2 - A/B Testing - Machine Learning and Business Applications</title>
+        <title>Proyecto 1 - Machine Learning and Business Applications</title>
       
     
     
@@ -67,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ab-testing" class="md-skip">
+        <a href="#proyecto-1-resultados-de-evaluacion" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -99,7 +99,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              2 - A/B Testing
+              Proyecto 1
             
           </span>
         </div>
@@ -475,12 +475,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" checked>
       
       
       
@@ -501,11 +503,21 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../notas/proyecto1/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Proyecto 1
       </a>
+      
     </li>
   
 
@@ -537,186 +549,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Tabla de contenidos
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#definition" class="md-nav__link">
-    🔎 Definition
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#statistical-framework" class="md-nav__link">
-    🧠 Statistical framework
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#minimal-workflow" class="md-nav__link">
-    🧭 Minimal workflow
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#design-choices-that-matter" class="md-nav__link">
-    🧩 Design choices that matter
-  </a>
-  
-    <nav class="md-nav" aria-label="🧩 Design choices that matter">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#unit-of-randomization" class="md-nav__link">
-    🆔 Unit of randomization
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#split-allocation" class="md-nav__link">
-    ⚖️ Split &amp; allocation
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#stratification-blocking" class="md-nav__link">
-    🧱 Stratification (blocking)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#exposure-policy" class="md-nav__link">
-    🔒 Exposure policy
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#metrics-statistical-tests" class="md-nav__link">
-    📐 Metrics &amp; statistical tests
-  </a>
-  
-    <nav class="md-nav" aria-label="📐 Metrics &amp; statistical tests">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#binary-metrics-conversion-rate-click-through-rate" class="md-nav__link">
-    ✅ Binary metrics (conversion rate, click-through rate)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#continuous-metrics-revenue-per-user-order-value" class="md-nav__link">
-    💵 Continuous metrics (Revenue per User, Order Value)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ratio-time-based-metrics" class="md-nav__link">
-    ⏱️ Ratio &amp; time-based metrics
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#sample-size-power-and-mde" class="md-nav__link">
-    📏 Sample size, Power, and MDE
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#variance-reduction-optional-but-powerful" class="md-nav__link">
-    🎯 Variance reduction (optional but powerful)
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#randomization-health-srm" class="md-nav__link">
-    🩺 Randomization health &amp; SRM
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#stopping-rules-sequential-looks" class="md-nav__link">
-    ⏳ Stopping rules &amp; sequential looks
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#multiple-comparisons" class="md-nav__link">
-    ➗ Multiple comparisons
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#worked-examples" class="md-nav__link">
-    🛠️ Worked examples
-  </a>
-  
-    <nav class="md-nav" aria-label="🛠️ Worked examples">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#example-1-conversion-rate-lift" class="md-nav__link">
-    📈 Example 1 — Conversion rate lift
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#example-2-revenue-per-user-skewed" class="md-nav__link">
-    💰 Example 2 — Revenue per user (skewed)
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#common-pitfalls-remedies" class="md-nav__link">
-    🧯 Common pitfalls &amp; remedies
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#decision-checklist" class="md-nav__link">
-    ✅ Decision checklist
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -729,181 +561,213 @@
                 
 
 
-<h1 id="ab-testing">🧪 A/B Testing</h1>
-<h2 id="definition">🔎 Definition</h2>
-<p>A randomized experiment comparing two versions:</p>
-<ul>
-<li><strong>A (Control):</strong> current baseline.</li>
-<li><strong>B (Treatment):</strong> new variant.</li>
-</ul>
-<hr />
-<h2 id="statistical-framework">🧠 Statistical framework</h2>
-<ul>
-<li><strong>Null hypothesis (H₀):</strong> no difference between A and B.</li>
-<li><strong>Alternative (H₁):</strong> a difference exists (two-sided by default; use one-sided only with strong prior and pre-registration) ⚠️.</li>
-<li><strong>Why A/B tests?</strong>  </li>
-<li>✅ Simple, robust design  </li>
-<li>🎲 Randomization minimizes selection bias  </li>
-<li>📏 Quantifies uncertainty for clear decisions</li>
-</ul>
-<hr />
-<h2 id="minimal-workflow">🧭 Minimal workflow</h2>
-<ol>
-<li>🎯 Define the <strong>primary metric</strong> (e.g., conversion rate, revenue per user).</li>
-<li>👤 Choose <strong>unit of randomization</strong> (user, session, PNR, household).</li>
-<li>🚦 Set <strong>exposure rules</strong> (who can/cannot be re-exposed).</li>
-<li>📝 Pre-register <strong>α, power, MDE, duration, guardrails</strong>.</li>
-<li>📊 Run, monitor for <strong>sample ratio mismatch (SRM)</strong>.</li>
-<li>🧾 Analyze and <strong>decide</strong> (see decision rules below).</li>
-</ol>
-<hr />
-<h2 id="design-choices-that-matter">🧩 Design choices that matter</h2>
-<h3 id="unit-of-randomization">🆔 Unit of randomization</h3>
-<ul>
-<li>Prefer <strong>stable identifiers</strong> (user ID, PNR) over sessions/cookies when possible.</li>
-<li>If cross-device is common, consider <strong>household</strong> or <strong>account</strong> level to reduce spillovers.</li>
-</ul>
-<h3 id="split-allocation">⚖️ Split &amp; allocation</h3>
-<ul>
-<li><strong>50/50</strong> maximizes power; skewed splits (e.g., 90/10) need <strong>larger total N</strong> for the same MDE.</li>
-<li>For risky changes, start with a <strong>10–20% ramp</strong>, then escalate if guardrails are healthy.</li>
-</ul>
-<h3 id="stratification-blocking">🧱 Stratification (blocking)</h3>
-<ul>
-<li>Randomize <strong>within strata</strong> (e.g., country, device, recency tiers) to keep groups balanced on key covariates.</li>
-<li>Report results overall and by strata; pre-specify subgroup analyses.</li>
-</ul>
-<h3 id="exposure-policy">🔒 Exposure policy</h3>
-<ul>
-<li>One user → one arm for the full test window.</li>
-<li>Avoid cross-arm exposure (e.g., receiving both Email and WhatsApp).</li>
-<li>Define <strong>frequency caps</strong> and <strong>eligibility</strong> rules up front.</li>
-</ul>
-<hr />
-<h2 id="metrics-statistical-tests">📐 Metrics &amp; statistical tests</h2>
-<h3 id="binary-metrics-conversion-rate-click-through-rate">✅ Binary metrics (conversion rate, click-through rate)</h3>
-<p>Let <span class="arithmatex">\( p_A \)</span>, <span class="arithmatex">\( p_B \)</span> be conversion rates; <span class="arithmatex">\( n_A, n_B \)</span> sample sizes.</p>
-<ul>
-<li><strong>Difference:</strong> <span class="arithmatex">\( \Delta = p_B - p_A \)</span></li>
-<li><strong>Pooled SE (for H₀: <span class="arithmatex">\( p_A = p_B \)</span>):</strong>
-  $$
-  \hat{p} = \frac{x_A + x_B}{n_A + n_B}, \quad
-  SE_{\text{pooled}} = \sqrt{\hat{p}(1-\hat{p})\left(\frac{1}{n_A}+\frac{1}{n_B}\right)}
-  $$</li>
-<li><strong>z-statistic:</strong> <span class="arithmatex">\( z = \frac{\Delta}{SE_{\text{pooled}}} \)</span></li>
-<li><strong>Two-sided p-value:</strong> compare |z| to standard normal.</li>
-</ul>
+<h1 id="proyecto-1-resultados-de-evaluacion">Proyecto 1 — Resultados de evaluación</h1>
+<p>Selecciona tu nombre para ver tu nota y la retroalimentación de la presentación. La nota se expresa en escala de 1 a 100 e integra la evaluación del grupo y el desempeño individual.</p>
 <blockquote>
-<p><strong>95% CI (unpooled)</strong><br />
-$$
-CI = \Delta \pm 1.96 \cdot \sqrt{\frac{p_A(1-p_A)}{n_A} + \frac{p_B(1-p_B)}{n_B}}
-$$</p>
+<p>La retroalimentación está organizada según los criterios de la rúbrica del Proyecto 1 (Comprensión del problema, Exploración de datos, Modelo y resultados, Interpretación de negocio, Comunicación, y Material visual). El nivel de cada nota corresponde a la escala de la rúbrica: <strong>90–100</strong> Excelente · <strong>80–89</strong> Muy bueno · <strong>70–79</strong> Bueno · <strong>60–69</strong> Aceptable · <strong>10–59</strong> Insuficiente.</p>
 </blockquote>
-<h3 id="continuous-metrics-revenue-per-user-order-value">💵 Continuous metrics (Revenue per User, Order Value)</h3>
-<ul>
-<li>Use <strong>Welch’s t-test</strong> (unequal variances).</li>
-<li>For skewed revenue: <strong>trimmed means</strong>, <strong>winsorization</strong>, or <strong>bootstrap CIs</strong>.</li>
-<li>Report both <strong>mean</strong> and <strong>median</strong>; consider <strong>RPU</strong> and <strong>RPT</strong>.</li>
-</ul>
-<h3 id="ratio-time-based-metrics">⏱️ Ratio &amp; time-based metrics</h3>
-<ul>
-<li>If numerator/denominator vary per user, consider <strong>delta method</strong> or <strong>bootstrap</strong>.</li>
-<li>Guardrails (refund rate, complaint rate) are tested but <strong>not optimized</strong>.</li>
-</ul>
-<hr />
-<h2 id="sample-size-power-and-mde">📏 Sample size, Power, and MDE</h2>
-<ul>
-<li><strong>Type I error (α):</strong> false positive rate (commonly 0.05).</li>
-<li><strong>Type II error (β):</strong> false negative rate; <strong>Power = 1 − β</strong> (commonly 0.8).</li>
-</ul>
-<p><strong>Back-of-the-envelope N for two proportions</strong> <em>(per arm)</em>:
-$$
-n \approx \frac{2\,p(1-p)\,(z_{1-\alpha/2}+z_{1-\beta})^2}{\delta^2}
-$$
-Where <span class="arithmatex">\( p \)</span> is baseline rate; <span class="arithmatex">\( \delta \)</span> is <strong>absolute</strong> lift (MDE, in pp).</p>
-<blockquote>
-<p>🧮 <strong>Interpretation:</strong> Smaller MDE ⇒ larger sample or longer duration.</p>
-</blockquote>
-<hr />
-<h2 id="variance-reduction-optional-but-powerful">🎯 Variance reduction (optional but powerful)</h2>
-<ul>
-<li><strong>Stratified randomization:</strong> balances covariates ⇒ lower variance.</li>
-<li><strong>Covariate adjustment (ANCOVA):</strong> regress outcome on treatment + pre-exposure covariates.</li>
-<li><strong>CUPED (pre-exposure correction):</strong><br />
-<span class="arithmatex">\( y' = y - \theta (x - \bar{x}) \)</span>, with <span class="arithmatex">\( \theta = \frac{\text{Cov}(y,x)}{\text{Var}(x)} \)</span>.</li>
-</ul>
-<p>⚠️ Pre-specify the method; ensure treatment does <strong>not</strong> affect the covariate <span class="arithmatex">\( x \)</span>.</p>
-<hr />
-<h2 id="randomization-health-srm">🩺 Randomization health &amp; SRM</h2>
-<p><strong>Sample Ratio Mismatch (SRM):</strong> observed allocation deviates from expected (e.g., expect 50/50, observe 49/51 out of 200k).</p>
-<ul>
-<li>Diagnose with a <strong>chi-square test</strong> on assignment counts.</li>
-<li>Common causes: bot traffic, bucketing bugs, eligibility filters applied <strong>after</strong> randomization, cross-device leakage, late-day traffic spikes.</li>
-</ul>
-<details>
- <summary>🧑‍💻 Suggested AI prompt</summary>
- Clean bar chart comparing expected 50/50 vs observed 49/51 assignment with a red highlight on the mismatch. Minimalist dashboard style.
- </details>
+<style>
+.notas-eval details { border-bottom: 1px solid #eef1f4; }
+.notas-eval summary {
+  cursor: pointer; padding: 12px 4px; font-size: 1rem; color: #243b53;
+  list-style: none; outline: none;
+}
+.notas-eval summary::-webkit-details-marker { display: none; }
+.notas-eval summary::before { content: "\25B8"; color: #9fb3c8; font-size: .8rem; margin-right: 10px; display: inline-block; transition: transform .15s; }
+.notas-eval details[open] summary::before { transform: rotate(90deg); }
+.notas-eval .detalle { padding: 4px 4px 18px 26px; }
+.notas-eval .nota-linea { font-size: .95rem; margin-bottom: 6px; }
+.notas-eval .nota-val { font-weight: 700; color: #102a43; }
+.notas-eval .nivel { border-left: 3px solid #9fb3c8; background: #f7f9fb; padding: 8px 12px; margin: 6px 0 14px; font-size: .85rem; color: #486581; }
+.notas-eval .fb { margin-bottom: 11px; }
+.notas-eval .crit { display: block; font-size: .72rem; text-transform: uppercase; letter-spacing: .05em; color: #829ab1; margin-bottom: 1px; }
+.notas-eval .fb p { margin: 0; font-size: .9rem; color: #486581; }
+.notas-eval .grupo-title { font-size: .8rem; text-transform: uppercase; letter-spacing: .06em; color: #829ab1; border-bottom: 1px solid #e1e7ed; padding-bottom: 6px; margin: 26px 0 4px; }
+</style>
 
-<p><strong>Action:</strong> If SRM is significant, <strong>invalidate</strong> the test and fix instrumentation before re-running.</p>
-<hr />
-<h2 id="stopping-rules-sequential-looks">⏳ Stopping rules &amp; sequential looks</h2>
-<ul>
-<li><strong>Fixed-horizon testing:</strong> set duration and N in advance; <strong>no peeking</strong>.</li>
-<li><strong>Sequential testing:</strong> allowed with proper <strong>alpha-spending</strong> (e.g., Pocock, O’Brien–Fleming) or <strong>always-valid</strong> methods.</li>
-<li>If monitoring periodically, use <strong>group-sequential</strong> plans and document spending rules.</li>
-</ul>
-<hr />
-<h2 id="multiple-comparisons">➗ Multiple comparisons</h2>
-<p>If you test many variants/metrics/subgroups, control false discoveries:</p>
-<ul>
-<li><strong>Bonferroni</strong> (conservative), <strong>Holm–Bonferroni</strong>, or <strong>Benjamini–Hochberg (FDR)</strong>.</li>
-<li>Prefer a <strong>single primary metric</strong>; treat others as <strong>guardrails</strong> or <strong>exploratory</strong>.</li>
-</ul>
-<hr />
-<h2 id="worked-examples">🛠️ Worked examples</h2>
-<h3 id="example-1-conversion-rate-lift">📈 Example 1 — Conversion rate lift</h3>
-<ul>
-<li><span class="arithmatex">\( n_A = n_B = 50{,}000 \)</span></li>
-<li><span class="arithmatex">\( p_A = 3.0\% = 0.030 \)</span></li>
-<li><span class="arithmatex">\( p_B = 3.6\% = 0.036 \)</span></li>
-<li><span class="arithmatex">\( \Delta = 0.006 \)</span> (<strong>+0.6 pp</strong>)</li>
-</ul>
-<p>Pooled <span class="arithmatex">\( \hat{p} = 0.03299 \)</span><br />
-<span class="arithmatex">\( SE_{\text{pooled}} \approx 0.00113 \)</span><br />
-<span class="arithmatex">\( z \approx 5.31 \)</span> → <strong>p-value ≈ 1.1e−7</strong> ✅<br />
-95% CI (unpooled) for <span class="arithmatex">\( \Delta \)</span>: <strong>[+0.38 pp, +0.82 pp]</strong><br />
-<strong>Decision:</strong> reject H₀. Also check <strong>business impact</strong> (incremental revenue, margin).</p>
-<h3 id="example-2-revenue-per-user-skewed">💰 Example 2 — Revenue per user (skewed)</h3>
-<ul>
-<li>Use <strong>Welch’s t-test</strong> or <strong>bootstrap CI</strong> on mean RPU.  </li>
-<li>If heavy tails: <strong>winsorize</strong> top 0.1–1% or report <strong>trimmed mean (e.g., 5%)</strong>.  </li>
-<li>Complement with <strong>conversion rate</strong> and <strong>AOV</strong> to explain drivers.</li>
-</ul>
-<hr />
-<h2 id="common-pitfalls-remedies">🧯 Common pitfalls &amp; remedies</h2>
-<ul>
-<li>👀 <strong>Peeking without correction:</strong> inflates Type I error → use fixed horizon or sequential designs.  </li>
-<li>🔁 <strong>Inconsistent exposure:</strong> users switch arms → lock assignment, deduplicate IDs.  </li>
-<li>🌐 <strong>Interference/spillovers:</strong> cross-channel effects → consider <strong>geo experiments</strong> or <strong>cluster randomization</strong>.  </li>
-<li>📅 <strong>Seasonality &amp; novelty:</strong> ensure runtime covers weekly cycles; consider ramps and post-holdouts.  </li>
-<li>🧮 <strong>Metric drift:</strong> freeze definitions during the test.  </li>
-<li>🧪 <strong>Underpowered tests:</strong> align MDE with business value; extend duration or traffic.  </li>
-</ul>
-<hr />
-<h2 id="decision-checklist">✅ Decision checklist</h2>
-<ul class="task-list">
-<li class="task-list-item"><input type="checkbox" disabled/> Primary metric defined; guardrails listed.  </li>
-<li class="task-list-item"><input type="checkbox" disabled/> α, power, MDE pre-registered; sample size computed.  </li>
-<li class="task-list-item"><input type="checkbox" disabled/> Unit of randomization &amp; exposure rules documented.  </li>
-<li class="task-list-item"><input type="checkbox" disabled/> Stratification keys (if any) fixed pre-launch.  </li>
-<li class="task-list-item"><input type="checkbox" disabled/> SRM monitored; assignment counts logged.  </li>
-<li class="task-list-item"><input type="checkbox" disabled/> Fixed horizon <strong>or</strong> sequential plan documented.  </li>
-<li class="task-list-item"><input type="checkbox" disabled/> Analysis plan: test type, CI, variance reduction (if any).  </li>
-<li class="task-list-item"><input type="checkbox" disabled/> Result meets <strong>statistical</strong> and <strong>business</strong> significance.  </li>
-<li class="task-list-item"><input type="checkbox" disabled/> Rollout plan &amp; post-launch monitoring defined.  </li>
-</ul>
-<hr />
+<div class="notas-eval" markdown="0">
+
+<div class="grupo-title">Grupo 1</div>
+
+<details>
+<summary>Alonso Seguel</summary>
+<div class="detalle">
+<div class="nota-linea"><b>Nota:</b> <span class="nota-val">80</span></div>
+<div class="nivel"><b>Nivel: Muy bueno (80–89).</b> Explicación y material visual sólidos, con vacíos menores en profundidad o fluidez. Buen dominio técnico y de negocio.</div>
+<div class="fb"><span class="crit">Comunicación y presentación</span><p>Explica la metodología con claridad.</p></div>
+<div class="fb"><span class="crit">Explicación del modelo y resultados</span><p>Faltó incorporar el VIF en la revisión de multicolinealidad.</p></div>
+</div>
+</details>
+
+<details>
+<summary>Simon Carrasco</summary>
+<div class="detalle">
+<div class="nota-linea"><b>Nota:</b> <span class="nota-val">75</span></div>
+<div class="nivel"><b>Nivel: Bueno (70–79).</b> Cubre los puntos principales de forma adecuada, pero falta profundidad o claridad en algunas áreas. Estructura razonable.</div>
+<div class="fb"><span class="crit">Comprensión del problema y contexto</span><p>Entrega un overview general del trabajo que resulta útil.</p></div>
+<div class="fb"><span class="crit">Explicación del modelo y resultados</span><p>Quedó pendiente la revisión de normalidad y de los supuestos del modelo.</p></div>
+</div>
+</details>
+
+<details>
+<summary>David Rebolledo</summary>
+<div class="detalle">
+<div class="nota-linea"><b>Nota:</b> <span class="nota-val">70</span></div>
+<div class="nivel"><b>Nivel: Bueno (70–79).</b> Cubre los puntos principales de forma adecuada, pero falta profundidad o claridad en algunas áreas. Estructura razonable.</div>
+<div class="fb"><span class="crit">Exploración de datos e insights</span><p>Presenta las estadísticas descriptivas, pero faltó extraer insights a partir de ellas.</p></div>
+<div class="fb"><span class="crit">Interpretación de negocio y recomendaciones</span><p>Respuestas correctas, aunque poco profundas en la interpretación.</p></div>
+</div>
+</details>
+
+<details>
+<summary>Benjamin Caceres</summary>
+<div class="detalle">
+<div class="nota-linea"><b>Nota:</b> <span class="nota-val">60</span></div>
+<div class="nivel"><b>Nivel: Aceptable (60–69).</b> Cobertura básica del proyecto, con insight limitado o conexión débil con el problema de negocio. Presentación algo poco clara o apresurada.</div>
+<div class="fb"><span class="crit">Material visual y diseño de slides</span><p>Buenas visualizaciones, útiles para apoyar el análisis.</p></div>
+<div class="fb"><span class="crit">Comunicación y presentación</span><p>Participación individual limitada; le costó responder al ser consultado.</p></div>
+</div>
+</details>
+
+<div class="grupo-title">Grupo 2</div>
+
+<details>
+<summary>Joaquin Riquelme</summary>
+<div class="detalle">
+<div class="nota-linea"><b>Nota:</b> <span class="nota-val">75</span></div>
+<div class="nivel"><b>Nivel: Bueno (70–79).</b> Cubre los puntos principales de forma adecuada, pero falta profundidad o claridad en algunas áreas. Estructura razonable.</div>
+<div class="fb"><span class="crit">Exploración de datos e insights</span><p>Describe todas las columnas del conjunto de datos, pero no queda claro qué se hizo con los outliers.</p></div>
+<div class="fb"><span class="crit">Comunicación y presentación</span><p>Falta mejorar el orden de la presentación; hay contenido que está de más.</p></div>
+</div>
+</details>
+
+<details>
+<summary>Joaquin Ortiz</summary>
+<div class="detalle">
+<div class="nota-linea"><b>Nota:</b> <span class="nota-val">70</span></div>
+<div class="nivel"><b>Nivel: Bueno (70–79).</b> Cubre los puntos principales de forma adecuada, pero falta profundidad o claridad en algunas áreas. Estructura razonable.</div>
+<div class="fb"><span class="crit">Explicación del modelo y resultados</span><p>Responde de forma general; no profundiza en la interpretación del modelo.</p></div>
+<div class="fb"><span class="crit">Comunicación y presentación</span><p>Falta apropiarse más de los resultados al exponer.</p></div>
+</div>
+</details>
+
+<details>
+<summary>Diego Fabio</summary>
+<div class="detalle">
+<div class="nota-linea"><b>Nota:</b> <span class="nota-val">70</span></div>
+<div class="nivel"><b>Nivel: Bueno (70–79).</b> Cubre los puntos principales de forma adecuada, pero falta profundidad o claridad en algunas áreas. Estructura razonable.</div>
+<div class="fb"><span class="crit">Comunicación y presentación</span><p>Participación acotada durante la presentación.</p></div>
+<div class="fb"><span class="crit">Explicación del modelo y resultados</span><p>Las respuestas quedaron poco desarrolladas al consultarle.</p></div>
+</div>
+</details>
+
+<div class="grupo-title">Grupo 3</div>
+
+<details>
+<summary>Emilio Venegas</summary>
+<div class="detalle">
+<div class="nota-linea"><b>Nota:</b> <span class="nota-val">80</span></div>
+<div class="nivel"><b>Nivel: Muy bueno (80–89).</b> Explicación y material visual sólidos, con vacíos menores en profundidad o fluidez. Buen dominio técnico y de negocio.</div>
+<div class="fb"><span class="crit">Comunicación y presentación</span><p>Conduce la presentación y expone la metodología con orden.</p></div>
+<div class="fb"><span class="crit">Exploración de datos e insights</span><p>Se nota dedicación en el análisis de los datos erróneos.</p></div>
+</div>
+</details>
+
+<details>
+<summary>Alexandra Vasquez</summary>
+<div class="detalle">
+<div class="nota-linea"><b>Nota:</b> <span class="nota-val">75</span></div>
+<div class="nivel"><b>Nivel: Bueno (70–79).</b> Cubre los puntos principales de forma adecuada, pero falta profundidad o claridad en algunas áreas. Estructura razonable.</div>
+<div class="fb"><span class="crit">Explicación del modelo y resultados</span><p>Falta explicar por qué el modelo es lineal.</p></div>
+<div class="fb"><span class="crit">Comprensión del problema y contexto</span><p>Buena disposición, pero requiere afianzar la parte conceptual.</p></div>
+</div>
+</details>
+
+<details>
+<summary>Nicolas Nahum</summary>
+<div class="detalle">
+<div class="nota-linea"><b>Nota:</b> <span class="nota-val">75</span></div>
+<div class="nivel"><b>Nivel: Bueno (70–79).</b> Cubre los puntos principales de forma adecuada, pero falta profundidad o claridad en algunas áreas. Estructura razonable.</div>
+<div class="fb"><span class="crit">Material visual y diseño de slides</span><p>Buen estilo de presentación, sencillo y mostrando los valores importantes.</p></div>
+<div class="fb"><span class="crit">Exploración de datos e insights</span><p>No logra explicar el significado de las columnas al ser consultado.</p></div>
+</div>
+</details>
+
+<div class="grupo-title">Grupo 4</div>
+
+<details>
+<summary>Claudio Sanchez</summary>
+<div class="detalle">
+<div class="nota-linea"><b>Nota:</b> <span class="nota-val">70</span></div>
+<div class="nivel"><b>Nivel: Bueno (70–79).</b> Cubre los puntos principales de forma adecuada, pero falta profundidad o claridad en algunas áreas. Estructura razonable.</div>
+<div class="fb"><span class="crit">Comunicación y presentación</span><p>Buen desempeño en su intervención.</p></div>
+<div class="fb"><span class="crit">Explicación del modelo y resultados</span><p>Responde con seguridad lo que se le consulta.</p></div>
+</div>
+</details>
+
+<details>
+<summary>Gianina Perez</summary>
+<div class="detalle">
+<div class="nota-linea"><b>Nota:</b> <span class="nota-val">70</span></div>
+<div class="nivel"><b>Nivel: Bueno (70–79).</b> Cubre los puntos principales de forma adecuada, pero falta profundidad o claridad en algunas áreas. Estructura razonable.</div>
+<div class="fb"><span class="crit">Comunicación y presentación</span><p>Buen desempeño en su intervención.</p></div>
+<div class="fb"><span class="crit">Material visual y diseño de slides</span><p>Aporta de forma clara a la exposición del grupo.</p></div>
+</div>
+</details>
+
+<details>
+<summary>Jorge Bustamante</summary>
+<div class="detalle">
+<div class="nota-linea"><b>Nota:</b> <span class="nota-val">70</span></div>
+<div class="nivel"><b>Nivel: Bueno (70–79).</b> Cubre los puntos principales de forma adecuada, pero falta profundidad o claridad en algunas áreas. Estructura razonable.</div>
+<div class="fb"><span class="crit">Exploración de datos e insights</span><p>No identifica con claridad qué variables categóricas hay en los datos.</p></div>
+<div class="fb"><span class="crit">Explicación del modelo y resultados</span><p>Le falta dominio sobre el preprocesamiento y su efecto en el modelo.</p></div>
+</div>
+</details>
+
+<details>
+<summary>Valentina Godoy</summary>
+<div class="detalle">
+<div class="nota-linea"><b>Nota:</b> <span class="nota-val">70</span></div>
+<div class="nivel"><b>Nivel: Bueno (70–79).</b> Cubre los puntos principales de forma adecuada, pero falta profundidad o claridad en algunas áreas. Estructura razonable.</div>
+<div class="fb"><span class="crit">Exploración de datos e insights</span><p>Al consultarle por los valores faltantes, no precisa qué tratamiento se aplicó.</p></div>
+<div class="fb"><span class="crit">Comunicación y presentación</span><p>Debe reforzar la justificación de las decisiones de limpieza al exponer.</p></div>
+</div>
+</details>
+
+<div class="grupo-title">Grupo 5</div>
+
+<details>
+<summary>Michael Muñoz</summary>
+<div class="detalle">
+<div class="nota-linea"><b>Nota:</b> <span class="nota-val">80</span></div>
+<div class="nivel"><b>Nivel: Muy bueno (80–89).</b> Explicación y material visual sólidos, con vacíos menores en profundidad o fluidez. Buen dominio técnico y de negocio.</div>
+<div class="fb"><span class="crit">Exploración de datos e insights</span><p>No distingue qué son los valores extraños o faltantes.</p></div>
+<div class="fb"><span class="crit">Explicación del modelo y resultados</span><p>Queda la duda de cómo construyeron el modelo.</p></div>
+</div>
+</details>
+
+<details>
+<summary>Alejandra Gallardo</summary>
+<div class="detalle">
+<div class="nota-linea"><b>Nota:</b> <span class="nota-val">80</span></div>
+<div class="nivel"><b>Nivel: Muy bueno (80–89).</b> Explicación y material visual sólidos, con vacíos menores en profundidad o fluidez. Buen dominio técnico y de negocio.</div>
+<div class="fb"><span class="crit">Explicación del modelo y resultados</span><p>No explica qué significa la significancia de las variables más importantes.</p></div>
+<div class="fb"><span class="crit">Interpretación de negocio y recomendaciones</span><p>Requiere afianzar la lectura de los resultados del modelo.</p></div>
+</div>
+</details>
+
+<details>
+<summary>Raul Alfaro</summary>
+<div class="detalle">
+<div class="nota-linea"><b>Nota:</b> <span class="nota-val">80</span></div>
+<div class="nivel"><b>Nivel: Muy bueno (80–89).</b> Explicación y material visual sólidos, con vacíos menores en profundidad o fluidez. Buen dominio técnico y de negocio.</div>
+<div class="fb"><span class="crit">Explicación del modelo y resultados</span><p>No se evaluó la multicolinealidad en el análisis.</p></div>
+<div class="fb"><span class="crit">Comunicación y presentación</span><p>Buena presentación general, pero faltó cerrar esa parte del diagnóstico.</p></div>
+</div>
+</details>
+
+</div>
 
               
             </article>
@@ -918,6 +782,26 @@ Where <span class="arithmatex">\( p \)</span> is baseline rate; <span class="ari
       </main>
       
         <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Pie">
+      
+        
+        <a href="../../assessments/project2/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: 💳 Project 2" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              💳 Project 2
+            </div>
+          </div>
+        </a>
+      
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
