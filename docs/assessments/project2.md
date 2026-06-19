@@ -1,7 +1,7 @@
 # 💳 Credit Risk Analytics: Predicting Loan Default
 
-> **Edition:** 2026 | **Assessment:** Project 2 (30% of final grade)
-> **Dates:** Release May 6 → Due May 14, 23:59 → Presentations Jun 2–4
+> **Edition:** 2026 | **Assessment:** Project 2 (40% of final grade)
+> **Dates:** Release May 6 → Due Jun 23, 23:59 → Presentation Jul 1
 
 ---
 

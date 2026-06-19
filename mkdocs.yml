@@ -21,7 +21,6 @@ markdown_extensions:
 # Extra javascript
 extra_javascript:
   - javascripts/mathjax.js   # <- nuestro config (ruta relativa a docs/)
-  - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 # Theme
