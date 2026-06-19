@@ -3,10 +3,15 @@
 ---
 
 ## 🧮 Ponderaciones
-- 🧪 **Evaluación 1, 2 y 3** *(proyecto + presentación)*: **30% cada una** → **90%** del curso.  
-- 📝 **Tareas/controles**: **10%** del curso.
 
-> Cada evaluación incluye **entrega de proyecto** y **presentación oral**.
+| Evaluación | Ponderación |
+|---|---:|
+| 📊 **Proyecto 1** *(entrega + presentación)* | **30%** |
+| 📝 **Actividad en clases 1** | **10%** |
+| 📝 **Actividad en clases 2** | **10%** |
+| 📝 **Actividad en clases 3** | **10%** |
+| 💳 **Proyecto 2** *(entrega + presentación)* | **40%** |
+| **Total** | **100%** |
 
 ---
 
