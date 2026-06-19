@@ -21,3 +21,7 @@ title: "Datasets"
 ## Data for Project 1: 
 
 [Employee Compensation Data (CSV)](employee_compensation.csv) | <a href="https://github.com/hizocar/USM-COURSE/raw/main/docs/datasets/employee_compensation.csv" target="_blank">⬇️ Descargar</a>
+
+## Data for Project 2: 
+
+[Loan Default Data (CSV)](loan_default.csv) | <a href="https://github.com/hizocar/USM-COURSE/raw/main/docs/datasets/loan_default.csv" target="_blank">⬇️ Descargar</a>
