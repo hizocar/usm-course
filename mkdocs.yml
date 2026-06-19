@@ -80,3 +80,5 @@ nav:
   - Assessments:
       - "📊 Project 1": assessments/project1.md
       - "💳 Project 2": assessments/project2.md
+  - Notas:
+      - "Proyecto 1": notas/proyecto1.md
