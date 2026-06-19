@@ -26,9 +26,8 @@
 | Hito | Fecha | Hora | Lugar |
 |---|---|---:|---|
 | 📢 Publicación de la evaluación | **miércoles 6 de mayo de 2026** | — | — |
-| 📥 **Plazo de entrega** (⏳ 8 días) | **jueves 14 de mayo de 2026** | **23:59** *(hora local)* | Entrega en el canal indicado por el/la docente |
-| 🎤 Presentaciones | **martes 2 de junio de 2026** | **horario clases** | Sede Vitacura (Sección Santiago) |
-|  | **jueves 4 de junio de 2026** | **horario clases** | Casa Central (Sección Valparaíso) |
+| 📥 **Plazo de entrega** (⏳ notebook `.ipynb`) | **martes 23 de junio de 2026** | **23:59** *(hora local)* | Entrega en el canal indicado por el/la docente |
+| 🎤 Presentaciones | **martes 1 de julio de 2026** | **horario clases** | Sede Vitacura (Sección Santiago) |
 
 
 
