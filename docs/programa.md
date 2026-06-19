@@ -15,18 +15,6 @@
 
 ---
 
-## 🗓️ Cronograma — Evaluación 1
-| Hito | Fecha | Hora | Lugar |
-|---|---|---:|---|
-| 📢 Publicación de la evaluación | **sábado 4 de abril de 2026** | — | — |
-| 📥 **Plazo de entrega** (⏳ 4 días) | **miércoles 8 de abril de 2026** | **23:59** *(hora local)* | Entrega en el canal indicado por el/la docente |
-| 🎤 Presentaciones | **martes 21 de abril de 2026** | **18:00** | Sede Vitacura (Sección Santiago) |
-|  | **miércoles 22 de abril de 2026** | **18:00** | Casa Central (Sección Valparaíso) |
-
----
-
----
-
 ## 🗓️ Cronograma — Evaluación 2
 | Hito | Fecha | Hora | Lugar |
 |---|---|---:|---|
@@ -37,21 +25,6 @@
 
 
 ---
-
----
-
-## 🗓️ Cronograma — Evaluación 3
-| Hito | Fecha | Hora | Lugar |
-|---|---|---:|---|
-| 📢 Publicación de la evaluación | **domingo 14 de junio de 2026** | — | — |
-| 📥 **Plazo de entrega** (⏳ 5 días) | **viernes 19 de junio de 2026** | **23:59** *(hora local)* | Entrega en el canal indicado por el/la docente |
-| 🎤 Presentaciones | **por definir** | **horario clases** | Sede Vitacura (Sección Santiago) |
-|  | **por definir** | **horario clases** | Casa Central (Sección Valparaíso) |
-
-
-
----
-
 
 ## ✅ Indicaciones de la entrega
 - 📄 **Formato y pauta**: se detallarán en el enunciado de cada evaluación.  
