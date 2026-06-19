@@ -1,0 +1,1630 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="usm machine learning course">
+      
+      
+        <meta name="author" content="Sebastian Azocar">
+      
+      
+      <link rel="icon" href="../../images/logo_python.svg">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.15">
+    
+    
+      
+        <title>💳 Project 2 - Machine Learning and Business Applications</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.c382b1dc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.cc9b2e1e.min.css">
+        
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="light-blue">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#credit-risk-analytics-predicting-loan-default" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="Machine Learning and Business Applications" class="md-header__button md-logo" aria-label="Machine Learning and Business Applications" data-md-component="logo">
+      
+  <img src="../../images/logo.bmp" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Machine Learning and Business Applications
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              💳 Project 2
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="light-blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="light-blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Limpiar" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Machine Learning and Business Applications" class="md-nav__button md-logo" aria-label="Machine Learning and Business Applications" data-md-component="logo">
+      
+  <img src="../../images/logo.bmp" alt="logo">
+
+    </a>
+    Machine Learning and Business Applications
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Program
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Program" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Program
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programa/" class="md-nav__link">
+        📚 Evaluaciones del curso
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Classes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Classes" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Classes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../clases/clases/" class="md-nav__link">
+        Classes
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Exercises
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Exercises" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Exercises
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exercises/exercises/" class="md-nav__link">
+        Exercises
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Datasets
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Datasets" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Datasets
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datasets/datasets/" class="md-nav__link">
+        Datasets
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Assessments
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Assessments" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Assessments
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../project1/" class="md-nav__link">
+        📊 Project 1
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          💳 Project 2
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        💳 Project 2
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#context-objective" class="md-nav__link">
+    🎯 Context &amp; Objective
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dataset-loan_defaultcsv" class="md-nav__link">
+    📂 Dataset: loan_default.csv
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-1-data-cleaning" class="md-nav__link">
+    📝 Part 1: Data Cleaning
+  </a>
+  
+    <nav class="md-nav" aria-label="📝 Part 1: Data Cleaning">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-initial-audit" class="md-nav__link">
+    1.1 Initial Audit
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-fix-data-type-issues" class="md-nav__link">
+    1.2 Fix Data Type Issues
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-fix-inconsistent-categories" class="md-nav__link">
+    1.3 Fix Inconsistent Categories
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-fix-impossible-outlier-values" class="md-nav__link">
+    1.4 Fix Impossible / Outlier Values
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-handle-missing-values" class="md-nav__link">
+    1.5 Handle Missing Values
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16-cleaning-summary-table" class="md-nav__link">
+    1.6 Cleaning Summary Table
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-2-exploratory-data-analysis-eda" class="md-nav__link">
+    📊 Part 2: Exploratory Data Analysis (EDA)
+  </a>
+  
+    <nav class="md-nav" aria-label="📊 Part 2: Exploratory Data Analysis (EDA)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-target-variable" class="md-nav__link">
+    2.1 Target Variable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-univariate-analysis" class="md-nav__link">
+    2.2 Univariate Analysis
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-bivariate-analysis-relationship-with-default" class="md-nav__link">
+    2.3 Bivariate Analysis — Relationship with Default
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-key-insights-46-bullet-points" class="md-nav__link">
+    2.4 Key Insights (4–6 bullet points)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-3-data-preparation-for-modeling" class="md-nav__link">
+    🤖 Part 3: Data Preparation for Modeling
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-4-modeling" class="md-nav__link">
+    🧠 Part 4: Modeling
+  </a>
+  
+    <nav class="md-nav" aria-label="🧠 Part 4: Modeling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#model-1-logistic-regression-baseline" class="md-nav__link">
+    Model 1: Logistic Regression (Baseline)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#model-2-decision-tree" class="md-nav__link">
+    Model 2: Decision Tree
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#model-3-random-forest" class="md-nav__link">
+    Model 3: Random Forest
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#model-4-xgboost" class="md-nav__link">
+    Model 4: XGBoost
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-5-model-evaluation-comparison" class="md-nav__link">
+    📈 Part 5: Model Evaluation &amp; Comparison
+  </a>
+  
+    <nav class="md-nav" aria-label="📈 Part 5: Model Evaluation &amp; Comparison">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-metrics-table" class="md-nav__link">
+    5.1 Metrics Table
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-roc-curves" class="md-nav__link">
+    5.2 ROC Curves
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-threshold-analysis" class="md-nav__link">
+    5.3 Threshold Analysis
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54-best-model-selection" class="md-nav__link">
+    5.4 Best Model Selection
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-6-feature-importance" class="md-nav__link">
+    🔍 Part 6: Feature Importance
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-7-business-report" class="md-nav__link">
+    💼 Part 7: Business Report
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deliverables" class="md-nav__link">
+    ✅ Deliverables
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tips" class="md-nav__link">
+    💡 Tips
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../project3/" class="md-nav__link">
+        📊 Project 3
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#context-objective" class="md-nav__link">
+    🎯 Context &amp; Objective
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dataset-loan_defaultcsv" class="md-nav__link">
+    📂 Dataset: loan_default.csv
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-1-data-cleaning" class="md-nav__link">
+    📝 Part 1: Data Cleaning
+  </a>
+  
+    <nav class="md-nav" aria-label="📝 Part 1: Data Cleaning">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-initial-audit" class="md-nav__link">
+    1.1 Initial Audit
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-fix-data-type-issues" class="md-nav__link">
+    1.2 Fix Data Type Issues
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-fix-inconsistent-categories" class="md-nav__link">
+    1.3 Fix Inconsistent Categories
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-fix-impossible-outlier-values" class="md-nav__link">
+    1.4 Fix Impossible / Outlier Values
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-handle-missing-values" class="md-nav__link">
+    1.5 Handle Missing Values
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16-cleaning-summary-table" class="md-nav__link">
+    1.6 Cleaning Summary Table
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-2-exploratory-data-analysis-eda" class="md-nav__link">
+    📊 Part 2: Exploratory Data Analysis (EDA)
+  </a>
+  
+    <nav class="md-nav" aria-label="📊 Part 2: Exploratory Data Analysis (EDA)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-target-variable" class="md-nav__link">
+    2.1 Target Variable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-univariate-analysis" class="md-nav__link">
+    2.2 Univariate Analysis
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-bivariate-analysis-relationship-with-default" class="md-nav__link">
+    2.3 Bivariate Analysis — Relationship with Default
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-key-insights-46-bullet-points" class="md-nav__link">
+    2.4 Key Insights (4–6 bullet points)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-3-data-preparation-for-modeling" class="md-nav__link">
+    🤖 Part 3: Data Preparation for Modeling
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-4-modeling" class="md-nav__link">
+    🧠 Part 4: Modeling
+  </a>
+  
+    <nav class="md-nav" aria-label="🧠 Part 4: Modeling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#model-1-logistic-regression-baseline" class="md-nav__link">
+    Model 1: Logistic Regression (Baseline)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#model-2-decision-tree" class="md-nav__link">
+    Model 2: Decision Tree
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#model-3-random-forest" class="md-nav__link">
+    Model 3: Random Forest
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#model-4-xgboost" class="md-nav__link">
+    Model 4: XGBoost
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-5-model-evaluation-comparison" class="md-nav__link">
+    📈 Part 5: Model Evaluation &amp; Comparison
+  </a>
+  
+    <nav class="md-nav" aria-label="📈 Part 5: Model Evaluation &amp; Comparison">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-metrics-table" class="md-nav__link">
+    5.1 Metrics Table
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-roc-curves" class="md-nav__link">
+    5.2 ROC Curves
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-threshold-analysis" class="md-nav__link">
+    5.3 Threshold Analysis
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54-best-model-selection" class="md-nav__link">
+    5.4 Best Model Selection
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-6-feature-importance" class="md-nav__link">
+    🔍 Part 6: Feature Importance
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-7-business-report" class="md-nav__link">
+    💼 Part 7: Business Report
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deliverables" class="md-nav__link">
+    ✅ Deliverables
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tips" class="md-nav__link">
+    💡 Tips
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="credit-risk-analytics-predicting-loan-default">💳 Credit Risk Analytics: Predicting Loan Default</h1>
+<blockquote>
+<p><strong>Edition:</strong> 2026 | <strong>Assessment:</strong> Project 2 (30% of final grade)
+<strong>Dates:</strong> Release May 6 → Due May 14, 23:59 → Presentations Jun 2–4</p>
+</blockquote>
+<hr />
+<h2 id="context-objective">🎯 Context &amp; Objective</h2>
+<p><strong>FinTrust Bank</strong> is a regional lender that processes thousands of personal and business loan applications each year. Over the last two years, the bank's default rate has been rising — causing significant losses and putting pressure on the credit risk team.</p>
+<p>The Chief Risk Officer has commissioned the data team to build a <strong>predictive model that identifies applicants who are likely to default</strong> before a loan is approved. A reliable model would allow the bank to adjust interest rates, require collateral, or decline high-risk applications early in the process.</p>
+<p>Your role is to act as a <strong>Data Scientist</strong> on the credit risk team. You will clean and explore the data, build and compare multiple classification models, and deliver actionable recommendations to FinTrust's risk committee.</p>
+<p>By the end of this project, you will be able to:</p>
+<ul>
+<li>Detect and fix <strong>data quality issues</strong> (missing values, outliers, inconsistent categories, duplicates).</li>
+<li>Perform a <strong>comprehensive EDA</strong> to understand credit risk drivers.</li>
+<li>Build and tune <strong>four classification models</strong>: Logistic Regression, Decision Tree, Random Forest, and XGBoost.</li>
+<li>Evaluate and compare models using <strong>business-relevant metrics</strong>.</li>
+<li>Extract and interpret <strong>feature importance</strong>.</li>
+<li>Communicate technical findings to a non-technical audience.</li>
+</ul>
+<hr />
+<h2 id="dataset-loan_defaultcsv">📂 Dataset: <code>loan_default.csv</code></h2>
+<blockquote>
+<p>Available in the <a href="../../datasets/datasets/">datasets section</a>.</p>
+</blockquote>
+<p>The dataset contains <strong>~10,000 loan applications</strong> processed by FinTrust Bank.<br />
+Your task is to <strong>predict the variable <code>default</code></strong>: whether a borrower defaulted (<code>1</code>) or repaid the loan (<code>0</code>).</p>
+<blockquote>
+<p>⚠️ <strong>Warning:</strong> This dataset was extracted directly from the bank's legacy CRM system and has <strong>not been cleaned</strong>. You will encounter missing values, outliers, inconsistent category labels, duplicate records, and impossible values. Identifying and fixing these issues is a core part of this project.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>loan_id</code></td>
+<td>ID</td>
+<td>Unique loan identifier — do not use as a feature</td>
+</tr>
+<tr>
+<td><code>age</code></td>
+<td>Numerical</td>
+<td>Applicant's age (years)</td>
+</tr>
+<tr>
+<td><code>annual_income</code></td>
+<td>Numerical</td>
+<td>Gross annual income (USD)</td>
+</tr>
+<tr>
+<td><code>employment_type</code></td>
+<td>Categorical</td>
+<td><code>full_time</code>, <code>part_time</code>, <code>self_employed</code>, <code>unemployed</code></td>
+</tr>
+<tr>
+<td><code>years_employed</code></td>
+<td>Numerical</td>
+<td>Years at current employer</td>
+</tr>
+<tr>
+<td><code>loan_amount</code></td>
+<td>Numerical</td>
+<td>Total loan amount requested (USD)</td>
+</tr>
+<tr>
+<td><code>loan_term_months</code></td>
+<td>Numerical</td>
+<td>Loan duration in months (12, 24, 36, 48, 60)</td>
+</tr>
+<tr>
+<td><code>interest_rate</code></td>
+<td>Numerical</td>
+<td>Annual interest rate (%)</td>
+</tr>
+<tr>
+<td><code>loan_purpose</code></td>
+<td>Categorical</td>
+<td><code>personal</code>, <code>home</code>, <code>car</code>, <code>education</code>, <code>business</code></td>
+</tr>
+<tr>
+<td><code>credit_score</code></td>
+<td>Numerical</td>
+<td>Credit bureau score (valid range: 300–850)</td>
+</tr>
+<tr>
+<td><code>num_credit_lines</code></td>
+<td>Numerical</td>
+<td>Number of active credit lines</td>
+</tr>
+<tr>
+<td><code>debt_to_income_ratio</code></td>
+<td>Numerical</td>
+<td>Total debt payments / gross income (0 to 1)</td>
+</tr>
+<tr>
+<td><code>has_collateral</code></td>
+<td>Binary</td>
+<td>Whether the loan is backed by collateral (1 = yes, 0 = no)</td>
+</tr>
+<tr>
+<td><code>num_late_payments</code></td>
+<td>Numerical</td>
+<td>Number of late payments in borrower's history</td>
+</tr>
+<tr>
+<td><code>region</code></td>
+<td>Categorical</td>
+<td><code>North</code>, <code>South</code>, <code>East</code>, <code>West</code></td>
+</tr>
+<tr>
+<td><code>default</code></td>
+<td>Binary</td>
+<td><strong>Target variable</strong> — 1 = defaulted, 0 = repaid</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="part-1-data-cleaning">📝 Part 1: Data Cleaning</h2>
+<p>Before any analysis, you must audit and fix the dataset. Document every issue you find and every decision you make.</p>
+<h3 id="11-initial-audit">1.1 Initial Audit</h3>
+<ol>
+<li>Load the dataset and inspect its shape, dtypes, and the first 10 rows.</li>
+<li>Report:</li>
+<li>Number of <strong>duplicate rows</strong> — drop them.</li>
+<li><strong>Missing values</strong> per column (count and percentage).</li>
+<li><strong>Data type issues</strong> — are all columns stored in the correct type?</li>
+</ol>
+<h3 id="12-fix-data-type-issues">1.2 Fix Data Type Issues</h3>
+<ul>
+<li>Identify the column stored as a string that should be numeric. Fix it.</li>
+<li>After fixing, ensure all numerical columns are <code>float</code> or <code>int</code>.</li>
+</ul>
+<h3 id="13-fix-inconsistent-categories">1.3 Fix Inconsistent Categories</h3>
+<ul>
+<li>Inspect the unique values of <code>employment_type</code> and <code>loan_purpose</code>.</li>
+<li>Standardize all values to the canonical lowercase form (e.g., <code>"Full-Time"</code>, <code>"FULL TIME"</code>, <code>"fulltime"</code> → <code>"full_time"</code>).</li>
+<li>Justify your mapping decisions.</li>
+</ul>
+<h3 id="14-fix-impossible-outlier-values">1.4 Fix Impossible / Outlier Values</h3>
+<p>For each numerical column, check for values that are <strong>logically impossible</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Valid Range</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>age</code></td>
+<td>18–100</td>
+<td>Replace out-of-range with <code>NaN</code></td>
+</tr>
+<tr>
+<td><code>credit_score</code></td>
+<td>300–850</td>
+<td>Replace out-of-range with <code>NaN</code></td>
+</tr>
+<tr>
+<td><code>years_employed</code></td>
+<td>≥ 0</td>
+<td>Replace negative values with <code>NaN</code></td>
+</tr>
+<tr>
+<td><code>num_late_payments</code></td>
+<td>≥ 0</td>
+<td>Replace negative values with <code>NaN</code></td>
+</tr>
+<tr>
+<td><code>annual_income</code></td>
+<td>Reasonable range</td>
+<td>Investigate extreme values — decide and justify</td>
+</tr>
+</tbody>
+</table>
+<h3 id="15-handle-missing-values">1.5 Handle Missing Values</h3>
+<p>For each column with missing values, <strong>choose and justify</strong> an imputation strategy:</p>
+<ul>
+<li>Numerical variables: mean, median, or model-based imputation.</li>
+<li>Consider whether the missingness pattern is random or informative.</li>
+</ul>
+<blockquote>
+<p>💡 After imputation, verify that no missing values remain before modeling.</p>
+</blockquote>
+<h3 id="16-cleaning-summary-table">1.6 Cleaning Summary Table</h3>
+<p>Provide a summary table listing every issue found, the fix applied, and the number of rows affected.</p>
+<hr />
+<h2 id="part-2-exploratory-data-analysis-eda">📊 Part 2: Exploratory Data Analysis (EDA)</h2>
+<h3 id="21-target-variable">2.1 Target Variable</h3>
+<ul>
+<li>Plot the distribution of <code>default</code> (bar chart with proportions).</li>
+<li>Report the <strong>class imbalance ratio</strong>.</li>
+<li>Discuss: is the imbalance severe enough to require special treatment during modeling?</li>
+</ul>
+<h3 id="22-univariate-analysis">2.2 Univariate Analysis</h3>
+<p>For <strong>numerical variables</strong>: histograms or KDE plots highlighting the distribution shape.<br />
+For <strong>categorical variables</strong>: bar charts showing value frequencies.</p>
+<h3 id="23-bivariate-analysis-relationship-with-default">2.3 Bivariate Analysis — Relationship with Default</h3>
+<p>Explore how each feature relates to the target variable. Include at least:</p>
+<ul>
+<li>Box plots of <code>credit_score</code>, <code>annual_income</code>, <code>debt_to_income_ratio</code>, and <code>num_late_payments</code> grouped by <code>default</code>.</li>
+<li>Default rate bar charts for each categorical variable (<code>employment_type</code>, <code>loan_purpose</code>, <code>region</code>).</li>
+<li>A <strong>correlation heatmap</strong> of all numerical features.</li>
+</ul>
+<p>For each finding, write <strong>one sentence</strong> summarizing the business implication.</p>
+<h3 id="24-key-insights-46-bullet-points">2.4 Key Insights (4–6 bullet points)</h3>
+<p>Summarize the most important patterns discovered during EDA. These insights should directly motivate your modeling decisions.</p>
+<hr />
+<h2 id="part-3-data-preparation-for-modeling">🤖 Part 3: Data Preparation for Modeling</h2>
+<ol>
+<li><strong>Encode categorical variables:</strong></li>
+<li>Apply <strong>One-Hot Encoding</strong> to <code>employment_type</code>, <code>loan_purpose</code>, and <code>region</code>.</li>
+<li>
+<p>Drop the first dummy in each group (<code>drop_first=True</code>) to avoid multicollinearity.</p>
+</li>
+<li>
+<p><strong>Feature scaling:</strong></p>
+</li>
+<li>Apply <strong>StandardScaler</strong> to numerical features for Logistic Regression.</li>
+<li>
+<p>Tree-based models (Decision Tree, Random Forest, XGBoost) do not require scaling — explain why.</p>
+</li>
+<li>
+<p><strong>Train/test split:</strong></p>
+</li>
+<li>Split into <strong>80% training / 20% test</strong> using <code>random_state=42</code>.</li>
+<li>
+<p>Use <strong>stratification</strong> on <code>default</code> to preserve the class ratio.</p>
+</li>
+<li>
+<p><strong>Class imbalance:</strong></p>
+</li>
+<li>Check the default rate in the training set.</li>
+<li>If imbalance is significant, apply <code>class_weight='balanced'</code> in the models that support it, or use <strong>SMOTE</strong> on the training set only.</li>
+<li>Justify your choice.</li>
+</ol>
+<hr />
+<h2 id="part-4-modeling">🧠 Part 4: Modeling</h2>
+<p>Build four models in this order. For each model, report training and test performance.</p>
+<hr />
+<h3 id="model-1-logistic-regression-baseline">Model 1: Logistic Regression (Baseline)</h3>
+<ul>
+<li>Train with default hyperparameters first, then with <code>class_weight='balanced'</code>.</li>
+<li>Report the <strong>confusion matrix</strong> and the <strong>classification report</strong> (precision, recall, F1).</li>
+<li>Interpret the <strong>top 5 coefficients</strong> in business terms:  <blockquote>
+<p><em>"A one-unit increase in <code>num_late_payments</code> is associated with an increase of X in the log-odds of default, holding all else constant."</em></p>
+</blockquote>
+</li>
+</ul>
+<hr />
+<h3 id="model-2-decision-tree">Model 2: Decision Tree</h3>
+<ul>
+<li>Perform <strong>hyperparameter tuning</strong> using <code>GridSearchCV</code> on at least:</li>
+<li><code>max_depth</code>: [3, 5, 7, 10]</li>
+<li><code>min_samples_leaf</code>: [10, 20, 50]</li>
+<li>Plot the <strong>pruned tree</strong> (max depth 3 for readability).</li>
+<li>Discuss: what is the risk of setting <code>max_depth</code> too high?</li>
+</ul>
+<hr />
+<h3 id="model-3-random-forest">Model 3: Random Forest</h3>
+<ul>
+<li>Tune with <code>RandomizedSearchCV</code> on:</li>
+<li><code>n_estimators</code>: [100, 200, 300]</li>
+<li><code>max_depth</code>: [5, 10, 15, None]</li>
+<li><code>min_samples_leaf</code>: [5, 10, 20]</li>
+<li>Use <code>class_weight='balanced'</code>.</li>
+<li>Report <strong>out-of-bag (OOB) error</strong> if applicable.</li>
+</ul>
+<hr />
+<h3 id="model-4-xgboost">Model 4: XGBoost</h3>
+<ul>
+<li>Tune at least:</li>
+<li><code>learning_rate</code>: [0.01, 0.05, 0.1]</li>
+<li><code>n_estimators</code>: [100, 200, 300]</li>
+<li><code>max_depth</code>: [3, 5, 7]</li>
+<li>Use <code>scale_pos_weight</code> to handle class imbalance (set to <code>n_negative / n_positive</code>).</li>
+<li>Discuss why <strong>boosting</strong> can outperform a single decision tree.</li>
+</ul>
+<hr />
+<h2 id="part-5-model-evaluation-comparison">📈 Part 5: Model Evaluation &amp; Comparison</h2>
+<h3 id="51-metrics-table">5.1 Metrics Table</h3>
+<p>For each model, compute on the <strong>test set</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>ROC-AUC</th>
+<th>Precision</th>
+<th>Recall</th>
+<th>F1-Score</th>
+<th>Accuracy</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Logistic Regression</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Decision Tree</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Random Forest</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>XGBoost</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Primary metric: ROC-AUC.</strong> Accuracy alone is misleading with imbalanced classes.</p>
+</blockquote>
+<h3 id="52-roc-curves">5.2 ROC Curves</h3>
+<p>Plot all four ROC curves on a single figure. Include the AUC in the legend for each model.</p>
+<h3 id="53-threshold-analysis">5.3 Threshold Analysis</h3>
+<p>For your <strong>best model</strong>:</p>
+<ul>
+<li>Plot Precision, Recall, and F1-score as a function of the classification threshold (0.1 to 0.9).</li>
+<li>Answer: <em>Is it more important for FinTrust Bank to maximize Recall or Precision?</em></li>
+<li><strong>Recall</strong> → catch as many defaulters as possible, even if some good borrowers are rejected.</li>
+<li><strong>Precision</strong> → avoid rejecting too many good borrowers, even if some defaulters slip through.</li>
+<li>Select an <strong>optimal threshold</strong> and justify the business reasoning.</li>
+</ul>
+<h3 id="54-best-model-selection">5.4 Best Model Selection</h3>
+<p>Choose one model as your final recommendation. Justify your choice considering:</p>
+<ul>
+<li>Predictive performance (AUC, F1).</li>
+<li>Interpretability for the risk committee.</li>
+<li>Computational cost at inference time.</li>
+</ul>
+<hr />
+<h2 id="part-6-feature-importance">🔍 Part 6: Feature Importance</h2>
+<p>For your <strong>two best models</strong>, extract and visualize feature importance:</p>
+<ul>
+<li><strong>Random Forest:</strong> <code>feature_importances_</code> (Gini impurity reduction) — bar chart of top 10 features.</li>
+<li><strong>XGBoost:</strong> <code>plot_importance()</code> using <code>importance_type='gain'</code>.</li>
+<li><strong>Logistic Regression:</strong> plot the absolute value of standardized coefficients.</li>
+</ul>
+<p>Then answer:</p>
+<ol>
+<li>Which <strong>three features</strong> are consistently the most important across models?</li>
+<li>Are there features that appear important in one model but not another? Why might that happen?</li>
+<li>Is there a feature that is <strong>statistically important</strong> but might raise ethical concerns in lending decisions? Discuss briefly.</li>
+</ol>
+<hr />
+<h2 id="part-7-business-report">💼 Part 7: Business Report</h2>
+<p>Write a <strong>short business report (300–400 words)</strong> addressed to FinTrust Bank's Chief Risk Officer (non-technical audience). It must answer:</p>
+<ol>
+<li>What is the <strong>estimated financial impact</strong> of loan defaults in the dataset? (Use average loan amount × default rate as a rough proxy.)</li>
+<li>Which <strong>borrower profiles</strong> are most at risk of defaulting?</li>
+<li>What model would you recommend, and why?</li>
+<li>At the chosen threshold, how many defaults out of 1,000 new applicants would the model <strong>correctly flag</strong>?</li>
+<li>What <strong>three actions</strong> should FinTrust take over the next quarter to reduce default risk?</li>
+</ol>
+<blockquote>
+<p>Write for a business audience — no code, no formulas, no p-values. Use plain language and concrete numbers.</p>
+</blockquote>
+<hr />
+<h2 id="deliverables">✅ Deliverables</h2>
+<p>Each student or group must submit:</p>
+<ol>
+<li><strong>Jupyter Notebook (<code>.ipynb</code>)</strong> — full analysis with all code, outputs, and visualizations.</li>
+<li>Every cleaning decision must be explicitly justified in a markdown cell.</li>
+<li>All plots must have titles, axis labels, and legends.</li>
+<li>
+<p>Code must be clean and reproducible end-to-end.</p>
+</li>
+<li>
+<p><strong>Business Report</strong> — 300–400 words in Markdown or Word, addressed to the Chief Risk Officer.</p>
+</li>
+<li>
+<p><strong>Oral Presentation</strong> — 12–15 minutes (see rubric below).</p>
+</li>
+</ol>
+<blockquote>
+<p>⚠️ <strong>Important:</strong> Both the written submission and the oral presentation are <strong>mandatory</strong>. Missing either component results in the <strong>minimum grade</strong> for the project.</p>
+</blockquote>
+<hr />
+<h2 id="tips">💡 Tips</h2>
+<ul>
+<li>For XGBoost: <code>pip install xgboost</code> or <code>conda install xgboost</code>. Import with <code>from xgboost import XGBClassifier</code>.</li>
+<li>For SMOTE: <code>from imblearn.over_sampling import SMOTE</code> — apply <strong>only on the training set</strong>.</li>
+<li>For <code>scale_pos_weight</code> in XGBoost: compute <code>(df['default'] == 0).sum() / (df['default'] == 1).sum()</code>.</li>
+<li>For ROC curves: <code>from sklearn.metrics import roc_curve, roc_auc_score</code>.</li>
+<li>For threshold analysis: use <code>model.predict_proba(X_test)[:, 1]</code> and loop over thresholds.</li>
+<li>Remember: <code>GridSearchCV</code> with <code>scoring='roc_auc'</code> is more appropriate than <code>scoring='accuracy'</code> for imbalanced problems.</li>
+</ul>
+<hr />
+<hr />
+<h1 id="oral-presentation-rubric-credit-risk-analytics-project">🎤 Oral Presentation Rubric — Credit Risk Analytics Project</h1>
+<p>Each group will be evaluated on a scale from <strong>10 to 100 points</strong>.<br />
+All presentations must be delivered in <strong>English or Spanish</strong> and last between <strong>12–15 minutes</strong>.</p>
+<hr />
+<h2 id="evaluation-criteria">Evaluation Criteria</h2>
+<table>
+<thead>
+<tr>
+<th><strong>Category</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Points Range</strong></th>
+<th><strong>Weight</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🧭 <strong>1. Problem Understanding &amp; Context</strong></td>
+<td>Demonstrates a clear understanding of FinTrust's credit risk problem and the business value of predicting default. Connects data science work to lending decisions.</td>
+<td>10–20</td>
+<td><strong>20%</strong></td>
+</tr>
+<tr>
+<td>📊 <strong>2. Data Cleaning &amp; EDA</strong></td>
+<td>Clearly explains the data quality issues found, the fixes applied, and key insights from the exploratory analysis. Shows how EDA findings guided modeling decisions.</td>
+<td>10–20</td>
+<td><strong>20%</strong></td>
+</tr>
+<tr>
+<td>🤖 <strong>3. Model Comparison &amp; Results</strong></td>
+<td>Explains the four models, tuning strategy, and evaluation metrics accurately. Shows a clear comparison table and ROC curves. Justifies the final model selection.</td>
+<td>10–20</td>
+<td><strong>20%</strong></td>
+</tr>
+<tr>
+<td>🎯 <strong>4. Business Interpretation &amp; Recommendations</strong></td>
+<td>Translates model outputs into actionable lending decisions. Explains threshold choice and its business consequences. Provides concrete risk management recommendations.</td>
+<td>10–20</td>
+<td><strong>20%</strong></td>
+</tr>
+<tr>
+<td>🗣️ <strong>5. Communication &amp; Delivery</strong></td>
+<td>Clear and professional delivery. Logical flow, confident tone, and effective teamwork. Stays within the time limit.</td>
+<td>10–15</td>
+<td><strong>15%</strong></td>
+</tr>
+<tr>
+<td>🖼️ <strong>6. Visual Aids &amp; Slide Design</strong></td>
+<td>Slides are clear and professional. Charts (ROC curves, feature importance, confusion matrices) are legible and support the narrative. Avoids cluttered or text-heavy slides.</td>
+<td>10–15</td>
+<td><strong>15%</strong></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="scoring-guide">Scoring Guide</h2>
+<table>
+<thead>
+<tr>
+<th><strong>Score Range</strong></th>
+<th><strong>Level</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>90–100</strong></td>
+<td>⭐ Excellent</td>
+<td>Outstanding command of both technical and business dimensions. Insightful threshold discussion and engaging delivery.</td>
+</tr>
+<tr>
+<td><strong>80–89</strong></td>
+<td>✅ Very Good</td>
+<td>Strong explanation and visuals, minor gaps in depth or flow. Solid technical and business grasp.</td>
+</tr>
+<tr>
+<td><strong>70–79</strong></td>
+<td>⚙️ Good</td>
+<td>Covers main points adequately but lacks depth or clarity in some areas. Reasonable structure.</td>
+</tr>
+<tr>
+<td><strong>60–69</strong></td>
+<td>⚠️ Acceptable</td>
+<td>Basic coverage with limited insight or weak connection to the business problem. Somewhat unclear or rushed.</td>
+</tr>
+<tr>
+<td><strong>10–59</strong></td>
+<td>❌ Insufficient</td>
+<td>Poor structure, missing key content, or failure to communicate findings effectively.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="final-score-calculation">Final Score Calculation</h2>
+<div class="arithmatex">\[
+\text{Final Score} = 0.20(\text{Problem}) + 0.20(\text{Cleaning \&amp; EDA}) + 0.20(\text{Models}) + 0.20(\text{Business}) + 0.15(\text{Delivery}) + 0.15(\text{Visuals})
+\]</div>
+<hr />
+<h3 id="notes-for-evaluators">Notes for Evaluators</h3>
+<ul>
+<li>Deduct up to <strong>10 points</strong> for presentations outside the allowed time range (under 8 min or over 16 min).</li>
+<li>Deduct up to <strong>5 points</strong> if not all team members participate actively.</li>
+<li>Award <strong>bonus up to +5 points</strong> for exceptional creativity, threshold analysis depth, or real-world business insight.</li>
+</ul>
+<hr />
+<p><strong>Total:</strong> 100 points maximum | <strong>Minimum passing score:</strong> 60 points</p>
+
+              
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Volver al principio
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Pie">
+      
+        
+        <a href="../project1/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: 📊 Project 1" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              📊 Project 1
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../project3/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: 📊 Project 3" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Siguiente
+              </span>
+              📊 Project 3
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+      
+      
+    
+    <a href="https://github.com/hizocar" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.top", "content.code.annotate", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.config.lang": "es", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "B\u00fasqueda", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version.title": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.a6c66575.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
