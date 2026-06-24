@@ -30,3 +30,5 @@ title: "Classes"
 [Class 12a: Logistic Regression, SVM and Error Metrics](Clase_12a_Modelos_No_Lineales_de_Clasificación _ Logistic _ SVM.ipynb) | <a href="https://colab.research.google.com/github/hizocar/usm-course/blob/main/docs/clases/Clase_12a_Modelos_No_Lineales_de_Clasificación _ Logistic _ SVM.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
 
 [Class 12b: Decision Tress, Random Forest and ROC curve](Clase_12b_Modelos_No_Lineales_de_Clasificación_trees.ipynb) | <a href="https://colab.research.google.com/github/hizocar/usm-course/blob/main/docs/clases/Clase_12b_Modelos_No_Lineales_de_Clasificación_trees.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
+
+[Clase Complementaria: Presentaciones piramidales en el mundo empresarial 🧩 (clase interactiva)](Clase_Presentaciones_Piramidales.html){target="_blank"}
