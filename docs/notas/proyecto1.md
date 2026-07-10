@@ -2,7 +2,7 @@
 
 Selecciona tu nombre para ver tu **nota final** y el detalle de cada evaluación. La nota se expresa en escala de 1 a 100.
 
-> **Cálculo de la nota final:** 30% Proyecto 1 + 40% Proyecto 2 + 30% Actividades en clases (3 actividades, 10% cada una). Cada actividad vale **100** si fue entregada y **0** si no. Cuando un estudiante no tiene registro individual en un proyecto, se le asigna el **promedio del curso**: **73.5** en Proyecto 1 y **73.4** en Proyecto 2. Las tareas realizadas en pareja se acreditan a ambos integrantes. En casos con arreglo especial de asistencia, la ponderación de las actividades se ajusta y se indica en la ficha del estudiante.
+> **Cálculo de la nota final:** 30% Proyecto 1 + 40% Proyecto 2 + 30% Actividades en clases (3 actividades, 10% cada una). Cada actividad vale **100** si fue entregada y **0** si no. Las tareas realizadas en pareja se acreditan a ambos integrantes. La retroalimentación de cada proyecto sigue su rúbrica; los niveles son 90–100 Excelente · 80–89 Muy bueno · 70–79 Bueno · 60–69 Aceptable · 10–59 Insuficiente.
 
 <style>
 .notas-eval details{border-bottom:1px solid #eef1f4;}
@@ -26,7 +26,6 @@ Selecciona tu nombre para ver tu **nota final** y el detalle de cada evaluación
 .notas-eval .fb{margin-bottom:10px;}
 .notas-eval .crit{display:block;font-size:.70rem;text-transform:uppercase;letter-spacing:.05em;color:#829ab1;margin-bottom:1px;}
 .notas-eval .fb p{margin:0;font-size:.88rem;color:#486581;}
-.notas-eval .sinreg{font-size:.83rem;color:#7d8b99;font-style:italic;}
 </style>
 
 <div class="notas-eval" markdown="0">
@@ -55,7 +54,7 @@ Selecciona tu nombre para ver tu **nota final** y el detalle de cada evaluación
 <div class="final-box"><div class="final-num">Nota final del curso: <b>67.4</b></div><div class="final-bd">Proyecto 1 (30%): 60 &nbsp;·&nbsp; Proyecto 2 (40%): 73.4 &nbsp;·&nbsp; Actividades (30%): T1 <span class="no">✗</span> · T2 <span class="ok">✓</span> · T3 <span class="ok">✓</span> (20/30)</div></div>
 <div class="projs">
 <div class="proj"><div class="proj-h">Proyecto 1 · Regresión</div><div class="nota-linea"><b>Nota:</b> <span class="nota-val">60</span></div><div class="nivel"><b>Nivel: Aceptable (60–69).</b> Cobertura básica; requiere reforzar la comunicación, la estructura piramidal y/o el dominio del tema.</div><div class="fb"><span class="crit">Material visual y diseño de slides</span><p>Buenas visualizaciones, útiles para apoyar el análisis.</p></div><div class="fb"><span class="crit">Comunicación y presentación</span><p>Participación individual limitada; le costó responder al ser consultado.</p></div></div>
-<div class="proj"><div class="proj-h">Proyecto 2 · Clasificación</div><div class="nota-linea"><b>Nota:</b> <span class="nota-val">73.4</span></div><div class="sinreg">Nota asignada por <b>promedio del curso</b> (sin registro individual en esta evaluación).</div></div>
+<div class="proj"><div class="proj-h">Proyecto 2 · Clasificación</div><div class="nota-linea"><b>Nota:</b> <span class="nota-val">73.4</span></div><div class="nivel"><b>Nivel: Bueno (70–79).</b> Cubre lo principal de forma adecuada, con oportunidades de mejora en estructura, profundidad o comunicación.</div></div>
 </div></div></details>
 
 <details>
@@ -63,7 +62,7 @@ Selecciona tu nombre para ver tu **nota final** y el detalle de cada evaluación
 <div class="detalle">
 <div class="final-box"><div class="final-num">Nota final del curso: <b>67.7</b></div><div class="final-bd">Proyecto 1 (30%): 73.5 &nbsp;·&nbsp; Proyecto 2 (40%): 64 &nbsp;·&nbsp; Actividades (30%): T1 <span class="no">✗</span> · T2 <span class="ok">✓</span> · T3 <span class="ok">✓</span> (20/30)</div></div>
 <div class="projs">
-<div class="proj"><div class="proj-h">Proyecto 1 · Regresión</div><div class="nota-linea"><b>Nota:</b> <span class="nota-val">73.5</span></div><div class="sinreg">Nota asignada por <b>promedio del curso</b> (sin registro individual en esta evaluación).</div></div>
+<div class="proj"><div class="proj-h">Proyecto 1 · Regresión</div><div class="nota-linea"><b>Nota:</b> <span class="nota-val">73.5</span></div><div class="nivel"><b>Nivel: Bueno (70–79).</b> Cubre lo principal de forma adecuada, con oportunidades de mejora en estructura, profundidad o comunicación.</div></div>
 <div class="proj"><div class="proj-h">Proyecto 2 · Clasificación</div><div class="nota-linea"><b>Nota:</b> <span class="nota-val">64</span></div><div class="nivel"><b>Nivel: Aceptable (60–69).</b> Cobertura básica; requiere reforzar la comunicación, la estructura piramidal y/o el dominio del tema.</div><div class="fb"><span class="crit">Comunicación y presentación</span><p>Nervioso; conviene no memorizar y priorizar el entendimiento.</p></div><div class="fb"><span class="crit">Material visual y diseño de slides</span><p>Los gráficos no ayudan al relato; falta fluidez grupal.</p></div></div>
 </div></div></details>
 
@@ -73,7 +72,7 @@ Selecciona tu nombre para ver tu **nota final** y el detalle de cada evaluación
 <div class="final-box"><div class="final-num">Nota final del curso: <b>71.9</b></div><div class="final-bd">Proyecto 1 (30%): 75 &nbsp;·&nbsp; Proyecto 2 (40%): 73.4 &nbsp;·&nbsp; Actividades (30%): T1 <span class="no">✗</span> · T2 <span class="ok">✓</span> · T3 <span class="ok">✓</span> (20/30)</div></div>
 <div class="projs">
 <div class="proj"><div class="proj-h">Proyecto 1 · Regresión</div><div class="nota-linea"><b>Nota:</b> <span class="nota-val">75</span></div><div class="nivel"><b>Nivel: Bueno (70–79).</b> Cubre lo principal de forma adecuada, con oportunidades de mejora en estructura, profundidad o comunicación.</div><div class="fb"><span class="crit">Comprensión del problema y contexto</span><p>Entrega un overview general del trabajo que resulta útil.</p></div><div class="fb"><span class="crit">Explicación del modelo y resultados</span><p>Quedó pendiente la revisión de normalidad y de los supuestos del modelo.</p></div></div>
-<div class="proj"><div class="proj-h">Proyecto 2 · Clasificación</div><div class="nota-linea"><b>Nota:</b> <span class="nota-val">73.4</span></div><div class="sinreg">Nota asignada por <b>promedio del curso</b> (sin registro individual en esta evaluación).</div></div>
+<div class="proj"><div class="proj-h">Proyecto 2 · Clasificación</div><div class="nota-linea"><b>Nota:</b> <span class="nota-val">73.4</span></div><div class="nivel"><b>Nivel: Bueno (70–79).</b> Cubre lo principal de forma adecuada, con oportunidades de mejora en estructura, profundidad o comunicación.</div></div>
 </div></div></details>
 
 <details>
@@ -81,7 +80,7 @@ Selecciona tu nombre para ver tu **nota final** y el detalle de cada evaluación
 <div class="detalle">
 <div class="final-box"><div class="final-num">Nota final del curso: <b>68.5</b></div><div class="final-bd">Proyecto 1 (30%): 73.5 &nbsp;·&nbsp; Proyecto 2 (40%): 66 &nbsp;·&nbsp; Actividades (30%): T1 <span class="no">✗</span> · T2 <span class="ok">✓</span> · T3 <span class="ok">✓</span> (20/30)</div></div>
 <div class="projs">
-<div class="proj"><div class="proj-h">Proyecto 1 · Regresión</div><div class="nota-linea"><b>Nota:</b> <span class="nota-val">73.5</span></div><div class="sinreg">Nota asignada por <b>promedio del curso</b> (sin registro individual en esta evaluación).</div></div>
+<div class="proj"><div class="proj-h">Proyecto 1 · Regresión</div><div class="nota-linea"><b>Nota:</b> <span class="nota-val">73.5</span></div><div class="nivel"><b>Nivel: Bueno (70–79).</b> Cubre lo principal de forma adecuada, con oportunidades de mejora en estructura, profundidad o comunicación.</div></div>
 <div class="proj"><div class="proj-h">Proyecto 2 · Clasificación</div><div class="nota-linea"><b>Nota:</b> <span class="nota-val">66</span></div><div class="nivel"><b>Nivel: Aceptable (60–69).</b> Cobertura básica; requiere reforzar la comunicación, la estructura piramidal y/o el dominio del tema.</div><div class="fb"><span class="crit">Comunicación y presentación</span><p>Falta práctica oratoria.</p></div><div class="fb"><span class="crit">Comprensión del problema y contexto</span><p>El grupo debe afianzar el dominio del tema.</p></div></div>
 </div></div></details>
 
@@ -117,7 +116,7 @@ Selecciona tu nombre para ver tu **nota final** y el detalle de cada evaluación
 <div class="detalle">
 <div class="final-box"><div class="final-num">Nota final del curso: <b>58.9</b></div><div class="final-bd">Proyecto 1 (30%): 73.5 &nbsp;·&nbsp; Proyecto 2 (40%): 67 &nbsp;·&nbsp; Actividades (30%): T1 <span class="no">✗</span> · T2 <span class="no">✗</span> · T3 <span class="ok">✓</span> (10/30)</div></div>
 <div class="projs">
-<div class="proj"><div class="proj-h">Proyecto 1 · Regresión</div><div class="nota-linea"><b>Nota:</b> <span class="nota-val">73.5</span></div><div class="sinreg">Nota asignada por <b>promedio del curso</b> (sin registro individual en esta evaluación).</div></div>
+<div class="proj"><div class="proj-h">Proyecto 1 · Regresión</div><div class="nota-linea"><b>Nota:</b> <span class="nota-val">73.5</span></div><div class="nivel"><b>Nivel: Bueno (70–79).</b> Cubre lo principal de forma adecuada, con oportunidades de mejora en estructura, profundidad o comunicación.</div></div>
 <div class="proj"><div class="proj-h">Proyecto 2 · Clasificación</div><div class="nota-linea"><b>Nota:</b> <span class="nota-val">67</span></div><div class="nivel"><b>Nivel: Aceptable (60–69).</b> Cobertura básica; requiere reforzar la comunicación, la estructura piramidal y/o el dominio del tema.</div><div class="fb"><span class="crit">Comunicación y presentación</span><p>Lee la presentación; se considera la barrera idiomática.</p></div><div class="fb"><span class="crit">Material visual y diseño de slides</span><p>Reducir los gráficos que no aportan al mensaje.</p></div></div>
 </div></div></details>
 
@@ -126,7 +125,7 @@ Selecciona tu nombre para ver tu **nota final** y el detalle de cada evaluación
 <div class="detalle">
 <div class="final-box"><div class="final-num">Nota final del curso: <b>58.5</b></div><div class="final-bd">Proyecto 1 (30%): 73.5 &nbsp;·&nbsp; Proyecto 2 (40%): 66 &nbsp;·&nbsp; Actividades (30%): T1 <span class="no">✗</span> · T2 <span class="no">✗</span> · T3 <span class="ok">✓</span> (10/30)</div></div>
 <div class="projs">
-<div class="proj"><div class="proj-h">Proyecto 1 · Regresión</div><div class="nota-linea"><b>Nota:</b> <span class="nota-val">73.5</span></div><div class="sinreg">Nota asignada por <b>promedio del curso</b> (sin registro individual en esta evaluación).</div></div>
+<div class="proj"><div class="proj-h">Proyecto 1 · Regresión</div><div class="nota-linea"><b>Nota:</b> <span class="nota-val">73.5</span></div><div class="nivel"><b>Nivel: Bueno (70–79).</b> Cubre lo principal de forma adecuada, con oportunidades de mejora en estructura, profundidad o comunicación.</div></div>
 <div class="proj"><div class="proj-h">Proyecto 2 · Clasificación</div><div class="nota-linea"><b>Nota:</b> <span class="nota-val">66</span></div><div class="nivel"><b>Nivel: Aceptable (60–69).</b> Cobertura básica; requiere reforzar la comunicación, la estructura piramidal y/o el dominio del tema.</div><div class="fb"><span class="crit">Comparación de modelos y resultados</span><p>Interpretación incorrecta del AUC: un AUC de 0,7 no significa predecir el 70%.</p></div><div class="fb"><span class="crit">Comprensión del problema y contexto</span><p>La presentación muestra el desarrollo técnico; falta una estructura piramidal orientada al negocio.</p></div></div>
 </div></div></details>
 
@@ -135,7 +134,7 @@ Selecciona tu nombre para ver tu **nota final** y el detalle de cada evaluación
 <div class="detalle">
 <div class="final-box"><div class="final-num">Nota final del curso: <b>82.0</b></div><div class="final-bd">Proyecto 1 (30%): 73.5 &nbsp;·&nbsp; Proyecto 2 (40%): 75 &nbsp;·&nbsp; Actividades (30%): T1 <span class="ok">✓</span> · T2 <span class="ok">✓</span> · T3 <span class="ok">✓</span> (30/30)</div></div>
 <div class="projs">
-<div class="proj"><div class="proj-h">Proyecto 1 · Regresión</div><div class="nota-linea"><b>Nota:</b> <span class="nota-val">73.5</span></div><div class="sinreg">Nota asignada por <b>promedio del curso</b> (sin registro individual en esta evaluación). <b>Pendiente de nota real</b> (el estudiante indica que presentó; a la espera de la calificación individual).</div></div>
+<div class="proj"><div class="proj-h">Proyecto 1 · Regresión</div><div class="nota-linea"><b>Nota:</b> <span class="nota-val">73.5</span></div><div class="nivel"><b>Nivel: Bueno (70–79).</b> Cubre lo principal de forma adecuada, con oportunidades de mejora en estructura, profundidad o comunicación.</div></div>
 <div class="proj"><div class="proj-h">Proyecto 2 · Clasificación</div><div class="nota-linea"><b>Nota:</b> <span class="nota-val">75</span></div><div class="nivel"><b>Nivel: Bueno (70–79).</b> Cubre lo principal de forma adecuada, con oportunidades de mejora en estructura, profundidad o comunicación.</div><div class="fb"><span class="crit">Comunicación y presentación</span><p>Buena oratoria.</p></div><div class="fb"><span class="crit">Material visual y diseño de slides</span><p>El desarrollo técnico conviene llevarlo a un anexo en una presentación piramidal.</p></div></div>
 </div></div></details>
 
@@ -144,7 +143,7 @@ Selecciona tu nombre para ver tu **nota final** y el detalle de cada evaluación
 <div class="detalle">
 <div class="final-box"><div class="final-num">Nota final del curso: <b>62.0</b></div><div class="final-bd">Proyecto 1 (30%): 73.5 &nbsp;·&nbsp; Proyecto 2 (40%): 75 &nbsp;·&nbsp; Actividades (30%): T1 <span class="no">✗</span> · T2 <span class="no">✗</span> · T3 <span class="ok">✓</span> (10/30)</div></div>
 <div class="projs">
-<div class="proj"><div class="proj-h">Proyecto 1 · Regresión</div><div class="nota-linea"><b>Nota:</b> <span class="nota-val">73.5</span></div><div class="sinreg">Nota asignada por <b>promedio del curso</b> (sin registro individual en esta evaluación).</div></div>
+<div class="proj"><div class="proj-h">Proyecto 1 · Regresión</div><div class="nota-linea"><b>Nota:</b> <span class="nota-val">73.5</span></div><div class="nivel"><b>Nivel: Bueno (70–79).</b> Cubre lo principal de forma adecuada, con oportunidades de mejora en estructura, profundidad o comunicación.</div></div>
 <div class="proj"><div class="proj-h">Proyecto 2 · Clasificación</div><div class="nota-linea"><b>Nota:</b> <span class="nota-val">75</span></div><div class="nivel"><b>Nivel: Bueno (70–79).</b> Cubre lo principal de forma adecuada, con oportunidades de mejora en estructura, profundidad o comunicación.</div><div class="fb"><span class="crit">Comunicación y presentación</span><p>Excelente oratoria.</p></div><div class="fb"><span class="crit">Comprensión del problema y contexto</span><p>El grupo debe demostrar mayor dominio del tema.</p></div></div>
 </div></div></details>
 
@@ -160,7 +159,7 @@ Selecciona tu nombre para ver tu **nota final** y el detalle de cada evaluación
 <details>
 <summary>Nicolas Nahum</summary>
 <div class="detalle">
-<div class="final-box"><div class="final-num">Nota final del curso: <b>76.5</b></div><div class="final-bd">Proyecto 1 (30%): 75 &nbsp;·&nbsp; Proyecto 2 (40%): 85 &nbsp;·&nbsp; Actividades (30%): T1 <span class="no">✗</span> · T2 <span class="ok">✓</span> · T3 <span class="ok">✓</span> (20/30)</div></div>
+<div class="final-box"><div class="final-num">Nota final del curso: <b>86.5</b></div><div class="final-bd">Proyecto 1 (30%): 75 &nbsp;·&nbsp; Proyecto 2 (40%): 85 &nbsp;·&nbsp; Actividades (30%): T1 <span class="ok">✓</span> · T2 <span class="ok">✓</span> · T3 <span class="ok">✓</span> (30/30)</div></div>
 <div class="projs">
 <div class="proj"><div class="proj-h">Proyecto 1 · Regresión</div><div class="nota-linea"><b>Nota:</b> <span class="nota-val">75</span></div><div class="nivel"><b>Nivel: Bueno (70–79).</b> Cubre lo principal de forma adecuada, con oportunidades de mejora en estructura, profundidad o comunicación.</div><div class="fb"><span class="crit">Material visual y diseño de slides</span><p>Buen estilo de presentación, sencillo y mostrando los valores importantes.</p></div><div class="fb"><span class="crit">Exploración de datos e insights</span><p>No logra explicar el significado de las columnas al ser consultado.</p></div></div>
 <div class="proj"><div class="proj-h">Proyecto 2 · Clasificación</div><div class="nota-linea"><b>Nota:</b> <span class="nota-val">85</span></div><div class="nivel"><b>Nivel: Muy bueno (80–89).</b> Presentación sólida y bien comunicada, con dominio técnico y de negocio; vacíos menores en profundidad o estructura.</div><div class="fb"><span class="crit">Comunicación y presentación</span><p>Excelente oratoria.</p></div><div class="fb"><span class="crit">Comparación de modelos y resultados</span><p>Explica con claridad la diferencia entre falso positivo y falso negativo.</p></div></div>
@@ -171,7 +170,7 @@ Selecciona tu nombre para ver tu **nota final** y el detalle de cada evaluación
 <div class="detalle">
 <div class="final-box"><div class="final-num">Nota final del curso: <b>60.0</b></div><div class="final-bd">Proyecto 1 (30%): 73.5 &nbsp;·&nbsp; Proyecto 2 (40%): 70 &nbsp;·&nbsp; Actividades (30%): T1 <span class="no">✗</span> · T2 <span class="no">✗</span> · T3 <span class="ok">✓</span> (10/30)</div></div>
 <div class="projs">
-<div class="proj"><div class="proj-h">Proyecto 1 · Regresión</div><div class="nota-linea"><b>Nota:</b> <span class="nota-val">73.5</span></div><div class="sinreg">Nota asignada por <b>promedio del curso</b> (sin registro individual en esta evaluación).</div></div>
+<div class="proj"><div class="proj-h">Proyecto 1 · Regresión</div><div class="nota-linea"><b>Nota:</b> <span class="nota-val">73.5</span></div><div class="nivel"><b>Nivel: Bueno (70–79).</b> Cubre lo principal de forma adecuada, con oportunidades de mejora en estructura, profundidad o comunicación.</div></div>
 <div class="proj"><div class="proj-h">Proyecto 2 · Clasificación</div><div class="nota-linea"><b>Nota:</b> <span class="nota-val">70</span></div><div class="nivel"><b>Nivel: Bueno (70–79).</b> Cubre lo principal de forma adecuada, con oportunidades de mejora en estructura, profundidad o comunicación.</div><div class="fb"><span class="crit">Comunicación y presentación</span><p>Más soltura al explicar, aunque al grupo le falta fluidez.</p></div><div class="fb"><span class="crit">Material visual y diseño de slides</span><p>Mejorar los gráficos de apoyo.</p></div></div>
 </div></div></details>
 
@@ -198,7 +197,7 @@ Selecciona tu nombre para ver tu **nota final** y el detalle de cada evaluación
 <div class="detalle">
 <div class="final-box"><div class="final-num">Nota final del curso: <b>80.8</b></div><div class="final-bd">Proyecto 1 (30%): 73.5 &nbsp;·&nbsp; Proyecto 2 (40%): 72 &nbsp;·&nbsp; Actividades (30%): T1 <span class="ok">✓</span> · T2 <span class="ok">✓</span> · T3 <span class="ok">✓</span> (30/30)</div></div>
 <div class="projs">
-<div class="proj"><div class="proj-h">Proyecto 1 · Regresión</div><div class="nota-linea"><b>Nota:</b> <span class="nota-val">73.5</span></div><div class="sinreg">Nota asignada por <b>promedio del curso</b> (sin registro individual en esta evaluación).</div></div>
+<div class="proj"><div class="proj-h">Proyecto 1 · Regresión</div><div class="nota-linea"><b>Nota:</b> <span class="nota-val">73.5</span></div><div class="nivel"><b>Nivel: Bueno (70–79).</b> Cubre lo principal de forma adecuada, con oportunidades de mejora en estructura, profundidad o comunicación.</div></div>
 <div class="proj"><div class="proj-h">Proyecto 2 · Clasificación</div><div class="nota-linea"><b>Nota:</b> <span class="nota-val">72</span></div><div class="nivel"><b>Nivel: Bueno (70–79).</b> Cubre lo principal de forma adecuada, con oportunidades de mejora en estructura, profundidad o comunicación.</div><div class="fb"><span class="crit">Comprensión del problema y contexto</span><p>Buen inicio mostrando impacto y generando interés; tiene formato piramidal.</p></div><div class="fb"><span class="crit">Material visual y diseño de slides</span><p>Demasiados gráficos que no aportan; depurar para una presentación empresarial.</p></div></div>
 </div></div></details>
 
@@ -208,7 +207,7 @@ Selecciona tu nombre para ver tu **nota final** y el detalle de cada evaluación
 <div class="final-box"><div class="final-num">Nota final del curso: <b>60.4</b></div><div class="final-bd">Proyecto 1 (30%): 70 &nbsp;·&nbsp; Proyecto 2 (40%): 73.4 &nbsp;·&nbsp; Actividades (30%): T1 <span class="no">✗</span> · T2 <span class="no">✗</span> · T3 <span class="ok">✓</span> (10/30)</div></div>
 <div class="projs">
 <div class="proj"><div class="proj-h">Proyecto 1 · Regresión</div><div class="nota-linea"><b>Nota:</b> <span class="nota-val">70</span></div><div class="nivel"><b>Nivel: Bueno (70–79).</b> Cubre lo principal de forma adecuada, con oportunidades de mejora en estructura, profundidad o comunicación.</div><div class="fb"><span class="crit">Exploración de datos e insights</span><p>Presenta las estadísticas descriptivas, pero faltó extraer insights a partir de ellas.</p></div><div class="fb"><span class="crit">Interpretación de negocio y recomendaciones</span><p>Respuestas correctas, aunque poco profundas en la interpretación.</p></div></div>
-<div class="proj"><div class="proj-h">Proyecto 2 · Clasificación</div><div class="nota-linea"><b>Nota:</b> <span class="nota-val">73.4</span></div><div class="sinreg">Nota asignada por <b>promedio del curso</b> (sin registro individual en esta evaluación).</div></div>
+<div class="proj"><div class="proj-h">Proyecto 2 · Clasificación</div><div class="nota-linea"><b>Nota:</b> <span class="nota-val">73.4</span></div><div class="nivel"><b>Nivel: Bueno (70–79).</b> Cubre lo principal de forma adecuada, con oportunidades de mejora en estructura, profundidad o comunicación.</div></div>
 </div></div></details>
 
 <details>
@@ -234,7 +233,7 @@ Selecciona tu nombre para ver tu **nota final** y el detalle de cada evaluación
 <div class="detalle">
 <div class="final-box"><div class="final-num">Nota final del curso: <b>72.0</b></div><div class="final-bd">Proyecto 1 (30%): 73.5 &nbsp;·&nbsp; Proyecto 2 (40%): 75 &nbsp;·&nbsp; Actividades (30%): T1 <span class="no">✗</span> · T2 <span class="ok">✓</span> · T3 <span class="ok">✓</span> (20/30)</div></div>
 <div class="projs">
-<div class="proj"><div class="proj-h">Proyecto 1 · Regresión</div><div class="nota-linea"><b>Nota:</b> <span class="nota-val">73.5</span></div><div class="sinreg">Nota asignada por <b>promedio del curso</b> (sin registro individual en esta evaluación).</div></div>
+<div class="proj"><div class="proj-h">Proyecto 1 · Regresión</div><div class="nota-linea"><b>Nota:</b> <span class="nota-val">73.5</span></div><div class="nivel"><b>Nivel: Bueno (70–79).</b> Cubre lo principal de forma adecuada, con oportunidades de mejora en estructura, profundidad o comunicación.</div></div>
 <div class="proj"><div class="proj-h">Proyecto 2 · Clasificación</div><div class="nota-linea"><b>Nota:</b> <span class="nota-val">75</span></div><div class="nivel"><b>Nivel: Bueno (70–79).</b> Cubre lo principal de forma adecuada, con oportunidades de mejora en estructura, profundidad o comunicación.</div><div class="fb"><span class="crit">Comunicación y presentación</span><p>Buena oratoria.</p></div><div class="fb"><span class="crit">Comparación de modelos y resultados</span><p>Revisar el recall alto: puede estar bajando demasiado la precisión.</p></div></div>
 </div></div></details>
 
@@ -244,13 +243,13 @@ Selecciona tu nombre para ver tu **nota final** y el detalle de cada evaluación
 <div class="final-box"><div class="final-num">Nota final del curso: <b>73.4</b></div><div class="final-bd">Proyecto 1 (30%): 80 &nbsp;·&nbsp; Proyecto 2 (40%): 73.4 &nbsp;·&nbsp; Actividades (30%): T1 <span class="no">✗</span> · T2 <span class="ok">✓</span> · T3 <span class="ok">✓</span> (20/30)</div></div>
 <div class="projs">
 <div class="proj"><div class="proj-h">Proyecto 1 · Regresión</div><div class="nota-linea"><b>Nota:</b> <span class="nota-val">80</span></div><div class="nivel"><b>Nivel: Muy bueno (80–89).</b> Presentación sólida y bien comunicada, con dominio técnico y de negocio; vacíos menores en profundidad o estructura.</div><div class="fb"><span class="crit">Comunicación y presentación</span><p>Explica la metodología con claridad.</p></div><div class="fb"><span class="crit">Explicación del modelo y resultados</span><p>Faltó incorporar el VIF en la revisión de multicolinealidad.</p></div></div>
-<div class="proj"><div class="proj-h">Proyecto 2 · Clasificación</div><div class="nota-linea"><b>Nota:</b> <span class="nota-val">73.4</span></div><div class="sinreg">Nota asignada por <b>promedio del curso</b> (sin registro individual en esta evaluación).</div></div>
+<div class="proj"><div class="proj-h">Proyecto 2 · Clasificación</div><div class="nota-linea"><b>Nota:</b> <span class="nota-val">73.4</span></div><div class="nivel"><b>Nivel: Bueno (70–79).</b> Cubre lo principal de forma adecuada, con oportunidades de mejora en estructura, profundidad o comunicación.</div></div>
 </div></div></details>
 
 <details>
 <summary>Alexandra Vasquez</summary>
 <div class="detalle">
-<div class="final-box"><div class="final-num">Nota final del curso: <b>62.9</b></div><div class="final-bd">Proyecto 1 (30%): 75 &nbsp;·&nbsp; Proyecto 2 (40%): 76 &nbsp;·&nbsp; Actividades (30%): T1 <span class="no">✗</span> · T2 <span class="no">✗</span> · T3 <span class="ok">✓</span> (10/30)</div></div>
+<div class="final-box"><div class="final-num">Nota final del curso: <b>72.9</b></div><div class="final-bd">Proyecto 1 (30%): 75 &nbsp;·&nbsp; Proyecto 2 (40%): 76 &nbsp;·&nbsp; Actividades (30%): T1 <span class="no">✗</span> · T2 <span class="ok">✓</span> · T3 <span class="ok">✓</span> (20/30)</div></div>
 <div class="projs">
 <div class="proj"><div class="proj-h">Proyecto 1 · Regresión</div><div class="nota-linea"><b>Nota:</b> <span class="nota-val">75</span></div><div class="nivel"><b>Nivel: Bueno (70–79).</b> Cubre lo principal de forma adecuada, con oportunidades de mejora en estructura, profundidad o comunicación.</div><div class="fb"><span class="crit">Explicación del modelo y resultados</span><p>Falta explicar por qué el modelo es lineal.</p></div><div class="fb"><span class="crit">Comprensión del problema y contexto</span><p>Buena disposición, pero requiere afianzar la parte conceptual.</p></div></div>
 <div class="proj"><div class="proj-h">Proyecto 2 · Clasificación</div><div class="nota-linea"><b>Nota:</b> <span class="nota-val">76</span></div><div class="nivel"><b>Nivel: Bueno (70–79).</b> Cubre lo principal de forma adecuada, con oportunidades de mejora en estructura, profundidad o comunicación.</div><div class="fb"><span class="crit">Comunicación y presentación</span><p>Lee al comienzo y luego explica; falta práctica oratoria.</p></div><div class="fb"><span class="crit">Interpretación de negocio y recomendaciones</span><p>Aporta a la presentación de los insights del grupo.</p></div></div>
